@@ -1,0 +1,201 @@
+\documentclass[11pt, a4paper ]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[francais]{babel}
+
+\usepackage{makeidx}
+\makeindex
+%\usepackage{fontspec}
+%\setmainfont{Arial}
+
+\title{Mémoire}
+\author{Julien Prugne}
+
+\begin{document}
+
+	\maketitle
+	\tableofcontents
+
+	% TODO: à la toute fin
+	\chapter*{Introduction} %3 pages
+
+	% TODO: avant intro et conclusion
+	% récolter assez d'info
+	\chapter{HappyBox et Montreal ça bouge} % 25 pages
+
+		\section{Présentation Happybox CMS} % 15 pages
+			\subsection{Historique, de DOM element à HappyboxCMS}
+				\subsubsection{DOM Element & WebRight}
+
+				\subsubsection{Happybox CMS}
+
+				\subsubsection{Open-source? Vente? Virage?}
+
+			\subsection{l'équipe}
+
+
+				\subsubsection{Guillaume et Danny: Les co-fondateurs}
+
+				\subsubsection{Les stagiaires: sbires fanatiques}
+
+				\subsubsection{Brendan and Brendan: Les vendeurs de vent}
+
+				\subsubsection{Organisation du travail}
+
+			\subsection{produit}
+
+				% faire un schéma puis l'expliquer
+
+				\subsubsection{API}
+				\subsubsection{CMS}
+				\subsubsection{éditeur frontend}
+				\subsubsection{Hebergement}
+
+		\section{Mise en context} % 10 pages
+			
+
+			\subsubsection{Entrepreunariat à Montreal}
+				% communauté tech
+				% communauté entrepreunarial et startup
+				% entrepreunariat sauvage
+
+			\subsubsection{Concurence}
+				% wix
+
+
+	\chapter{Problématique} % 28 pages
+		\section{problématique} % 5 pages
+
+		% énonciation
+			En quoi la mise en place d'une infrastructure de nouvelle génération permet d'accroitre les performances d'une startup.
+
+			En quoi le déploiement d'une architecture sur une plateforme IAAS nécessite la mise en place d'une stratégie de gouvernance afin d'éviter une explosion des coûts.
+
+			En quoi, une infrastructure de nouvelle génération et les logiciels libre constitue un avantage stratégique dans le developement d'une (start up || d'un produit).
+
+			peu constituer une alternative économique au solution de virtualisation traditionel
+
+			Pourquoi la mise en place d'une stratégie de gouvernance est nécessaire....
+
+			Fuck Toi la gouvernance!
+
+			Mot clé :
+
+				- Happybox CMS
+					- Landing Page, One pager
+					- Cible, clientèle
+					- API
+					- Wysiwig front end layout
+					- Chroot / VPS / Connard de client qui achete du PaaS
+				* déploiement
+					- complexité de déploiement
+					* AWS, Amazon Web Services
+						* cloud publique
+							- amazon VPC
+						* dématérialisation
+						* Virtualisation des infrastructure						* Infrastructure as a service
+							- Plateform as a service
+							* Software as a service
+								-hb cms, gitlab, openweb analytics
+						- free tiers
+						- reservation d'instance
+					* provisionning
+						- Opswork
+							- chef, ruby
+							- Consistence des configurations
+							- Normalisation de la configuration
+						* Orchestration
+						* Intégration Continue
+					- Monitoring
+						- ganglia
+						- munin
+					- simplification
+					- Linux
+						- Free Software, open source
+						- ubuntu, debian
+				- startup
+					- marché 
+					- customer aquiring
+					- Stratégie de gouvernance
+					- Cout
+					- productivité
+					* performance
+					- Chanvre Indiens / Marijuana / Cannabis / Monreal
+					- Bière 
+					- Pizza, chips, redbull
+					- Financement 
+						- Venture Capitalism
+						- Concours entreprenariat
+							- fondation Montreal Inc
+							- Sociéte de developement ville marie
+					- Community management
+						- Minecraft
+						- réseaux sociaux : fb, twitter
+						- Mail
+			
+			Il est de plus en plus courant de recourir au service de cloud publique afin de gagner en perfomance, en disponibilité, de simplifier les taches d'administration en faisant abstraction de la couche matériel. Malgrès leur apparence attirante les plateforme dite IaaS, Infrastructure as a Service, engendre un lot de cout plus ou moins caché et de nouveaux défi dans la gestion de ces dernières. Il semble donc nécessaire de mettre en place une politique de gouvernance afin de réellement exploiter le potentiel de telles infrastructures à moindre cout. Mais quelles sont concrétement les élément constitutif d'une telle démarche.
+
+			% justification
+
+			\subsection*{terminologie}
+
+				\subsubsection{IAAS}
+					Infrastructure as a software => AWS
+
+				\subsubsection{PAAS}
+					Plateform as a software =>
+
+				\subsubsection{SAAS}
+					Software as a plateforme => Happybox CMS, gitlab, ...
+
+		% Méthodes habituellement utilisé pour une situation présentant des similitude
+		\section{méthodes habituelles} % 5 pages
+			\subsubsection{location chez OVH ou autre}
+			\subsubsection{création d'un datacenter}
+			\subsubsection{Déploiement manuel ou scripté}
+
+		% Exposé des décisions prise et des interventions menée par le stagiare pour résoudre le problème
+		\section{truc fait}	 % 15 pages
+
+			\subsubsection{Déploiement happybox CMS}
+				% montrer que ça demande beaucoup de temps et d'efforts
+				% peu de moyen et peu de monde
+			\subsubsection{AWS}
+				% analyse des coups, explication IAAS
+				% présentation argumenté de AWS/GCE
+
+			\subsubsection{Opswork}
+				% gestion configuration, automatisation déploiement, productivité
+
+			\subsubsection{Open source: Gitlab, Open Web Analytics}
+				% impact du logiciel libre sur le travail
+				% Ouverture sur le possible future libre de Happybox CMS
+
+		% Démonstration d’une originalité dans l’élaboration et la mise en œuvre de la solution
+		\section{Demonstration que c'est trop plus la bonne décision} % 5 page
+				% gain productivité
+				% gain cout
+				% gain maintenabilité
+				% gain scalabilité
+				 % gain sécurité
+
+		% Analyse de l’approche choisie
+		\section{Analyse masturbatoire de l'action} % 3 pages
+				% c'est le monet de ce la péter
+
+		% Réflexion sur le stage et le mémoire
+		\section{Autoévaluation}
+
+	\chapter*{Conculsion} % 2 pages
+
+	\chapter*{Remerciements}
+
+	\appendix
+	%bibliographie
+	\printindex
+
+
+
+\end{document}
