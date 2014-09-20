@@ -1,0 +1,54 @@
+
+			% Mot clé :
+
+			% 	- Happybox CMS
+			% 		- Landing Page, One pager
+			% 		- Cible, clientèle
+			% 		- API
+			% 		- Wysiwig front end layout
+			% 		- Chroot / VPS / Connard de client qui achete du PaaS
+			% 	* déploiement
+			% 		- complexité de déploiement
+			% 		* AWS, Amazon Web Services
+			% 			* cloud publique
+			% 				- amazon VPC
+			% 			* dématérialisation
+			% 			* Virtualisation des infrastructure						* Infrastructure as a service
+			% 				- Plateform as a service
+			% 				* Software as a service
+			% 					-hb cms, gitlab, openweb analytics
+			% 			- free tiers
+			% 			- reservation d'instance
+			% 		* provisionning
+			% 			- Opswork
+			% 				- chef, ruby
+			% 				- Consistence des configurations
+			% 				- Normalisation de la configuration
+			% 			* Orchestration
+			% 			* Intégration Continue
+			% 		- Monitoring
+			% 			- ganglia
+			% 			- munin
+			% 		- simplification
+			% 		- Linux
+			% 			- Free Software, open source
+			% 			- ubuntu, debian
+			% 	- startup
+			% 		- marché
+			% 		- customer aquiring
+			% 		- Stratégie de gouvernance
+			% 		- Cout
+			% 		- productivité
+			% 		* performance
+			% 		- Chanvre Indiens / Monreal
+			% 		- Bière
+			% 		- Pizza, chips, redbull
+			% 		- Financement
+			% 			- Venture Capitalism
+			% 			- Concours entreprenariat
+			% 				- fondation Montreal Inc
+			% 				- Sociéte de developement ville marie
+			% 		- Community management
+			% 			- Minecraft
+			% 			- réseaux sociaux : fb, twitter
+			% 			- Mail
