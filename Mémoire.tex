@@ -1,4 +1,4 @@
-\documentclass[11pt, a4paper ]{report}
+\documentclass[11pt, a4paper ]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -7,6 +7,7 @@
 \usepackage{wrapfig}
 \usepackage{graphicx}
 \usepackage{makeidx}
+\usepackage{url}
 \makeindex
 %\usepackage{fontspec}
 %\setmainfont{Arial}
@@ -15,26 +16,38 @@
 \author{Julien Prugne 108287}
 \date{Avril 2014 à Octobre 2014}
 
+% new page for every section
+\let\stdsection\section
+\renewcommand\section{\newpage\stdsection}
+
 \begin{document}
 
 	\maketitle
 	\tableofcontents
 
 	% TODO: à la toute fin
-	\chapter*{Introduction} %3 pages
+	\breakpage
+	\section{Introduction} %3 pages
 
 	% TODO: avant intro et conclusion
 	% récolter assez d'info
-	\chapter{présentation entreprise et mise en context : titre personalisé} % 25 pages
+	%\chapter{présentation entreprise et mise en context : titre personalisé} % 25 pages
+
+	\breakpage
+	\section{Présentation de l'entreprise: titre personnalisé} % 15 pages trouver un meilleur titre
 
 			%intro de partie
-DOM Element Inc. est une startup Montrealaise. Elle à pour vocation de dévelloper et de promouvoire un produit. Ce produit c'est \emph{Happybox CMS}. Il s'agit d'une solution de création site web d'une seul page afin d'attirer l'attention sur un projet, un produit,...
+DOM Element Inc. est une startup Montrealaise.
 
-Une startup\cite{theseStartup} est une jeune entreprise qui démarre. C'est une structure ayant pour but de déffricher un nouveau pan de l'economie. Il s'agit d'entreprise généralement incarné par leur(s) créateur(s) et foNdant son modéles économique sur l'innovation. 
+Une startup\cite{theseStartup} est une jeune entreprise. C'est une structure ayant pour but de déffricher un nouveau pan de l'economie. Il s'agit d'entreprise généralement incarné par leur(s) créateur(s) et fondant son modéles économique sur l'innovation. Cette capacité innovation est l'adn des startups.
 
-L'entreprise en elle même n'est qu'une structure légale offrant une interface avec des stuctures ayant la capacité de financer l'essort du projet. En effet, les plan d'affaires de ces entreprises prévois généralement des pertes sur les premiers temps de son dévellopement voir pour l'intégralité de son existence. Cela peut sembler incohérent à premier abord mais un écosystéme c'est créer autour des startups. Riche particuliers\footnote{Bussiness Angel}, des groupe financier gérant un fond privé\footnote{venture capital}, concours entrepreunarial créer un flux entrant de capitaux dans cette économie. Ces derniers ont généralement pour objectif de rentabiliser leurs investissements lors de la vente ou de la capitalisation boursiére de la startup. Les montant en jeux sont considérable, les investissements ou les ventes de telle société ce chiffre généralement en dizaine,centaine de millier de dollars certain cas allant jusqu'à plusieurs milliards de dollars.
+Dans un premier temps l'entreprise en elle même n'est qu'une structure légale offrant une interface avec des stuctures ayant la capacité de financer l'essort du projet. En effet, les plan d'affaires de ces entreprises prévois généralement des pertes sur les premiers temps de son dévellopement voir pour l'intégralité de son existence. Cela peut sembler incohérent à premier abord mais un écosystéme c'est créer autour des startups. Riche particuliers\footnote{Bussiness Angel}, des groupe financier gérant un fond privé\footnote{venture capital}, concours entrepreunarial créer un flux entrant de capitaux dans cette économie. Ces derniers ont généralement pour objectif de rentabiliser leurs investissements lors de la vente ou de la capitalisation boursiére de la startup. Les montants en jeux sont considérable, les investissements ou les ventes de telle sociétées ce chiffre en dizaine, centaine de millier de dollars certain cas allant jusqu'à plusieurs milliards de dollars.
 
-Les perspectives de ces marchés semble extrémement interessante mais il faut pondérer ces assertions par le taux d'échec impressionnant des start-up. En effet, une partie ne dépassera jamais le stade embryonaire, une grande partie arretera par manque de moyen financier empéchant de mener le projet à maturité, une petite portion sera acheter par de gros groupe\footnote{ skype, } et enfin une infime petite partie deviendront de large entreprise\footnote{exemple: facebook, twitter, Google,...} aprés capitalisation.
+Les perspectives de ces marchés semblent extrémement interessante mais il faut pondérer ces assertions par le taux d'échec impressionnant des start-up. En effet, au bout de 4 ans seul cinquante pourcent des startup ssemble encore en activité le tout chute drastiquement au bout de dix ans seul vingt-neux pourcent d'entre elles sont encore en activité.
+Beaucoup de chiffre pourrais être cité de nombreuse sources mais vue que cette économie est encore sauvage et peux controllé ou controllable mais les statistique semble s'accorder sur une tendance générale: Le taux d'échecs des startup est colossale mais les réussites sont spéctaculaire.
+
+La majorité  arretera par manque de moyen financier empéchant de mener le projet à maturité,  puis une petite portion sera acheter par de gros groupe\footnote{ skype par microsoft pour 8,5 milliards de dollars, instagram par facebook pour 1 milliard de dollar,... } et enfin une infime petite partie deviendront de large entreprise\footnote{exemple: facebook, twitter, Google,...} aprés capitalisation.
+
 \begin{center}
 \begin{tabular}{l*{1}{c}}
 	Années  & Taux d'échec\\
@@ -46,30 +59,294 @@ Les perspectives de ces marchés semble extrémement interessante mais il faut p
 \end{tabular}\cite{statEchecStartup}
 \end{center}
 
-		\section{Présentation de l'entreprise: titre personnalisé} % 15 pages trouver un meilleur titre
-			\subsection{Historique, de WebRight à Dom Element Inc}
+Attention toute les jeunes entreprises ne sont pas des startups. Une startup est caractérisé par sa capacité à générer de la croissance rapidement. Le taux de croissance hebdomadaire de croissance est l'indicateurs le plus révélateur de la bonne santé d'une startup.
+
+\begin{quote}
+	[...]
+
+	Commençons par faire une ditinction qui est souvent ignoré: tout les compagnie financé ne sont pas des startups. Des millions de compagnie sont créer chaque années aux États Unis. Seul une petite fraction de ces entreprises sont des startups. La pluspart sont des services commerciaux - restaurants, coiffeurs, plombier, etc. Ce ne sont pas des startup sauf dans quelques cas particuliers. Un salon de coiffure n'est pas précue pour une croissance exponentiel. Tandis qu'un moteur de recherche l'est.
+
+	[...]
+
+
+	\caption{Paul Graham, \emph{Startup = Growth\cite{startupGrowth}}}
+\end{quote}
+
+Une startup est donc avant tout un projet soutenue par une équipe passionné et persuader de la pertinence et de la capacité à générer de la croissance de leurs solutions. Pour happybox, c'est de rendre la création web abstraite de toute contraintes techniques.
+
+
+
 		% présentation générale HappyboxCMS = intro plan d'affaire
 		%	historique à étoffer
-		\subsubsection{Happybox CMS, la plateforme web}
+		\subsection{L'équipe} %2 pages max
+DOM Element étant une trés petite structure composé principalement de ses deux co-fondateurs: Danny Coulombe et Guillaume Lagacé, de deux actionnaires minoritaire chargé de la communication: Brendan Shera-shriar et Brendan Tully-Walsh et de un ou deux stagiaire selon l'époque: François Lacroix-Durant et moi même.
+
+\begin{center}
+	\includegraphics[width=\textwidth]{images/team/team.jpg}
+
+	 De gauche à droite: François Lacroix-Durant, Danny Coulombe, Brendan Sera-Shriar, Brendan Tully Walsh, Guillaume Lagacé and Julien Prugne.
+\end{center}
+
 \paragraph{}
-\emph{Happybox CMS}, a vu le jour en Octobre 2012, lorsque Guillaume Lagacé et Danny Coulombe, fondateurs de l'agence digitale \emph{WebRight\footnote{\url{http://webright.ca/fr}}} décident d'élaborer un moteur de création web alliant simplicité d'utilisation et téchnologie de pointe.
+	Guillaume Lagacé à le rôle de \emph{CEO}, Chief Executif Officer ou Président Directeur Générale en français, Il à pour responsabilité de mettre en place la structure globale de l'entreprise.
+	Ses tâches inclus:
+
+		\begin{itemize}
+			\item
+				Relations avec les financiers
+			\item
+				Définitions de la stratégie d'entreprise.
+			\item
+				Coordination de l'équipe
+			\item
+				Entretiens les relations d'affaires
+		\end{itemize}
+
+\paragraph{}
+	Danny Coulombe est le \emph{CTO}, Chief Technolgy Officer ou Directeure de la Technologie en français. Il est le dévellopeur principale d'Happybox CMS. Il est responsable des orientation technologique et de la gouvernance du dévelopement du produit.
+
+
+
+	Ces tâche inclus:
+
+		\begin{itemize}
+
+			\item
+				Dévelopement \emph{Full Stack\footnote{Expression en vogue désignant un dévelopeur web alliant à la fois de compétence de dévellopement front-end et bakend ainsi que des compétences en administration systémes. Il s'agit d'un profil complet capable de créer, déployer et maintenir une application web dans sa totalité.}}
+			\item
+				Design interface utilisateur
+			\item
+				Optimisation d'experience utilisateur
+			\item
+				Prototypage
+
+		\end{itemize}
+
+
+
+\paragraph{} %brendans
+	\emph{The Brendans} est une agence de communication digitale anglophone Montrealaise. Ses deux membres fondateurs, Brendan Shera-Shriar et Brendan Tully-Walsh, sont actuellement actionnaire à hauteur de 2\%. Ils ont pour mission avec leur équipe de promouvoir Happybox CMS sur les réseaux sociaux, de créer et d'entretenir l'image du produit.
+	C'est un élément fondamentale de l'accès au web. Seul les compagnies ayant une bonne visibilité auprès de leur cible et entretenant ded rapportd avec leurd clients semblent émergé.
+
+		\subsection{Historique DOM Element Inc.}
+%%%%%%%%%% TODO: INTEGRER LE RESEAUX ET LES CONCOURS ICITTE %%%%%%%%%%%%%%%%%
+
+\paragraph{}
+\emph{Happybox CMS}, a vu le jour en Octobre 2012, lorsque Guillaume Lagacé et Danny Coulombe, fondateurs de l'agence digitale \emph{WebRight\footnote{\url{http://webright.ca/fr}}} décident d'élaborer un moteur de création web alliant simplicité d'utilisation, téchnologie de pointe et créativité.
+
 \paragraph{}
 Pour arriver à leurs fins, ils enregistrent la société \emph{DOM Element Incorporated} le 23 Octobre 2012 auprés du registraire des entreprises du Quebec via la société \emph{Dufourd, Dion Avocats}. Les droits du produit Happybox CMS sont cédés à \emph{DOM Element Inc}, Danny et Guillaume se partagent alors la compagnie en deux parts égales, leur conférant un pouvoir décisionel commun et équivalent au sein de l'entreprise.
+
 \paragraph{}
-Durant les deux mois suivants, les efforts s'orientent sur le dévelopement du projet \emph{Happybox}. 
+Durant les deux mois suivants, les efforts s'orientent sur le dévelopement du projet \emph{Happybox CMS}.
 En décembre 2013, l'équipe rencontre Brendan Shera-Shriar et Brendan Tully-Walsh, co-fondateurs de l'agence de communication digitale \emph{The Brendans} qui deviendront, le 15 mai 2013 des actionnaires et membres éxecutifs de DOM Element Incorporated en échange de leur expertise en terme de communication et d'acquisition de clientèle.
+
 \paragraph{}
 Ce même mois de mai 2013, Happybox CMS, nom de produit approuvé plus tôt en fevrier, est sélectionné pour faire partie de la \emph{cohorte de la fondation Montreal Inc.} et recevra une bourse de \$12000. Bourse qui sera uilisée pour le financement du dévelopement et de la communication autour du produit.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% PARLER DES LOCAUX  + choix model freemium %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \paragraph{}
 En juin 2013, François Lacroix-Durant et moi-même intégrons les rangs de DOM Element Inc., respectivement en tant qu'intégrateur web et administrateur systémes.
+
+\paragraph{} %%%% raconter l'été 2013
+
+
 \paragraph{}
 À l'automne 2013, le service en ligne Happybox CMS ouvre ses portes pour une phase d'alpha privé comptant déjà une centaine d'utilisateurs. Principalement des dévelopeurs, des agences de Marketing Montréalaise ainsi que l'entreprise Maaco\footnote{Maaco est une des plus grande chaîne de peinture et de réparation de véhicules d'Amérique du nord.}.
+
 \paragraph{}
 Le 19 Novembre 2013, Happybox CMS se classe second au grand concours entrepreunarial \emph{Prix Montreal Inc}..
 %%%%%% TODO: manquant décembre 2013 à maintenant %%%%%%%
 
 %%%%%% FIN                                       %%%%%%%
 
+			\subsection{Plan d'affaire: le modéle freemium} % 11 pages
+% Là faut charger! cible tout du long
+
+\paragraph{}
+% intro model freemium
+Le \emph{modéle freemium\index{freemium!modéle}} est un type de plan d'affaire. Le mot \emph{freemium} est la contraction de deux termes anglophones : \emph{free} et \emph{premium}. Ce modéle économique ce voue à proposer un produit ou un service gratuitement à la majorité de ses utilisateurs afin que tous puisse accéder librement au produit. En plus de cette offre gratuite, il est proposé à l'utilisateur une offre dite premium qui , elle, est payante et transforme une partie des utilisateurs en client générateur de revenue. La minorité des utilisateurs payant le service premium financeront la plateforme pour l'intégralité de ses utilisateurs.
+
+
+% presentation détaillé
+\paragraph{} % offre gratuite
+L'offre gratuite ne peut pas et ne dois pas être une version d'essaie inutilisable sans recourir au service premium. Ce dois être un produit répondant à un besoin de l'utilisateur ou lui offrant un produit ou un service dont il aurait envie. Cette base d'utilisateurs gratuit est vitale au fonctionnement de cette stratégie d'affaire.
+
+\subparagraph{} % exemple offre gratuite skype + farm ville
+L'exemple le plus frappant est surement Skype, ce dernier propose un service de voix et de vidéo sur internet entiérement gratuit à ses urilisateurs. La majorité des utilisateurs ne paieront jamais pour utiliser un service le permettant de faire la visionconférence internationale gratuitement.
+
+Un autre exemple populaire pourrait être les jeux de gestion sur facebook type \emph{farmville} porposant gratuitement des jeux complet, avec des mécaniques basé sur l'interaction sociale avec le réseaux du(de la) joueur(joueuse\footnote{La cible de prédilection de ces compagnies n'est pas la même que les autres compagnie de jeux vidéo car ces derniers ont du temps mais peu voir pas d'argent ni de carte de crédit, ils constitueront la masse des joueurs offrant la visibilité nécessaire au jeux. Le véritable marché cible de situe chez les ménagères d'âges moyen, femme au foyer qui semblent être les véritables payeuses des jeux sociaux. }) rendant le produit addictif pour ses utilisateurs.
+
+\paragraph{} % offre payante
+Il est évident que seul une offre gratuite ne peut suffire à garantir les revenues nécessaire au fonctionnement de l'entreprise. C'est la qu'interviens l'offre premium. C'est un complement à l'offre gratuite une amélioration significatif de l'experience utilisateur. Cette offre surclassé dois permettre de financer l'offre gratuite ou compenser dans un premier temps au maximum les cout de l'offre gratuite.
+\subparagraph{}
+L'offre premium peux porter sur différents type service mais dois toujours être en adéquation avec l'offre gratuite, de fait la définition de l'offre premium étant intimement lié au produit il est impossible de définir un modéle unique et applicable à tout type d'affaire. On remarque tout de même que de grande tendance semble ce dessiner et cela viens de la concurrence importante sur les marché porteurs de freemium ainsi beaucoup semble adopter la même ligne d'affaire et offir des services similaires du moment qu'il propose des offres similaire. La copie des plan d'affaire de société en pleine expansion est une stratégie vieille comme le monde.
+
+\subparagraph{} % exmple skype et farmville
+
+On ne compte plus le nombre de jeux gratuits sur facebook offrant des achats \emph{in app} ne coupant l'experience de jeux et permettant d'accélerer la progression des joueurs évitant ainsi d'avoir à subir l'arduité de l'experience de jeux optimisé pour la conversion des utilisateurs. L'achat sera donc le plus souvent impulsif pour gagner du temps de jeux afin de dépasser ses \emph{amis facebook} ou tout simplement de pouvoir continuer à jouer car dans ce genre d'application la tendance semble être à la limitations du nombre d'action effectuable par heure avec une possibilité de paiement pour éviter d'attendre\footnote{Il s'agit de coupe file numérique.}. Au moment ou ces lignes sont écrite \emph{Farmville 2 dévellopé par Zynga} compte dix millions d'utilisateurs mensuel seul 3\% de ces utilisateurs paieront une offre premium.
+
+
+La cible de ces produits sont des amateurs de jeux néophyte en terme de pratique vidéoludique qui ne ce rendront pas compte que le rapport amusement/cout est un des plus mauvais sur le marché.
+
+%source http://gamasutra.com/view/feature/207779/ethical_freetoplay_game_design_.php?print=1
+Attention les pratiques trop agressive auprés de l'utilisateurs l'entrainera peut être à court termes à acheter et augmenter les revenues de la compagnie mais, trés vite, l'utilisateur ce lassera plus vite et quittera la plateforme réduisant à néant toute stratégie de rétention d'utilisateurs à long terme. Depuis sa capitalisation boursiére la compagnie Zynga tente d'achever sa profitabilité et adopte une stratégie trés agressive auprès de sa communautée de joueurs pour augmenter leurs consommation et les revenues de la société. Ces campagnes on eu pour effet une chute drastique, -68.55\% entre le quatième trimestre 2012 et le troisième trimestre 2014 du nombre d'utilisateurs. 
+% source http://www.appmtr.com/facebook/app/321574327904696-farmville-2/
+
+\begin{center}
+	\begin{tabular}{l*{1}{c}}
+		Trimestre  & utilisateur actif mensuel & Variation\\
+		\hline
+		2012 T4 & 51,569,209 & 0 \\
+		2013 T1 & 40,557,507 & - 21.35\% \\
+		2013 T2 & 34,713,652 & - 14.41\% \\
+		2013 T3 & 26,268,910 & - 24,32\% \\
+		2013 T4 & 23,630,665 & - 10.04\% \\
+		2014 T1 & 19,339,065 & - 18.16\% \\
+		2014 T2 & 22,471,919 & + 16.20\% \\
+		2014 T3 & 19,826,868 & - 11.77\% \\
+	\end{tabular}\cite{appmtrFarmVille2}
+\end{center}
+
+
+
+
+\subsubparagraph{}
+Les applications d'écoute de musique\footnote{Spotify, Deezer, Groove Shark, Google Music, ...} propose généralement une offre gratuite incluant publicité durant les temps d'attente, des limitations sur le nombres de morceaux écoutable ainsi que le nombre d'écoute d'un même morceaux.
+Le paiement d'un abonnement supprimera publicité et limitation ainsi que l'ajout de de fonctionnalité type synchronisation des fichiers sur un appareil afin d'offrir un accés hors ligne. Plusieurs type d'offre payante pourront ainsi être proposé.
+
+%%% offre premium spotify %%%
+
+\paragraph{} %validité du model
+% citation freemium.org => equations
+	\subparagraph{} % comment c'est possible de faire payer 5% de ses clients?
+Le concept de freemium peux sembler frauduleux à premiére vue. En effet, un modéle économique basé sur la distribution gratuite de son produit semble d'emblé voué à l'échec. Il est difficile d'imaginer un boulanger offrant gratuitement ses croissants en espérant financer son affaire via la vente d'offre surclassé comme un croissant avec de la confiture, un sac de transport en tissu issus du commerce équitable et un sourire de la caissière. Une telle pratique économique ne peut être perreine. De maniére générale toute offre implicant la disparition du bien\footnote{Les fameux croissants ou tout autre bien de consommation.} ou du service\footnote{Coiffeur, avocat, medecin, ...} après utilisation ne semble pas adapté au modéle freemium.
+
+Ce qui rend cette solution viable dans le cadre d'un produit digitale et le faible cout de duplication et de distribution du produit\footnote{Que ce soit un biens ou un service.}. Un logiciel traditionel, une fois dévellopé ne coute pas plus chére si il est éxécuté une fois ou 10 fois sur le poste d'un client. Il en va de même pour les biens culturels\footnote{Le groupe de musique \emph{Nine Inch Nails} à offert son album en mp3 téléchargeable gratuitement. Les support physique en édition de collection vendue plus chère qu'un disque conventionel, les produits dérivé et la vente de billets de concert constitue l'offre premium du groupe. La distribution et la duplication de fichiers musicaux étant nulle l'offre premium paiera les musiciens et rentabilisera les coûts de production.}, par exemple un livre une fois écrit et convertis dans un format numérique à le même cout de production peut importe le nombre de ses lecteurs. La magie de ce paradigme viens du fait que copier un fichier est une opération logiciel simple qui n'altére ni ne supprime le fichier originale quelqu'en soit le nombre de copie effectué. Le cout de production d'une copie du produits s'approche alors de zéro.
+
+Il est donc fondamentale de connaitre exactement ses couts de production et de distribution avant d'envisager un modéle tel que celui-ci. Les coût doivent être estimer de manières précis afin de pouvoir calculer ce que coute un utilisateurs gratuit. Une fois le cout réel d'un utilisateurs gratuit déterminé, il est nécessaire de connaitre le taux de conversion de ses utilisateurs gratuit en utilisateurs payant. Si l'on multiplie ensuite le nombre d'utilisateurs par le taux de conversion qui multiplie la contribution unitaire de chaque utilisateur on obtient une estimations de ses revenue\cite{equationFreemium}.
+
+%%%% synthèse par les équation %%%%%
+\begin{equation}
+	U\ =\ Nombre\ d'utilisateur\ gratuit
+\end{equation}
+\begin{equation}
+	T\ =\ Taux\ de\ conversion
+\end{equation}
+\begin{equation}
+	Cu\ =\ Contribution unitaire par utilisateur
+\end{equation}
+\begin{equation}
+	U \times T \times Cu\ =\ Revenue
+\end{equation}
+
+Lorsque cet indicateurs est calculé il faut en calculer un second: les couts variables. C'est à dire une estimation du cout total des utilisateurs gratuit. Pour cela rien de plus simple multiplié le nombre de vos utilisateurs gratuit par le cout d'un utilisateurs. Ces utilisateurs ne sont pas des couts fixe car le montant exact de leurs utilisations dépendra du context de l'offre freemium.
+
+%%%%%% synthese equations %%%%%%%
+\begin{equation}
+	Co\ =\ cout\ d'un\ utilisateur\ gratuit
+\end{equation}
+\begin{equation}
+	U\ \times\ Co\ =\ Couts\ variables
+\end{equation}
+
+Si en soustrayant aux revenues les coûts variables et que le résultats de l'opération est engendré aux coûts engendré par la création et la distribution du produit alors, théoriquement, le modéle est économiquement viable.
+
+%%%%% synthese equation %%%%%%
+\begin{equation}
+	(Revenue\ -\ Couts variables)\ <\ Couts 
+\end{equation}
+
+% présentation du modéle freemium happybox
+\paragraph{} % Happybox avec chiffres
+Le choix du freemium pour Happybox CMS est le résultats de longues discussion avec la totalité de l'équipe lors de l'été 2013. De ces réunions nous avons établie pour chaque fonctionnalitée du produit les limites de l'offre gratuite et offert une solution de monétisation de l'offre premium\footnote{Voir en annexe le document récapitulatif rédigé en Aout 2013 par François Lacroix-Durant}.
+Trois offres on alors vue le jours au seins de l'application:
+
+\begin{center}
+	\begin{tabular}[width=\textwidth]{| l | l | l | l |}
+		Métrique & Offre personel & Offre professionel & Offre agence \\
+		\hline
+		Domaine & sous domaine de happyboxcms.me & domaine personnalisé & domaine personnalisé \\
+		Nombre de projet & 1 & 25 & illimité \\
+		Bande passante & 5GB par mois & 50GB par mois & 100GB par mois \\
+		Espace disque & 1 GB & 10 GB & 100 GB \\
+		Style & basique & basique & avancé \\
+		Analyse de traffique & basique & avancé & avancé \\
+		Contenue Dynamique & non compris & non compris & oui \\
+		Support & communautaire & via ticket & via ticket et téléphone  \\
+		Prix & Gratuit & \$49.99/mois & \$100/mois\footnote{Ou négocié en fonction des services demandés.} \\
+
+	\end{tabular}
+\end{center}
+
+En applicants les équations vue dans les paragraphes précédents sur des chiffres prévisionnel basé sur une croissance de 4\%\footnote{Croissance minimum hebdmadaire d'une startup afin d'attirer des capitaux issus du \emph{venture capitalisme} selon Paul Graham fondateur de Y-Combinators. C'est aussi le taux de croissance prévitionnel définie dans le plan d'affaire de Happybox CMS.} par semaine.
+Spéculons sur un lancement discret en janvier 2014 avec cinquante utilisateurs gratuits trié sur le volet et un taux de conversions faible de 2\% aux vues du cout minimum par contribution unitaire actuel de \$49.99.
+
+\begin{center}
+	\begin{tabular}{l l l}
+		Temps & Utilisateurs gratuits & Utilisateurs payant & Cout utilisateurs\footnote{La méthodologie exact de calcule du cout par utilisateurs est présenté plus à la section .}\\ %%%% AJOUTER LE NUMERO DE SECTION
+		\hline
+		Janvier 2014 & 50 & 1 & \$0.52 \\
+		Juin 2014 & 95 & 1.9 & \$0.48 \\
+		Janvier 2015 & 291 & 5.82 & \$0.45 \\
+		Juin 2015 & 649 & 12.98 & \$0.45 \\
+		Janvier 2016 & 1,994 & 39.88 & \$0.44 \\
+		Juin 2016 & 4,442 & 88.84 & \$0.44 \\
+	\end{tabular}
+\end{center}
+
+cout fixes = salaire + frais brendan() + location des locaux + taxe
+
+\begin{center}
+	\begin{tabular}{| 1*{l} | c c c |}
+		Temps & Cout Variable & Revenue & Resultat hors frais fixe\\
+		\hline
+		Janvier 2014 & \$26.26 & \$49.99 & + \$23.73\\
+		Juin 2014 & \$46.06 & \$94.90 & + \$48.84\\
+		Janvier 2015 & \$132.30 & \$291.35 & + \$159.05\\
+		Juin 2015 & \$289.82 & \$649.22 & + \$359.4\\
+		Janvier 2016 & \$881.63 & \$1,993.18 & + \$1111.55\\
+		Juin 2016 & \$1958.77 & \$4,441.8 & + \$2483.03\\
+	\end{tabular}
+\end{center}
+
+\subparagraph{} % tableaux avec exemples
+
+% présentation avec des chiffres: projection et réel
+parrallel happybox
+
+= offre service ou produit gratuit
+- produit de qualité il faut des utilisateurs gratuit et le plus possible.
+- offre premium ajoutant des fonctionnalité payante
+- possible grace au coup quasi nulle de la duplication de bien digitale
+- mais pas que informatique, ex: musique distribution de mp3 gratuit offre premium: fichier de meilleur qualité, vente de support physique edition de collection, billet de concert, ...., nine inch nails album
+
+- On value un utilisateurs gratuit, c'est une source viral de communication, truc trop cool gratuit == truc géniale donc on en cause au pote qui en cause au pote. Effet de buzz rapide ==> plus d'utilisateur + de potentiel payeur
+- Il faut reellement fournir un service géniale dont les utilisateurs ont besoin! Sinon pas d'utilisateurs
+
+- taaux de conversion: utilisateur gratuit devenant utilisateur payant
+- Attention il est necessaire de connaitre exactement la valeur d'un utilisateur gratuit.
+
+- semble insensé mais
+- startup pas necessairement en quéte de revenue
+- croissance utilisateur = crédibilité face au investisseur = plus de roulement
+- clientele payante = bon point investissuer ça peu aller trés vite : Jeff Grammer partner Rho Canada startup breakfast montreal
+- source de financement des startup
+- croissance == danger pour les grosse entreprise en place qui ne veulent ==> rachat == objectif atteint
+- Modele freemium interessant pour startup evernote, skype, farmville
+- la croissance est ce qui permet à une startup d'atteindre sa maturité
+- User aquiring = absolue nécessité
+
+
+
+		\section{Mise en contexte} % 10 pages
+%%%%%%% Intro mise en context %%%%%%%%%%%%%%%%%%%%%
+Putain d'mise en contexte de mon cul!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			\subsection{Happybox CMS, une solution complète pour le web.}
 		% présentation du produit avec screen et schéma technique (à traduire)
 
@@ -78,15 +355,15 @@ Le 19 Novembre 2013, Happybox CMS se classe second au grand concours entrepreuna
 Happybox CMS est un logiciel en tant que service\index{SaaS!Happybox CMS}, c'est à dire qu'aucune installation n'est requise pour pouvoir l'utiliser. Il fonctionne sur un modèle client-serveur où le client est une page web dans votre navigateur communiquant avec un Service web, le serveur. Il faut le voir comme une feuille d'acétate qui se dépose sur un nom de domaine existant et permet instantanemment de créer un site web ou d'en éditer le contenu.
 
 % Dom Element Inc c'est une stratup donc orienter sur 1 seul et unique produit
-
+\subsubsection{Front end}
 	% Présentation utilisateurs
 	\paragraph{}
-Happybox est avant toute chose un systéme de gestion de contenu\footnote{appellé aussi CMS, Content Management System}. Il s'agit d'un logiciel permettant la création et la mise à jour dynamique de site web. 
+Happybox est avant toute chose un systéme de gestion de contenu\footnote{appellé aussi CMS, Content Management System}. Il s'agit d'un logiciel permettant la création et la mise à jour dynamique de site web.
 C'est un CMS spécialisé dans la création de site web à une seul et unique page, appellé aussi \emph{page d'aterrissage} ou \emph{landing page} en anglais. Ce type de site web est généralement réserver au opération de promotions qu'elles soient personelles\footnote{Pages personnelle, présentation d'un projet, CV en ligne, loufoquerie, ...} ou corporative\footnote{Bon de réduction, présentation d'un produit, évenements, ...}. Il a pour objectif d'interesser les internautes afin de les informer ou de les guider vers un autre service.
 
 %%%%%% TODO: causer SEO %%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \paragraph{}
 L'accés au service ce fait via une page Happybox présentant les différentes fonctionnalitées du logiciel. Cette page offre aussi un accés aux différents portails communautaires et à la création de compte. Ce site est une vitrine des possibilité offerte par le CMS. C'est le point d'accroche de la communication autour du produit.
@@ -106,14 +383,14 @@ Chaque gabarit est complétement \emph{responsive\index{responsive!moteur de gab
 
 %% SCREENSHOT EDITEUR DE GABARIT%%
 \begin{center}
-	
+
 		\includegraphics[width=\textwidth]{images/HBscreen/editeurGabarit.png}
 		\caption{Editeur de Gabarit: vue ordinateur, vue tablette, vue mobile}
-	
+
 \end{center}
 
 \paragraph{} % contenue, style, SEO
-Une fois qu'une page est structuré il faut lui ajouter un style. Pour cela, un éditeur de style complet permettant de gérer la majorité des propriétées css via une interface simple d'utilisation permettant aux non-developeur d'affiner leur design avec un niveau de détails inégalé. Pour les utilisateurs confortable avec l'édition d'un fichier css, il possible d'écrire directement du code css dans l'éditeur. 
+Une fois qu'une page est structuré il faut lui ajouter un style. Pour cela, un éditeur de style complet permettant de gérer la majorité des propriétées css via une interface simple d'utilisation permettant aux non-developeur d'affiner leur design avec un niveau de détails inégalé. Pour les utilisateurs confortable avec l'édition d'un fichier css, il possible d'écrire directement du code css dans l'éditeur.
 Le contenue de la page, textes, images, sont éditable directement sur la page avec un rendu en temps réel. Ce que vous voyez c'est ce qui sera affiché.
 Happybox garde en mémoire que la fonction premiére d'une page d'aterrissage est avant tout un outils de référencement vous permettant d'offir une meilleur visibilité à un produit ou un service pour le web. Un assistant de SEO est disponible dans l'éditeur proposant d'améliorer votre page en temps réel afin que les moteurs de recherche index au mieux la page.
 %% screen contenue style CEO
@@ -123,7 +400,7 @@ Happybox garde en mémoire que la fonction premiére d'une page d'aterrissage es
 \end{center}
 
 \paragraph{} % editeur de code + versionning
-Happybox ciblant prioritairement les developeurs web, c'est pourquoi un éditeur de code permettant d'éditer l'intégralité des source de la page et d'ajouter des modules php ou javascript afin d'étendre encore les possibilités de la plateforme. Ce qui n'est pas déjà dévelopé par l'équipe pourra être dévellopé et tester avec un rendue en temps réel. 
+Happybox ciblant prioritairement les developeurs web, c'est pourquoi un éditeur de code permettant d'éditer l'intégralité des source de la page et d'ajouter des modules php ou javascript afin d'étendre encore les possibilités de la plateforme. Ce qui n'est pas déjà dévelopé par l'équipe pourra être dévellopé et tester avec un rendue en temps réel.
 %% Screenshot editeur de source
 \begin{center}
 	\includegraphics[width=\textwidth]{images/HBscreen/codeManager.png}
@@ -133,6 +410,7 @@ Happybox ciblant prioritairement les developeurs web, c'est pourquoi un éditeur
 % séparation fond et formes
 \paragraph{}
 
+Toutes ces fonctionnalité on pour finalité la création d'une page web unique. Il est donc possible de prévisualiser comme les utilisateurs le verront sur chaque type de résolution.
 \begin{center}
 	\includegraphics[width=\textwidth]{images/HBscreen/preview.png}
 	\caption{Prévisualisation de la pages version ordinateur, tablette et mobile}
@@ -140,112 +418,97 @@ Happybox ciblant prioritairement les developeurs web, c'est pourquoi un éditeur
 
 % présentation des outils de gestions
 \paragraph{}
-De plus chaque client ce vois allouer un espaces dédié sur nos serveurs. Il reste ainsi le seul et l'unqiue propriétaire de ses données. Happybox est donc aussi un hébergeur de données. 
-Des services d'analyse de traffique, de gestion de consommation, de nom de domaines et gestion de projet sont aussi mise à dospistion des utilisateurs.
+De plus chaque client ce vois allouer un espaces dédié sur nos serveurs. Il reste ainsi le seul et l'unqiue propriétaire de ses données. Happybox est donc aussi un hébergeur de données. Afin de répondre à cette seconde problématique un ensemble d'outils permettant d'accéder à ses statistique d'utilisation de stockage, la gestion des noms de domaines, d'analyser le traffique sur les pages.
 
 \begin{center}
 	\includegraphics[width=\textwidth]{images/HBscreen/dash.png}
 	\caption{Differentes options du panneau d'administration et différents forfait proposé}
 \end{center}
 
+\paragraph{backend}
+
 
 
 % analyse que c'est un bon CMS
-Il répond donc à un certain nombre de fonctionnalitées communes à l'ensemble des systémes de gestion de contenue et recherché par les utilisateurs de CMS\cite{enqueteCMSSmile}.
+
+Happybox CMS répond donc à un certain nombre de fonctionnalitées communes à l'ensemble des systémes de gestion de contenue et recherché par les utilisateurs de CMS\cite{enqueteCMSSmile}.
 
 \begin{itemize}
-	\item Structuration du contenue 
+	\item Structuration du contenue
 
 		\begin{itemize}
-			\item Durant la création de votre page Happybox 
+			\item Durant la création de votre page Happybox
 
-			\item Contenus structuré 
+			\item Contenus structuré
 
-			\item Organisation des contenus 
+			\item Organisation des contenus
 
 		\end{itemize}
 
-	\item Ergonomie des outils de gestion 
+	\item Ergonomie des outils de gestion
 
 		\begin{itemize}
-			\item Qualité de l'interface de gestion 
+			\item Qualité de l'interface de gestion
 
-			\item Dépot de contenu Wysiwig 
+			\item Dépot de contenu Wysiwig
 
 		\end{itemize}
 
-	\item Experience utilisateurs en front-office 
+	\item Experience utilisateurs en front-office
 		\begin{itemize}
-			\item Souplesse des gabarits et mise en page 
+			\item Souplesse des gabarits et mise en page
 
-			\item Accessibilité 
+			\item Accessibilité
 
-			\item Référencement 
+			\item Référencement
 
-			\item Personnalisation 
+			\item Personnalisation
 
-			\item Référencement 
-			\item Receuil d'information/formulaire 
+			\item Référencement
+
+			\item Receuil d'information/formulaire
 
 		\end{itemize}
 
-	\item Processus de publication 
+	\item Processus de publication
 		\begin{itemize}
-			\item Gestion de la version du contenue 
+			\item Gestion de la version du contenue
 
-			\item Cycle de vie du contenue 
+			\item Cycle de vie du contenue
 
-			\item Travail collaboratif 
+			\item Travail collaboratif
 
 		\end{itemize}
 
-	\item Intégration avec les réseaux sociaux 
+	\item Intégration avec les réseaux sociaux
 
-	\item Qualité de l'architecture technique 
+	\item Qualité de l'architecture technique
 		\begin{itemize}
 			\item Documentation
 
 			\item Plugins et extensibilité
 
-			\item Performances 
+			\item Performances
 
 		\end{itemize}
 
 \end{itemize}
 
+		\subsection{Secteur à forte concurrence}
+
+Le monde des gestionnaire de contenue est un secteur à
 
 
 
-			\subsection{Plan d'affaire}
-		% plan d'affaire
-			% chiffre
-			% stratégie d'accés au marché 
-
-		% annex le plan d'affaire d'happybox
-			% présenter
-		% mon analyse 
-		%l'état actuel d'happybox
-
-		%ma proposition de futur
-			% conteneur opensource
-
-			\subsection{Management orienté produit}
-		% Fonctionnement de l'entreprise
+%%%%%%    CONCLUSION PARTIE %%%%%%%
 
 
-		\section{Mise en context} % 10 pages
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-			\subsubsection{Entrepreunariat à Montreal}
-				% communauté tech
-				% communauté entrepreunarial et startup
-				% entrepreunariat sauvage
 
-			\subsubsection{Concurence}
-				% wix
-
-
-	\chapter{Problématique} % 28 pages
+	%\chapter{Problématique} % 28 pages
 		\section{problématique} % 5 pages
 
 
@@ -298,9 +561,9 @@ Les clouds publiques sont generalement composés de trois types de services\inde
 
 Pour bien expliquer ces différents concepts, nous nous réfererons à l'excellente analogie \emph{Pizza comme un Service}\cite{PizzaasaService}. Cette dernière nous explique que les habitudes d'utilisation de plateforme en ligne sont comparables aux habitudes de consommation de pizza.
 
-En effet, un cloud privé\index{Cloud privé!Définition par la pizza} où vous vous chargeriez d'équiper les locaux en éléctricité, en ventilation, de gérer la sécurité physique et logicielle et installer les serveurs dans votre centre de données serait comparable à faire votre pâte à pizza, garnir votre pizza, la cuire, installer votre table à manger, servir les boissons et votre pizza. Cette solution vous offre le plus de fléxibilité dans les choix que vous pouvez faire mais peut devenir très contraignante car tout est de votre responsabilité. 
+En effet, un cloud privé\index{Cloud privé!Définition par la pizza} où vous vous chargeriez d'équiper les locaux en éléctricité, en ventilation, de gérer la sécurité physique et logicielle et installer les serveurs dans votre centre de données serait comparable à faire votre pâte à pizza, garnir votre pizza, la cuire, installer votre table à manger, servir les boissons et votre pizza. Cette solution vous offre le plus de fléxibilité dans les choix que vous pouvez faire mais peut devenir très contraignante car tout est de votre responsabilité.
 
-Les solutions IAAS\index{IaaS!Définition par la pizza}, sont comparables au fait d'acheter une pizza crue ou congelée et de la cuire chez vous. En d'autres termes vos considérations s'orienteront sur le choix et l'installation des sytémes d'exploitations, la création de réseaux virtuels, la configuration de gestionnaire de charge\footnote{load-balancer}... Ces services vous offrent un centre de données complet sans les inconvénients du matériel. 
+Les solutions IAAS\index{IaaS!Définition par la pizza}, sont comparables au fait d'acheter une pizza crue ou congelée et de la cuire chez vous. En d'autres termes vos considérations s'orienteront sur le choix et l'installation des sytémes d'exploitations, la création de réseaux virtuels, la configuration de gestionnaire de charge\footnote{load-balancer}... Ces services vous offrent un centre de données complet sans les inconvénients du matériel.
 
 Les solutions PaaS\index{Paas!Définition par la pizza} correspondent au service de livraisons de pizza. Il ne reste à votre charge que la table et les boissons. D'un point de vue informatique, vous géreriez la création de votre application puis la déploierez chez votre fournisseur. La gestion du systéme d'exploitation n'est plus de votre ressort vous laissant la responsabilité de votre logiciel.
 
@@ -308,27 +571,27 @@ Finalement les solutions SaaS\index{SaaS!Définition par la pizza} sont le penda
 
 Le schéma ci dessous illustre ces explications:
 
-\includegraphics[scale=0.5]{images/PizzaasaService.jpg}
+\includegraphics[width=\textwidth]{images/PizzaasaService.jpg}
 
 				%\subsection*{approche envisagé}
 
 					%\paragraph{cout}
 					%\paragraph{consitence de la conf}
 					%\paragraph{sécurité et privacité}
-La frontière entre ces différents types d'infrastructure est parfois mince voire inexistante. Par expemle, la plateforme web permettant de gérer ses infrastructures virtuelles chez n'importe quel fournisseur d'infrastructure comme un service\footnote{IaaS} n'est autre qu'un logiciel comme un service\footnote{SaaS}. De plus, les plateformes IaaS fournissent généralement une solution de plateforme comme une service\footnote{PaaS}. Google app Engine est une plateforme PaaS fournis par google et inclus dans l'offre Google Cloud, de la même façon Amazon Web Service propose Opswork. 
+La frontière entre ces différents types d'infrastructure est parfois mince voire inexistante. Par expemle, la plateforme web permettant de gérer ses infrastructures virtuelles chez n'importe quel fournisseur d'infrastructure comme un service\footnote{IaaS} n'est autre qu'un logiciel comme un service\footnote{SaaS}. De plus, les plateformes IaaS fournissent généralement une solution de plateforme comme une service\footnote{PaaS}. Google app Engine est une plateforme PaaS fournis par google et inclus dans l'offre Google Cloud, de la même façon Amazon Web Service propose Opswork.
 
-De fait, ces concepts restent trés théoriques et leurs implémentations ne sont jamais une vision absolue du concept. Il est donc important de bien comprendre ces services afin de définir le potentiel de chaque plateforme d'hébergement et d'en exploiter au maximum les fonctionnalitées. 
-Pour cela, nous utiliserons sept d'indicateurs permettant, selon mon expérience, de comparer la pertinence des différentes solutions présente sur le marché. 
+De fait, ces concepts restent trés théoriques et leurs implémentations ne sont jamais une vision absolue du concept. Il est donc important de bien comprendre ces services afin de définir le potentiel de chaque plateforme d'hébergement et d'en exploiter au maximum les fonctionnalitées.
+Pour cela, nous utiliserons sept d'indicateurs permettant, selon mon expérience, de comparer la pertinence des différentes solutions présente sur le marché.
 
 \begin{description}
 
-	\item[Sécurité] 
+	\item[Sécurité]
 		Controller l'accès aux ressources et aux données. Pouvoir garantir leur confidentialité.
 
-	\item[Souveraineté]  
+	\item[Souveraineté]
 		Posséder totalement ou partiellement ses ressources et données.
 
-	\item[Adaptabilité]
+	\item[Flexibilité]
 		Changer, ce transformer, s'adapter aux besoins des utilisateurs.
 
 	\item[Consistence]
@@ -342,28 +605,43 @@ Pour cela, nous utiliserons sept d'indicateurs permettant, selon mon expérience
 
 \end{description}
 
-Ces indicateurs, devrait à eux seuls permettre de définir notre politique de gouvernances. Ils sont, en quelques, sorte les indicateurs vitaux d'un systéme informatique. 
+Ces indicateurs, devrait à eux seuls permettre de définir notre politique de gouvernances. Ils sont, en quelques, sorte les indicateurs vitaux d'un systéme informatique.
 
 		% Méthodes habituellement utilisé pour une situation présentant des similitude
 		\section{méthodes habituelles} % 5 pages
-			\subsubsection{location chez OVH ou autre}
-			\subsubsection{création d'un datacenter}
-			\subsubsection{Déploiement manuel ou scripté}
+
+1 sys admin = X serveurs
+1 sysadmin = 1 corps
+1 corps peut physiquement y serveurs
+
+X tant à augmenter mais pas le nombre de corps/sysadmin => ratio merdique de 1
+
+
+			\subsection{Création de centre de données et cloud privé}
+\paragraph{Présentation}
+
+\paragraph{Points forts}
+
+\paragraph{Points faibles}
+
+\paragraph{Conclusion}
+
+			\subsection{Déploiement manuel ou scripté}
 
 		% Exposé des décisions prise et des interventions menée par le stagiare pour résoudre le problème
-		\section{truc fait}	 % 15 pages
+		\section{Une infrastructure à batis dans le nuage.}	 % 15 pages
 
-			\subsubsection{Déploiement happybox CMS}
+			\subsection{Déploiement happybox CMS}
 				% montrer que ça demande beaucoup de temps et d'efforts
 				% peu de moyen et peu de monde
-			\subsubsection{AWS}
+			\subsection{AWS}
 				% analyse des coups, explication IAAS
 				% présentation argumenté de AWS/GCE
 
-			\subsubsection{Opswork}
+			\subsection{Opswork}
 				% gestion configuration, automatisation déploiement, productivité
 
-			\subsubsection{Open source: Gitlab, Open Web Analytics}
+			\subsection{Open source: Gitlab, Open Web Analytics}
 				% impact du logiciel libre sur le travail
 				% Ouverture sur le possible future libre de Happybox CMS
 
@@ -377,17 +655,19 @@ Ces indicateurs, devrait à eux seuls permettre de définir notre politique de g
 
 		% Analyse de l’approche choisie
 		\section{Analyse masturbatoire de l'action} % 3 pages
-				% c'est le monet de ce la péter
+				% c'est le moment de ce la péter
 
 		% Réflexion sur le stage et le mémoire
 		\section{Autoévaluation}
 
-	\chapter*{Conculsion} % 2 pages
+	\section{Conculsion} % 2 pages
 
-	\chapter*{Remerciements}
+	\section{Remerciements}
 
 	\appendix
-	\section{Exemple de pages Happybox}
+	\section{Exemples de pages Happybox}
+
+	\section{Plan freemium}
 	%bibliographie
 	\printindex
 
