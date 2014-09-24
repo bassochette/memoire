@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{makeidx}
 \usepackage{url}
+\usepackage{tabularx}
 \makeindex
 %\usepackage{fontspec}
 %\setmainfont{Arial}
@@ -26,14 +27,14 @@
 	\tableofcontents
 
 	% TODO: à la toute fin
-	\breakpage
+	
 	\section{Introduction} %3 pages
 
 	% TODO: avant intro et conclusion
 	% récolter assez d'info
 	%\chapter{présentation entreprise et mise en context : titre personalisé} % 25 pages
 
-	\breakpage
+
 	\section{Présentation de l'entreprise: titre personnalisé} % 15 pages trouver un meilleur titre
 
 			%intro de partie
@@ -200,17 +201,17 @@ Le paiement d'un abonnement supprimera publicité et limitation ainsi que l'ajou
 % citation freemium.org => equations
 	\subparagraph{} % comment c'est possible de faire payer 5% de ses clients?
 Le concept de freemium peux sembler frauduleux à premiére vue. En effet, un modéle économique basé sur la distribution gratuite de son produit semble d'emblé voué à l'échec. Il est difficile d'imaginer un boulanger offrant gratuitement ses croissants en espérant financer son affaire via la vente d'offre surclassé comme un croissant avec de la confiture, un sac de transport en tissu issus du commerce équitable et un sourire de la caissière. Une telle pratique économique ne peut être perreine. De maniére générale toute offre implicant la disparition du bien\footnote{Les fameux croissants ou tout autre bien de consommation.} ou du service\footnote{Coiffeur, avocat, medecin, ...} après utilisation ne semble pas adapté au modéle freemium.
-
+\subparagraph{}
 Ce qui rend cette solution viable dans le cadre d'un produit digitale et le faible cout de duplication et de distribution du produit\footnote{Que ce soit un biens ou un service.}. Un logiciel traditionel, une fois dévellopé ne coute pas plus chére si il est éxécuté une fois ou 10 fois sur le poste d'un client. Il en va de même pour les biens culturels\footnote{Le groupe de musique \emph{Nine Inch Nails} à offert son album en mp3 téléchargeable gratuitement. Les support physique en édition de collection vendue plus chère qu'un disque conventionel, les produits dérivé et la vente de billets de concert constitue l'offre premium du groupe. La distribution et la duplication de fichiers musicaux étant nulle l'offre premium paiera les musiciens et rentabilisera les coûts de production.}, par exemple un livre une fois écrit et convertis dans un format numérique à le même cout de production peut importe le nombre de ses lecteurs. La magie de ce paradigme viens du fait que copier un fichier est une opération logiciel simple qui n'altére ni ne supprime le fichier originale quelqu'en soit le nombre de copie effectué. Le cout de production d'une copie du produits s'approche alors de zéro.
-
-Il ne faut surtout pas considérer un utilisateur gratuit comme une perte car un consommateur ne payant pas le produit n'est pas un client, c'est un moyen. Au même titre que l'achat d'encars publicitaire, de mot clé dans les moteurs de recherche ou de publication mise en avant sur les réseaux sociaux pour faire la promotion du produit. 
-En proposant un service ayant, aux yeux de l' utilisateur, une réel valeur ajouté qui le pousserai à utiliser réguiliérement on crée une \emph{relation d'approbation} qui à une valeurs bien supérieur à la publicité. 
-En effet, si demain la boucherie de mon quartier adopte le modéle freemium en offrant gratuitement ses produits à tout les clients potentiels et offrant un service de charcuterie premium. 
-Il est plus que probable que je diffuse l'information auprés de mon réseaux qui le diffusera lui aussi à son réseaux et ainsi de suite jusqu'à atteindre la limite du marché, dans ce cas précis un cout de déplacement supérieur au gain apporter par le produit gratuits. 
-Dépenser \$200 d'essence pour obtenir un produit gratuit d'une valeur de quelque dizaine de dollars n'est pas judicieux. Il est toujours envisageable de compter sur une clientéle stupide mais mon expérience du jeux de go m'a appris qu'établir une stratégie basé sur les erreurs potentiels de son adversaire n'est que rarement voir jamais payant. 
+\subparagraph{}
+Il ne faut surtout pas considérer un utilisateur gratuit comme une perte car un consommateur ne payant pas le produit n'est pas un client, c'est un moyen. Au même titre que l'achat d'encars publicitaire, de mot clé dans les moteurs de recherche ou de publication mise en avant sur les réseaux sociaux pour faire la promotion du produit.
+En proposant un service ayant, aux yeux de l' utilisateur, une réel valeur ajouté qui le pousserai à utiliser réguiliérement on crée une \emph{relation d'approbation} qui à une valeurs bien supérieur à la publicité.
+En effet, si demain la boucherie de mon quartier adopte le modéle freemium en offrant gratuitement ses produits à tout les clients potentiels et offrant un service de charcuterie premium.
+Il est plus que probable que je diffuse l'information auprés de mon réseaux qui le diffusera lui aussi à son réseaux et ainsi de suite jusqu'à atteindre la limite du marché, dans ce cas précis un cout de déplacement supérieur au gain apporter par le produit gratuits.
+Dépenser \$200 d'essence pour obtenir un produit gratuit d'une valeur de quelque dizaine de dollars n'est pas judicieux. Il est toujours envisageable de compter sur une clientéle stupide mais mon expérience du jeux de go m'a appris qu'établir une stratégie basé sur les erreurs potentiels de son adversaire n'est que rarement voir jamais payant.
 Considérer ses futurs clients\footnote{aka utilisateurs gratuits ou leurs réseaux} comme moutons à tondre ne peut être une stratégie payante à long terme même si à court termes de telles méthodes peuvent apporter des recettes.
-
-Attention les pratiques trop agressive auprés de l'utilisateurs l'entrainera peut être à court termes à acheter et augmenter les revenues de la compagnie mais, trés vite, l'utilisateur ce lassera plus vite et quittera la plateforme réduisant à néant toute stratégie de rétention d'utilisateurs à long terme. Depuis sa capitalisation boursiére la compagnie Zynga\footnote{Zynga à fait sont offre public initial, IPO, le 26 décembre 2011 évaluant l'entreprise aprés son entré en bourse à environ 7 milliards de dollars.\cite{ipoZynga}} tente d'achever sa profitabilité et adopte une stratégie de plus en plus agressive auprès de sa communautée de joueurs pour augmenter leurs consommation et les revenues de la société. Ces campagnes on eu pour effet une chute drastique, -68.55\% entre le quatième trimestre 2012 et le troisième trimestre 2014 du nombre d'utilisateurs. 
+\subparagraph{}
+Attention les pratiques trop agressive auprés de l'utilisateurs l'entrainera peut être à court termes à acheter et augmenter les revenues de la compagnie mais, trés vite, l'utilisateur ce lassera plus vite et quittera la plateforme réduisant à néant toute stratégie de rétention d'utilisateurs à long terme. Depuis sa capitalisation boursiére la compagnie Zynga\footnote{Zynga, société créatrice de Farmville ainsi que 67 autres jeux gratuits sur le réseaux sociale facebook, à fait sont offre public initial, IPO, le 26 décembre 2011 évaluant l'entreprise aprés son entré en bourse à environ 7 milliards de dollars.\cite{ipoZynga}} tente d'achever sa profitabilité et adopte une stratégie de plus en plus agressive auprès de sa communautée de joueurs pour augmenter leurs consommation et les revenues de la société. Ces campagnes on eu pour effet une chute drastique, -68.55\% entre le quatième trimestre 2012 et le troisième trimestre 2014 du nombre d'utilisateurs.
 % source http://www.appmtr.com/facebook/app/321574327904696-farmville-2/
 
 \begin{center}
@@ -234,40 +235,57 @@ Attention les pratiques trop agressive auprés de l'utilisateurs l'entrainera pe
 % Les restrictions sur le nombre de copie (e.g. un logiciel qui ne peut être installé que sur un unique ordinateur et non sur un réseau) ;
 % Les restrictions sur les classes d’utilisateurs (e.g. un logiciel gratuit tant que l’utilisation est non commerciale) ;
 % Les restrictions sur l’effort (e.g. un logiciel gratuit mais limité qui peut être débloqué gratuitement mais au prix de démarches laborieuses, qui peuvent être facilitées moyennant un paiement).
-
-Un modéle freemium, si il veux survivre à long terme dois être conçu et mise en place de maniére éthique\cite{ethicalF2P} en respectant les utilisateurs. Beaucoup d'offre freemium cherche à tirer un maximum de bénéfice, le plus rapidement possible, de ce qui semble être en ce moment un plan d'affaire extremement lucratif, ne cherchant pas la rétention à long termes des utilisateurs. Dans le cas des jeux gratuits contenant de la consommation en jeux, beaucoup fonctionne exactement de la même maniére. Parfois, il suffit de changer l'emballage pour donner l'impression de nouveauté suffisante à délier la bourse des plus impulsif. 
-
-Il est donc fondamentale de connaitre exactement ses couts de production et de distribution avant d'envisager un modéle tel que celui-ci. Les coût doivent être estimer de manières précis afin de pouvoir calculer ce que coute un utilisateurs gratuit. Une fois le cout réel d'un utilisateurs gratuit déterminé, il est nécessaire de connaitre le taux de conversion de ses utilisateurs gratuit en utilisateurs payant. Si l'on multiplie ensuite le nombre d'utilisateurs par le taux de conversion qui multiplie la contribution unitaire de chaque utilisateur on obtient une estimations de ses revenue\cite{equationFreemium}.
+\subparagraph{}
+Un modéle freemium, si il veux survivre à long terme dois être conçu et mise en place de maniére éthique\cite{ethicalF2P} en respectant les utilisateurs. Beaucoup d'offre freemium cherche à tirer un maximum de bénéfice, le plus rapidement possible, de ce qui semble être en ce moment un plan d'affaire extremement lucratif, ne cherchant pas la rétention à long termes des utilisateurs. Dans le cas des jeux gratuits contenant de la consommation en jeux, beaucoup fonctionne exactement de la même maniére. Parfois, il suffit de changer l'emballage pour donner l'impression de nouveauté suffisante à délier la bourse des plus impulsif.
+\subparagraph{}
+Il est donc fondamentale de connaitre exactement ses coûts de production et de distribution avant d'envisager un modéle tel que celui-ci. Pour cela, il faut savoir qu'il existe plusieurs types de coûts.
+Les premiers sont les \emph{coûts fixe\index{Coûts fixe!définition}}\footnote{Exemple de coûts fixe: Loyer, Salaire des employées permanents, frais de justice, etc}\cite{defCoutFixeEtVar}, il ne varie pas en fonction du volume d'activité de l'entreprise.
+À l'inverse, les \emph{coûts variables\index{Coûts variables!définition}\footnote{Exemple de coûts variables: Consommation éléctrique dasn une manufacture, salaire des employés temporaires, location d'instances sur Amazon Web Services pour répondre à la demande utilisateur.}\cite{defCoutFixeEtVar}}\ sont proportionnellement liés au volumes d'activité de l'entreprises, plus cette derniéres génère de l'activité, plus ses coûts variables vont augmenter.
+Viens ensuite le tours des coûts d'opportunité\index{Coûts d'opportunité!définition}\footnote{Exemple de coûts d'opportunité: dépots de grantis à la création d'un compte en banque }\cite{defCoutOpp} qui sont un manque à gagner sur l'exploitation de capitale, c'est à dire que dans une situation donnée une somme d'argent à été bloqué ou investit, si ces actifs n'avait pas été bloqué il serait utilisé pour l'essort de l'entreprise. Un cout d'opportunité est donc la différence du résultat de l'action effectué minoré par le gain potentiel d'une autres utilisation de la ressource, c'est donc un coûts purement spéculatif.
+Finalement, les \emph{coûts marginaux\footnote{Exemple de coûts marginaux: frais d'importation, }}\index{Coûts marginaux!définition}, définissent les frais necessaires à la production d'une commande suplémentaire. Il cherche à définir la rentabilité prévisionnelle d'une action donnée. Il est lui aussi purement spéculatif car c'est avant out un indicateurs stratégique.
+\subparagraph{}
+Les coût doivent être estimer de manières précise afin de pouvoir calculer ce que coût un utilisateurs gratuit. Une fois le coût réel d'un utilisateurs gratuit déterminé, il est nécessaire de connaitre le taux de conversion de ses utilisateurs gratuit en utilisateurs payant. Si l'on multiplie ensuite le nombre d'utilisateurs par le taux de conversion qui multiplie la contribution unitaire de chaque utilisateur on obtient une estimations de ses revenue\cite{equationFreemium}.
 
 %%%% synthèse par les équation %%%%%
-\begin{equation}
+\begin{equation}\index{U!définition}
 	U\ =\ Nombre\ d'utilisateur\ gratuit
 \end{equation}
-\begin{equation}
+
+
+\begin{equation}\index{T!définition}
 	T\ =\ Taux\ de\ conversion
 \end{equation}
-\begin{equation}
-	Cu\ =\ Contribution unitaire par utilisateur
+
+
+\begin{equation} \index{Cu!définition}
+	Cu\ =\ Contribution\ unitaire\ moyenne\ par\ utilisateur payant
 \end{equation}
-\begin{equation}
+
+
+\begin{equation}\index{Revenue!définition}
 	U \times T \times Cu\ =\ Revenue
 \end{equation}
 
 Lorsque cet indicateurs est calculé il faut en calculer un second: les couts variables. C'est à dire une estimation du cout total des utilisateurs gratuit. Pour cela rien de plus simple multiplié le nombre de vos utilisateurs gratuit par le cout d'un utilisateurs. Ces utilisateurs ne sont pas des couts fixe car le montant exact de leurs utilisations dépendra du context de l'offre freemium.
 
 %%%%%% synthese equations %%%%%%%
-\begin{equation}
-	Co\ =\ cout\ d'un\ utilisateur\ gratuit
+\begin{equation}\index{Cg!définition}
+	Cg\ =\ cout\ d'un\ utilisateur\ gratuit
 \end{equation}
-\begin{equation}
-	U\ \times\ Co\ =\ Couts\ variables
+
+
+\begin{equation}\index{Couts variables!calcule}
+	U\ \times\ Cg\ =\ Couts\ variables
 \end{equation}
 
 Si en soustrayant aux revenues les coûts variables et que le résultats de l'opération est engendré aux coûts engendré par la création et la distribution du produit alors, théoriquement, le modéle est économiquement viable.
 
 %%%%% synthese equation %%%%%%
 \begin{equation}
-	(Revenue\ -\ Couts variables)\ <\ Couts 
+	C\ =\ Coûts\ fixes\ +\ Couts\ Variables\ +\ Couts\ spéculatifs
+\end{equation}
+\begin{equation}
+	(Revenue\ -\ Couts\ variables)\ <\ C
 \end{equation}
 
 % présentation du modéle freemium happybox
@@ -276,8 +294,8 @@ Le choix du freemium pour Happybox CMS est le résultats de longues discussion a
 Trois offres ont alors vue le jours au seins de l'application:
 
 \begin{center}
-	\begin{tabular}{| l | l | l | l |}
-		Métrique & Offre personel & Offre professionel & Offre agence \\
+	\begin{tabular}{|l|l|l|l|}
+		Métrique & Personnel & Professionel & Agence \\
 		\hline
 		Domaine & sous domaine de happyboxcms.me & domaine personnalisé & domaine personnalisé \\
 		Nombre de projet & 1 & 25 & illimité \\
@@ -291,14 +309,14 @@ Trois offres ont alors vue le jours au seins de l'application:
 
 	\end{tabular}
 \end{center}
-
+\subparagraph{}
 En applicants les équations vue dans les paragraphes précédents aves des chiffres prévisionnel basé sur une \emph{croissance\index{startup!croissance} de la masse des utilisateurs de 4\%\footnote{Croissance minimum hebodmadaire d'une startup afin d'attirer des capitaux issus du \emph{venture capitalisme}} selon Paul Graham fondateur de Y-Combinators. C'est aussi le taux de croissance prévitionnel définie dans le plan d'affaire de DOM Element Inc..} par semaine.
 Spéculons sur un lancement discret en janvier 2014 avec cinquante utilisateurs gratuits trié sur le volet et un taux de conversions faible de 2\% aux vues du cout minimum par contribution unitaire actuel de \$49.99. Ces chiffres sont volontairement faible afin de voire si même avec des indicateurs ne permettant que difficilement d'atteindre les objectifs de rentabilités cela est possible. La profitabilité n'étant pas nécessairement un objectif pour une startup nous verrons pourquoi dans la section sur les mode de financement des startup.
 
 
-%%% PRESENTATION 
-\begin{center}
-	\begin{tabular}{|l||l|l|}
+%%% PRESENTATION
+
+	\begin{tabular}{|l||c|c|c|}
 		Temps & Utilisateurs gratuits & Utilisateurs payant & Cout utilisateurs\footnote{La méthodologie exact de calcule du cout par utilisateurs est présenté en détail dans la section .}\\ %%%% AJOUTER LE NUMERO DE SECTION
 		\hline
 		Janvier 2014 & 50 & 1 & \$0.52 \\
@@ -308,14 +326,13 @@ Spéculons sur un lancement discret en janvier 2014 avec cinquante utilisateurs 
 		Janvier 2016 & 1,994 & 39.88 & \$0.44 \\
 		Juin 2016 & 4,442 & 88.84 & \$0.44 \\
 	\end{tabular}
-	\caption{Projection indicateur Happybox CMS sur 3 ans, 4\% croissance hebdomadaire et un taux de conversion de 0.02 }
-\end{center}
-
-Il est possible de continuer d'appliquer les formules présenter dans la partie précédente afin de dégager une prévision théorique de revenue si le taux de croissance des utilisateurs est continue et que l'offre proposé semble équitable entre pour les utilisateurs et l'entreprise. Les chiffres extraits ne présente pas une solutions extrémement rentable voire même déficitaires lorsque l'on applique les frais fixes
+	
+\subparagraph{}
+Il est possible de continuer d'appliquer les formules présenter dans la partie précédente afin de dégager une prévision théorique de revenue si le taux de croissance des utilisateurs reste stables durant les trois prochaines années en en Juin 2016 Happybox CMS devrait compter 4,442 utilisateurs dont 88.84 payant avec un achat unitaire de \$49.99 on obtiens un revenue de \$4,441.8 auquel il faut retrancher les coûts variables de \$1958.77 afin d'obtenir un résultat d'exploitation de positif de \$2483.03.
 
 %%% PRESENTATION
-\begin{center}
-	\begin{tabular}{| 1*{l} || r | r | r |}
+
+	\begin{tabular}{| 1*{l} || c | c | c |}
 		Temps & Cout Variable & Revenue & Resultat hors frais fixe\\
 		\hline
 		Janvier 2014 & \$26.26 & \$49.99 & + \$23.73\\
@@ -325,9 +342,18 @@ Il est possible de continuer d'appliquer les formules présenter dans la partie 
 		Janvier 2016 & \$881.63 & \$1,993.18 & + \$1111.55\\
 		Juin 2016 & \$1958.77 & \$4,441.8 & + \$2483.03\\
 	\end{tabular}
-	\caption{Projection revenue Happybox CMS, 4\% croissance hebdomadaire et un taux de conversion de 0.02 }
+	
+
+
+\subparagraph{}
+Afin de clarifier ces projections voilà un graphique synthétisants les projections d'Happybox CMS en terme de croissance d'utilisateurs et de flux financiers, de ces derniers sont exclus les investissments, couts fixe, les couts d'opportunité ainsi que les coûts additionels. Pour plus de statistique rendez vous dans les annexes pour une foule de projection. Il est bien-sure evident qu'avec des indicateurs de base\footnote{Taux de croissance utilisateur, taux de conversion, contribution moyenne par utilisateurs payant} plus optimistes les résultats de ces projections seront meilleurs.
+
+\bengin{center}
+	\includegraphics[width=\textwidth]{images/media/chartFreemiumHbCMS.png}
 \end{center}
- 
+
+\paragraph{}%limites
+Un certain nombres de limites sont déjà apparues tout au long de la présentation du modéle freemium. 
 
 % parrallel happybox
 
@@ -337,8 +363,8 @@ Il est possible de continuer d'appliquer les formules présenter dans la partie 
 % - possible grace au coup quasi nulle de la duplication de bien digitale
 % - mais pas que informatique, ex: musique distribution de mp3 gratuit offre premium: fichier de meilleur qualité, vente de support physique edition de collection, billet de concert, ...., nine inch nails album
 
-- On value un utilisateurs gratuit, c'est une source viral de communication, truc trop cool gratuit == truc géniale donc on en cause au pote qui en cause au pote. Effet de buzz rapide ==> plus d'utilisateur + de potentiel payeur
-- Il faut reellement fournir un service géniale dont les utilisateurs ont besoin! Sinon pas d'utilisateurs
+% - On value un utilisateurs gratuit, c'est une source viral de communication, truc trop cool gratuit == truc géniale donc on en cause au pote qui en cause au pote. Effet de buzz rapide ==> plus d'utilisateur + de potentiel payeur
+% - Il faut reellement fournir un service géniale dont les utilisateurs ont besoin! Sinon pas d'utilisateurs
 
 % - taaux de conversion: utilisateur gratuit devenant utilisateur payant
 % - Attention il est necessaire de connaitre exactement la valeur d'un utilisateur gratuit.
@@ -506,7 +532,12 @@ Happybox CMS répond donc à un certain nombre de fonctionnalitées communes à 
 		\end{itemize}
 
 \end{itemize}
+
 		\subsection{Apparte sur le financement des startup}
+
+% http://blogs.wsj.com/accelerators/2013/06/24/steve-blank-the-6-types-of-startups-2/
+		\paragraph{}
+		Selon Steve Blank, il existe six types de startups\cite{typeStartup}:
 
 		% Suply chain
 		% plusieurs type de startup mais la on parle de startup WEB
