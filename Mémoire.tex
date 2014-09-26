@@ -10,6 +10,9 @@
 \usepackage{url}
 \usepackage{tabularx}
 \usepackage{setspace}
+
+\setmainfont{Arial}
+
 \makeindex
 %\usepackage{fontspec}
 %\setmainfont{Arial}
@@ -23,13 +26,13 @@
 \renewcommand\section{\newpage\stdsection}
 
 \begin{document}
-\begin{spacing}{1.5}
+
 
 	\maketitle
 	\tableofcontents
 
 	% TODO: à la toute fin
-
+\begin{spacing}{1.5}
 	\section{Introduction} %3 pages
 
 	% TODO: avant intro et conclusion
@@ -47,7 +50,7 @@ Une startup\cite{theseStartup} est une jeune entreprise. C'est une structure aya
 Dans un premier temps, l'entreprise en elle-même n'est qu'une structure légale offrant une interface avec des stuctures ayant la capacité de financer l'essort du projet. En effet, les plans d'affaire de ces entreprises prévoient généralement des pertes sur les premiers temps de son dévelopement voir pour l'intégralité de son existence. Cela peut sembler incohérent à premier abord mais un écosystème s'est créé autour des startups. Riches particuliers\footnote{Bussiness Angel}, des groupes financiers gérant un fond privé\footnote{venture capital}, concours entrepreunarial créent un flux entrant de capitaux dans cette économie. Ces derniers ont généralement pour objectif de rentabiliser leurs investissements lors de la vente ou de la capitalisation boursière de la startup. Les montants en jeux sont considérables, les investissements ou les ventes de telle sociétés se chiffrent en dizaine, centaine de millier de dollars certain cas allant jusqu'à plusieurs milliards de dollars.
 
 Les perspectives de ces marchés semblent extrémement interessantes mais il faut pondérer ces assertions par le taux d'échec impressionnant des startups. En effet, au bout de 4 ans seul cinquante pourcent des startups semblent encore en activité, ce pourcentage chute drastiquement au bout de dix ans seul vingt-neuf pourcent d'entre elles sont encore en activité.
-Beaucoup de chiffres pourraient être cités mais aux vues de l'aspect encore sauvage de cette économie, il est peu probable que les chiffres reflètent la réalité tumultueuse de ces chasseurs d'or de nouvelle génération. 
+Beaucoup de chiffres pourraient être cités mais aux vues de l'aspect encore sauvage de cette économie, il est peu probable que les chiffres reflètent la réalité tumultueuse de ces chasseurs d'or de nouvelle génération.
 Toute fois les statistiques semblent s'accorder sur une tendance générale: Le taux d'échec des startups est colossal mais les réussites sont spéctaculaires.
 
 La majorité arrêtera par manque de moyens financiers empéchant de mener le projet à maturité. Un certain nombre vivra quelques années au frais du venture capitalism, une petite portion sera achetée par de gros groupes\footnote{ skype par microsoft pour 8,5 milliards de dollars, instagram par facebook pour 1 milliard de dollars,... } et enfin, une infime partie deviendra de larges entreprises\footnote{exemple: facebook, twitter, Google,...} aprés capitalisation.
@@ -204,10 +207,10 @@ Les applications d'écoute de musique\footnote{Spotify, Deezer, Groove Shark, Go
 Le paiement d'un abonnement supprimera publicité et limitation ainsi que l'ajout de fonctionnalités\footnote{Fichier musicaux de meilleurs qualité, vente ou location de titre numérique} comme par exemple, une synchronisation des fichiers sur un appareil afin d'offrir un accés hors ligne. Plusieurs types d'offre payante pourront ainsi être proposés.
 
 %%% offre premium spotify %%%
-\begin{figure}{h!}
-	\includegraphics[width=(\textwidth-1)]{images/media/premiumSpotify.png}
-	\caption{Offre gratuite et offre premium de la plateforme d'ecoute de musique en ligne Spotify}
-\end{figure}
+
+\begin{center}
+	\includegraphics[width=\textwidth]{images/media/premiumSpotify.png}
+\end{center}
 
 \paragraph{} %validité et limite du model
 % citation freemium.org => equations
@@ -222,9 +225,9 @@ Il ne faut surtout pas considérer un utilisateur gratuit comme une perte car un
 
 %%%%% Corrigé jusqu'à ce point %%%%%%%
 
-En proposant un service ayant, aux yeux de l' utilisateur, une réel valeur ajouté qui le pousserai à utiliser réguiliérement on crée une \emph{relation d'approbation} qui à une valeurs bien supérieur à la publicité.
-En effet, si demain la boucherie de mon quartier adopte le modéle freemium en offrant gratuitement ses produits à tout les clients potentiels et offrant un service de charcuterie premium.
-Il est plus que probable que je diffuse l'information auprés de mon réseaux qui le diffusera lui aussi à son réseaux et ainsi de suite jusqu'à atteindre la limite du marché, dans ce cas précis un cout de déplacement supérieur au gain apporter par le produit gratuits.
+En proposant un service ayant, aux yeux de l'utilisateur, une réelle valeur ajoutée qui le pousserait à l'utiliser réguilièrement, on crée une \emph{relation d'approbation} qui a une valeur bien supérieure à la publicité.
+En effet, si demain la boucherie de mon quartier adopte le modèle freemium, elle offrirait gratuitement ses produits à tous les clients potentiels et ferait payer un service de charcuterie premium qui serait optionnel.
+Il est alors plus que probable que je diffuse l'information auprés de mon réseau qui le diffusera lui aussi à son réseau et ainsi de suite jusqu'à atteindre la limite du marché. Dans ce cas précis, le coût de déplacement serait bien supérieur au gain apporté par le produit gratuit.
 Dépenser \$200 d'essence pour obtenir un produit gratuit d'une valeur de quelque dizaine de dollars n'est pas judicieux. Il est toujours envisageable de compter sur une clientéle stupide mais mon expérience du jeux de go m'a appris qu'établir une stratégie basé sur les erreurs potentiels de son adversaire n'est que rarement voir jamais payant.
 Considérer ses futurs clients\footnote{aka utilisateurs gratuits ou leurs réseaux} comme moutons à tondre ne peut être une stratégie payante à long terme même si à court termes de telles méthodes peuvent apporter des recettes.
 \subparagraph{}
@@ -373,6 +376,7 @@ Afin de clarifier ces projections voilà un graphique synthétisants les project
 	\includegraphics[width=\textwidth]{images/media/chartFreemiumHbCMS.png}
 \end{center}
 
+
 % \paragraph{}%limites
 
 % Un certain nombres de limites sont déjà apparues tout au long de la présentation du modéle.
@@ -414,7 +418,7 @@ Afin de clarifier ces projections voilà un graphique synthétisants les project
 
 	% abstract
 \paragraph{}
-Happybox CMS est un logiciel en tant que service\index{SaaS!Happybox CMS}, c'est à dire qu'aucune installation n'est requise pour pouvoir l'utiliser. Il fonctionne sur un modèle client-serveur où le client est une page web dans votre navigateur communiquant avec un Service web, le serveur. Il faut le voir comme une feuille d'acétate qui se dépose sur un nom de domaine existant et permet instantanemment de créer un site web ou d'en éditer le contenu. 
+Happybox CMS est un logiciel en tant que service\index{SaaS!Happybox CMS}, c'est à dire qu'aucune installation n'est requise pour pouvoir l'utiliser. Il fonctionne sur un modèle client-serveur où le client est une page web dans votre navigateur communiquant avec un Service web, le serveur. Il faut le voir comme une feuille d'acétate qui se dépose sur un nom de domaine existant et permet instantanemment de créer un site web ou d'en éditer le contenu.
 
 % Dom Element Inc c'est une stratup donc orienter sur 1 seul et unique produit
 %\subsubsection{Front end}
@@ -487,8 +491,8 @@ De plus chaque client ce vois allouer un espaces dédié sur nos serveurs. Il re
 	\caption{Differentes options du panneau d'administration et différents forfait proposé}
 \end{center}
 
-	
-	\subsection{Étude de l'écosystéme des startups}		
+
+	\subsection{Étude de l'écosystéme des startups}
 
 % http://blogs.wsj.com/accelerators/2013/06/24/steve-blank-the-6-types-of-startups-2/
 		\paragraph{Présentation de 6 principaux\cite{typeStartup} types de startups}
@@ -513,11 +517,11 @@ C'est un modéles particulièrement adapté à des missions humanitaires, des pr
 Ces structures n'ont qu'un seul objectif: créer un produit pouvant être vendue le plus vite possible et le plus chères possible. Majoritairement les fondateurs de telles structures sont expérimenter et ont un domaine d'expertise poussé\footnote{Quel qu'en soit le domaine.} leurs permettant s d'analyser le marché et d'y trouver des niches d'innovations. Ces niches doivent être exploiter rapidement afin d'arriver avant que la concurrence ne ce soit créer. Proposant ainsi un produit ayant une valeurs ajouté importante car unique ou technologiquement supérieur à ses concurents. Une fois qu'ils ont vendue leur société pour une somme généralement comprise entre \$500,000 à \$50,000,000, ces derniers cherchent une nouvelles pétites d'innovation qu'ils pourront financer avec une partie de la vente de la compagnie précédente.
 
 	%%%%%% IMAGES %%%%%%
-			\subparagraph{} %scalable % google, facebook, doyourfreemi
+			\subparagraph{Les évolutives} %scalable % google, facebook, doyourfreemi
 Finalement viennent les statups conçue dans leurs essences pour l'évolutivité. Ces compagnie visent généralement des taux de croissance extrémement rapide et nécessite de fond important permettant de soutenir leurs besoin de croissance, mais pas d'inquiétude des fond d'investissement géréer investisseurs appelé \emph{venture capitale\footnote{Capitalisme d'aventure}}. La majorité de ces startup mourrira avant de connaitre le destin glorieux et porteur de millionaire du mythe de la startup. Facebook, google, twitter sont des exemples de stratup ayant basé leurs ayant basé leur stratégie sur l'adaptabilité et l'évolutivité sont devenue des méga-corporations internationale ne se limitant plus à leurs domaine d'origine.
 
 		\paragraph{La chaine d'approvisionements }
-	
+
 L'économie traditionnel peux être définie par sa chaine de distribution des biens, dans ce modéles un \emph{fournisseur/créateur} vend sa production à une \{plateforme de centralisation des biens} qui ce chargera ensuite de les distribuer et de les vendres au consommateur. Le concept est simple acheter à moindre pour ensuite revendre à un prix supérieur ceci permettant de dégager une \emph{recette} qui dois être supérieur à la somme coût. Si la recette est supérieur aux coûts alors l'opération génére des bénéfices qui peuvent être réutiliser dans l'entreprise créant ainsi un cercle vertueux d'investissement.
 
 D'autre modéles d'approvisionnement propose d'offrir un service gratuit aux consommateurs tout en achetant les biens qui leurs sont distribué.
@@ -533,7 +537,7 @@ Une chaine de distribution différente c'est alors créer autour de l'écosysté
 
 		\paragraph{Aparte sur financement des startup}
 
-Il deux grand type de recoltes de fond pour une startup: les subventions directe et les subevention indirectes. 
+Il deux grand type de recoltes de fond pour une startup: les subventions directe et les subevention indirectes.
 Les subventions directes sont obtenues via des bourses, lors de la participation à des concours entrepreunarial DOM Element à ainsi récolté entre avril 2013 et fevrier 2014 \$40,000 afin de dévelloper la compagnie. Il ne s'agit pas là de pret ou d'achat de participation au capital mais juste des fond données sans volonté de retour sur investissement. Beaucoup d'entreprise finance le débuts de leurs ctivité de cette maniére à Montreal.
 
 \subparagraph{}
@@ -544,13 +548,13 @@ Les premiers investissements privé sont généralement des fond provenant d'ang
 Aprés ces premiers financement, si les résultats sont au rendez-vous une startup cherchera de l'investissement de série A , B ou AAA\emph{Réserver au compagnie ayant fait leurs preuves.}. La différence entre ces trois types porte sur les montants proposé par l'investisseur allant de plusieurs centaine de milliers de dollars à plusieurs dizaine de million de dollars.
 
 \subparagraph{}
-La derniéres étapes est généralement la capitalisation aprés plusieurs rondes de financements mais cette pratique coute chére et la procédure est extremement longue. Elle implique d'engager les services d'une banque d'affaire qui définira la premiéres offre publique de valuation c'est dire un nombre définis d'action à un prix fixé à l'avance ainsi qu'un pamphlet de plusieurs pages révélant tout les détails de l'entreprise. Cette derniéres deviendra publique le jour de son IPO\footnote{ Initial Public Offering}. La banque en charge de l'introduction propose ensuite à des groupes d'investissements cette offre et lorsque la banque à réunis assez de réservation pour l'introductions en bourse, alors seulement la date d'introduction sera annoncé.  Le jours même la banque achetera l'ntegralité des actions puis les redistribueras à leurs nouveaus propriétaires. 
+La derniéres étapes est généralement la capitalisation aprés plusieurs rondes de financements mais cette pratique coute chére et la procédure est extremement longue. Elle implique d'engager les services d'une banque d'affaire qui définira la premiéres offre publique de valuation c'est dire un nombre définis d'action à un prix fixé à l'avance ainsi qu'un pamphlet de plusieurs pages révélant tout les détails de l'entreprise. Cette derniéres deviendra publique le jour de son IPO\footnote{ Initial Public Offering}. La banque en charge de l'introduction propose ensuite à des groupes d'investissements cette offre et lorsque la banque à réunis assez de réservation pour l'introductions en bourse, alors seulement la date d'introduction sera annoncé.  Le jours même la banque achetera l'ntegralité des actions puis les redistribueras à leurs nouveaus propriétaires.
 Le processus est trés complexe et ne concerne qu'une infime fractions des startups.
 
 \subparagraph{}
 C'est une économie extrémement spéculative générant des sommes colossales à partir de peu. Historiquement, les bulles spéculatives ont tendance à exploser lorsque la valeurs des actifs en circulation sur le marché est supérieurs aux nombre d'actif présents. En 1929 l'économie mondiale c'est éffondré lorsque le marché réel de l'argent n'est plus capable de soutenir la croissance due aux spéculations. C'est donc un jeux potentiellement trés dangereux pour l'economie mondiale bien qu'a l'heure la tendances sembles inverse. Cette économie semble être encore une des rare capable de généré de la croissance aux milieux de pays occidentaux à croissance quasi nulle.
 
-%%%%% SCHËMA RËCAPITULATIF DU CYCLE DE VIE D"UNE Startup 
+%%%%% SCHËMA RËCAPITULATIF DU CYCLE DE VIE D"UNE Startup
 
 %%%% FINACEMENT HB %%%%%
 %Avril 2013 Fondation Montréal Inc. (12 000)
@@ -564,7 +568,7 @@ C'est une économie extrémement spéculative générant des sommes colossales �
 	\includegraphics[width=\textwidth]{images/media/concurenceHBCMS}
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%
-		
+
 		\paragraph{Critique}
 		% VC et angel fournisseur d'un bien précieux du pognon
 		% une startup meurt ou multiplie les capitaux
@@ -649,7 +653,9 @@ Le schéma ci dessous illustre ces explications:
 La frontière entre ces différents types d'infrastructure est parfois mince voire inexistante. Par expemle, la plateforme web permettant de gérer ses infrastructures virtuelles chez n'importe quel fournisseur d'infrastructure comme un service\footnote{IaaS} n'est autre qu'un logiciel comme un service\footnote{SaaS}. De plus, les plateformes IaaS fournissent généralement une solution de plateforme comme une service\footnote{PaaS}. Google app Engine est une plateforme PaaS fournis par google et inclus dans l'offre Google Cloud, de la même façon Amazon Web Service propose Opswork.
 
 De fait, ces concepts restent trés théoriques et leurs implémentations ne sont jamais une vision absolue du concept. Il est donc important de bien comprendre ces services afin de définir le potentiel de chaque plateforme d'hébergement et d'en exploiter au maximum les fonctionnalitées.
-Pour cela, nous utiliserons sept indicateurs permettant, selon mon expérience, de comparer la pertinence des différentes solutions présente sur le marché. C'est indicateurs sont les suivants: 
+
+%%%% miteux
+Pour cela, nous utiliserons sept indicateurs permettant, selon mon expérience, de comparer la pertinence des différentes solutions présente sur le marché. C'est indicateurs sont les suivants:
 
 \begin{description}
 
@@ -668,67 +674,171 @@ Pour cela, nous utiliserons sept indicateurs permettant, selon mon expérience, 
 	\item[Cout]
 		Le nerf de la guerre qu'il faut savoir gérer pour ne pas ce retrouver sans éléctricité pour ses serveurs.
 
-	\item[Compétence nécessaire]
+	\item[Barriéres technologique]
 		Besoin en formation ou en personnel qualifié.
 
-	\item[Performances techniques]
+	\item[Pertinence techniques]
 		Puissance de calcule, mémoire, espace de stockage, outils innovant.
 
 \end{description}
 
+%%%%% miteux
 %%%%%%%%%%%%% METHODOLOGIE %%%%%%%
+Définir des indicateurs ne suffit pas à élaborer une stratégie. Les chiffres sont trop maléables pour pouvoir refleter la réalité. De plus, une projection linéaire ne peut être juste. Il faudrait au minimum l'indexer sur l'inflation afin d'appliquer une variance sur les projections pour qu'elles soit en adéquation avec l'économie dans laquel la structure évolue.
 
+Il est tout même possible d'accorder 
+
+Si tout ce passe accordément au modèle l'acquistion des utilisteurs est exponentiel. Les ressources nécessaire pour servir un volume de clients croissant de manière exponentiel est aussi théoriquement proportionelle. Par extrapolation les coûts suivent l'evolution
+
+
+ même si les couts sont faibles, ils ne sont toujours pas nuls. 
+
+
+Il y a donc une limite mathématique à la réduction des couts par utilisateurs. C'est un palier annonçant la fin de la croissances des récettes et l'augmentation des couts. Tant que les coût par utilisateurs baisse, la startup croit facilement. C'est un peu comme dans l'echange de monnaie, les marges réaliser grace à la dépreciation d'une des monnaie par rapport à une autre créer des profits. 
+Par exemple: si aujourd'hui, je paie 800 euros pour obtenire 1000 dollars canadien et quelque jours plus tard pour ces même 1000 dollars je ne paie que 600 euros. Je n'ai pas fait de recette mais limité les pertes. Pour pouvoir tirer profit d'un achat, il suffit de le revendre pour une somme supérieurs au montant d'achats aditionné aux frais. 
+Pour cela, il suffit selon Adam Smith d'attendre que la demande soit supérieur l'offre. \emph{La main invisible de l'économie}  étant pour réguler le marché, c'est à dire que selon lui la loi du marché finis toujours par s'imposer et le réguler.
+
+Si rien n'est fait, le taux peut devenir négatif alors chaque utilisateurs deviens une perte nette qui s'accroit de manière exponentiel, à ce moment la seul choses restant à faire c'est de trouver des capitaux extrémement rapidement afin d'éviter la faillite. 
+
+Tant que les flux d'investissement ne se tarrissens ppas et que l'entreprise n'as pas fait faillite tout est encore possible.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Ces indicateurs, devrait à eux seuls permettre de définir notre politique de gouvernances. Ils sont, en quelques, sorte les indicateurs vitaux d'un systéme informatique.
 
 		% Méthodes habituellement utilisé pour une situation présentant des similitude
 		\section{méthodes habituelles} % 5 pages
 
 			\subsection{Les serveurs dans le placard ou dans la cave}
 
-hébergment à la maison peu dispendieux. 
+Cette solution permet d'être le seul et unique souverain de son infrastructure et de ses données. 
 
-Internet de merde
-électricité de merde
-connard de gosse qui débranche au milieu d'une maj ou qui télecharge du pron en 4k
+Il est aussi impossible de fournir un service en haute disponibilité, il suffit d'une panne de courant ou la terrible femme de ménage débrancheuse de serveurs. 
+De plus, l'implémentation de mesure garantissant l'accès physique est impossible à mettre en place à moins de posséder de moyen financier important ou de vivre préalablement dans un bunker. Ce qui ne serait peut être pas suffisant. Pour Kevin Mitnick\footnote{Hacker expert en ingénérie social emprisonné à l'âge de 15 pour avoir pénétré des dizaines d'ordinateurs. Il à passé 4 ans et 8 mois de sa peine en isolement. Selon Mitnick, les officiers de justice aurait convaincue le juge qu'il pourrait déclencher une guerre atomique en sifflant dans un téléphone.}, il n'existe pas de machine innaccessible, même un hôtes isolé au fond d'un bunker est accessible car il ne suffit que de convaincre un garde de le brancher aux réseaux ou plus sobrement lui donner accés à la machine.
 
-sécurité physique aui pu du cul généralement.
-surcout d'electricité
-haute dispo impossible 
+C'est une solution idéale pour un hobbyiste ou un groupe de passioné car elle offre la pus grande liberté. Chacun met ce qu'il veux dans son placard. En revanche, les compétences nécessaire au maintiens de l'infrastructure sont trés importante. Il faut savoir changer/réparer du materiel brisé ou usé mais ce n'est pas tout car tout est du fait de la personne gérant son infrastructure. 
+
+Cela correspond à représentation de l'imagimaire collectif des startups informatique florrissant dans les garages de la sylicon valley des années soixante-dix. 
+
+%%%%% TABLEAU AVEC LES METRIQUE %%%%
+\begin{center}
+	\begin{tabular}{| l | c | }
+		Souveraineté & il est difficilement possible d'être plus souverains que dans ce cas de figure. \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Sécurité & Obtenir un systémes sécuriser demande de grande compétences, des moyen important particulièrement pour la sécurisation des accès physique. Une fois en place, ce peut devenir un véritable bastion technologique.\\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Flexibilité & En un sens ces infrastructres ne peuvent répondre à une augmentation de demande trop importante. Commander et installer un serveurs n'est pas instantané. \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Consistence & \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Coût & \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Barriéres technologique & Installer son propre placard à serveurs \\
+	\end{tabular}
+\end{center}
 
 			\subsection{Création de centre de données et cloud privé}
-c'est chére et chiant et si c'est pas chére c'pire
-Faut ce taper la sécurité physique + logiciel ainsi uqe l'entretiens des appareil réseaux et compute
 
-Ecologiquement difficile à chiffrer pas d'argus de la mort des non humains.
+% c'est chére et chiant et si c'est pas chére c'pire
+% Faut ce taper la sécurité physique + logiciel ainsi uqe l'entretiens des appareil réseaux et compute
 
-Compétence ++
+% Véritable haute dispo extremement chere car min 2 datacenter pour PRA
 
-si compténce et pognons alors ça tue tout !!!!!!
+% Ecologiquement difficile à chiffrer pas d'argus de la mort des non humains.
 
-projection des couts à 10 ans puissance pour de calcule
-			
-			\subsection{Engin PaaS, ça puT(e)}
-Incompatible dasn l'état d'happybox à cause la persistance des données 
-En plus c'est chére.
+% Compétence +++++
+
+% si compténce et pognons alors ça tue tout !!!!!!
+
+% projection des couts à 10 ans puissance pour de calcule
+
+Calculer le cout exact de la construction et de l'exploitation d'un centre de données privée et aù delà de mes compétences. Les facteurs de coûts son extrèments nombreux. Beaucoup d'entreprise une estimations inexacte de leurs infocentre en raison la fragmentation des centres de dépendances. Il facile de négliger le poid d'un super-calculateur\footnote{trouver un article sur biogemma si possible}au moment la construction du batiment, ce qui arrive ensuite est simple: l'ordinateurs pesant plusieurs tonnes traverse le sol pour aller décorer l'étage inférieur.
+
+La mise en place d'une telle structure demande énormément de compétence aussi diverse que varié. Le comptable est tout aussi important que le directeur des services d'informations car sans lui il serait impossible d'exploiter financiérement la plateforme. 
+
+Tout est à faire du sytéme de refroidissement à la sécurité du réseaux en passant par l'achat, l'installation et la configuration du matériel\footnote{Tout les cables doivent être branché et si possible au bon endroit.}. 
+
+Si il est dans les prérogative du centre de fournir un service de haute disponibilité, il sera necessaire de construire deux site physiquement distinct pouvant ce relayer en cas de panne afin d'offrir un plan de retour ou de non disruption de l'activité efficient\footnote{L'efficience sera calculer en temps de présence disponibilité des ressources.}. 
+
+%%%% REF datacenter google
+Il faut aussi prendre en compte l'impact du centre sur l'environnement. Ce dernier peut être négatif ou positif. Par exemple le data center de google en Finlande récupère les eaux sales des villes environnante. Elles sont ensuite utilisé dans le système de refroidissement, traité puis renvoyer potable dans le circuit de consommation ou rejeter \emph{froide} dans le golf d'amina.
+
+%%%%% TABLEAU AVEC LES METRIQUE %%%%
+\begin{center}
+	\begin{tabular}{| l | c | }
+		Souveraineté & \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Sécurité & \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Flexibilité & \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Consistence & \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Coût & \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Barriéres technologique & \\
+	\end{tabular}
+\end{center}
+
+			\subsection{Engin PaaS}
+
+
+Incompatible dasn l'état d'happybox à cause la persistance des données
+
+En plus c'est chére. CPU partagé mais ram allouer entiérement au container. On ne pense pas payer les couts des ressources os necessaire au fonctionnement du PaaS mais evidement tu paie plein taro mon con!
+
+Ultra scalable. mise à l'échelle dynamique en fonction de la configuration.
+
+Persistence des données problématique.
 
 projection des cout à 10 ans pour puissance calcule équivalente
 
 externalisation peux entrainer une dépendence technologique néfaste.
 
+%%%%% TABLEAU AVEC LES METRIQUE %%%%
+\begin{center}
+	\begin{tabular}{| l | c | }
+		Souveraineté & \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Sécurité & \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Flexibilité & \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Consistence & \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Coût & \\
+	\end{tabular}
+	\begin{tabular}{| l | c | }
+		Barriéres technologique & \\
+	\end{tabular}
+\end{center}
+
 
 			\subsection{Consistence des infrastructures et méthode de déploiement}
 
-Les infra sont de plus en plus importante. Il n'y a pas plus de sysadmin => c'est la ouaille. 
-Impossible de garantir que sur 1000 servuers configuré par un seul individue et qu'il n'y aura pas d'erreur. ZOB!
+La lois de Moore institut que la puissance de calcul des systèmes d'information double tout les six mois mais que ses administrateurs ne semble sujet à cette multiplication spontané. 
+
+Les infra sont de plus en plus importante. Il n'y a pas plus de sysadmin => c'est la ouaille.
+Impossible de garantir que sur 1000 servers configuré par un seul individue et qu'il n'y aura pas d'erreur. ZOB!
 Serveurs ma lconfiguré c'est serveurs vulnérables. Si infra importante difficle de troublshoot parce qu'il faut d'abord trouver.
 
 Mais y a moyen de moyenner et on vois ça aprés. cf provisionning
 
 		% Exposé des décisions prise et des interventions menée par le stagiare pour résoudre le problème
-		\section{Une infrastructure à batis dans le nuage.}	 % 15 pages
+\section{Une infrastructure à batis dans le nuage.}	 % 15 pages
 
 		Petite intro bien sympa présentant la méthodes suivis:
 			- stat
@@ -736,12 +846,15 @@ Mais y a moyen de moyenner et on vois ça aprés. cf provisionning
 			- stat
 			- action
 			- sieste
+			cf linux bible
 
-			\subsection{Estimation et calcule prévisionnel des coûts}
+	\subsection{Estimation, statistique et calcule prévisionnel des coûts d'exploitation de l'infra} % 5 pages
 
 				% faire plusieurs itération faut vendre du vent et tomber des pages d
 				% parler de la limite mathématique de l'équation
-collecte des info via des plugin custom munin + 
+
+Outils en ligne: http://www.cloudorado.com, http://cloudpricecalculator.com
+collecte des info via des plugin custom munin +
 
 Premiéres vague de stat et de calcule métrique évidente
 
@@ -756,12 +869,14 @@ Vague d'optimisations S3, stockage extrement chére
 
 troisiéme et dernieres vague d'estimation
 
+Comparaison entre les plateforme et cout difficile à établir
+
 Proposition de réduction drastique en utilisant dropbox en CDN archi pour 50\$ mois
 
 Opswork essayer l'auto-citation
 
 
-			\subsection{Déploiement et consistence}
+\subsection{Déploiement et consistence}
 
 				% Git
 				% Opswork Chef
@@ -772,19 +887,26 @@ cout d'un techos à l'heure à montreal \$70 à \$120 citer les tarif de dan
 
 GITlab, JIRA Ah si je peux définir des process de developement!!!!!
 
-			\subsection{Sécurité, souveraineté et performance}
+
+Procedure restauration hermes ou installation munin.... %crafter le doc
+
+	\subsection{Sécurité, souveraineté et performance}
 
 Nginx vs apache bench mark de distribution de fichier statique.
 
-Procedure restauration hermes ou installation munin....
+Gitlab
 
 réaction de AWS parfois surprenante via API ou interface Web => des risque de redémarrage d'instance ec2 ou RDS laissant le service en carafe. Trop rare pour automatisation mais suffisement casse cul quand ça arrive pour y perde sa nuit de sommeil.
+
+Best practice linux bible
+
 
 
 		% Démonstration d’une originalité dans l’élaboration et la mise en œuvre de la solution
 	\section{Yarrbox le seul est unique vaiseaux des pirates de la boite.} % 5 page
-		
-Mise en place de jira et devellopement de process. Infra ne nécessitant aucune présence physique donc startup ++ ou on vas fumer des joint avec les pote pis on code jusqu'a ce que segmentation fault s'en suive.
+
+Mise en place de jira et devellopement de process. 
+Infra ne nécessitant aucune présence physique donc startup ++ ou on vas fumer des joint avec les pote pis on code jusqu'a ce que segmentation fault s'en suive.
 
 Flexibilité ce qui ne semblait pas évidenta avec un produits aussi complet et complexe qu'happybox CMS. Opswork et plein de scripts dans tout les sens
 
@@ -796,9 +918,9 @@ Flexibilité ce qui ne semblait pas évidenta avec un produits aussi complet et 
 
 seul moyen est projections puis comparaison avec les fait
 
-Peu dispendieuse bien que vrais lors de la mise en place. Depuis l'offre à changer, les serveurs que nous utilisions sont plus puissants 
+Peu dispendieuse bien que vrais lors de la mise en place. Depuis l'offre à changer, les serveurs que nous utilisions sont moins puissants que la gnenération actuel burst de CPU en plus.
 
-			Table T1.micro VS T2.micro le batlle des titans nain 
+			Table T1.micro VS T2.micro le batlle des titans nain
 
 Conversion de danny à linux mint mistifier du pinguin
 
@@ -807,14 +929,20 @@ Archi mi-pour les devs sans moi les infra tournerons encore masi pas aussi bien.
 proposition de modele hybrid alliant AWS à une autre solutions et projeter
 
 
+
+
 		% Réflexion sur le stage et le mémoire
 	\section{Autoévaluation} % 2 pages
 
-Beaucoup appris économie à forte croissance. 
-Mais si à refaire ce serait encore plus simple et moins chéres. 
+Beaucoup appris économie à forte croissance.
+Mais si à refaire ce serait encore plus simple et moins chéres.
 normale  car loi  de moore.
 
-Le chemins sera encore long avant de devnir un magiciens du kernel mais les perspective de ce monde, coté passioné et fou. L'argent des fundings c'est le trucs chiant
+Le chemins sera encore long avant de devnir un magiciens du kernel mais les perspective de ce monde, coté passioné et fou. L'argent des fundings c'est le trucs chiant.
+
+Avec du recule sla solution nést plus adapté il faudrait penser une alternative.
+
+Beaucoup expérimentation => cool et rare
 
 	\section{Conclusion} % 2 pages
 
@@ -832,7 +960,9 @@ Le chemins sera encore long avant de devnir un magiciens du kernel mais les pers
 	\section{Remerciements}
 
 		Mon amoureuse je t'aime et sans toi rien ne serait possible
-		
+
+		Merci à Danny et à Guillaume pour m'avoir préter leurs jouet
+
 		Un peu ma famille qui à filer le blé à supinfo
 
 		Les connards de potes
@@ -841,7 +971,7 @@ Le chemins sera encore long avant de devnir un magiciens du kernel mais les pers
 
 
 	\appendix
-	\section{Exemples de pages Happybox}
+	\section{Exemples de pages Happybox et capture de l'application}
 		% partir à la chasse et faire des screen full page
 	\section{Plan freemium}
 		% include pdf
