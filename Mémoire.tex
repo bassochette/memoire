@@ -668,9 +668,6 @@ Pour cela, nous utiliserons sept indicateurs permettant, selon mon expérience, 
 	\item[Flexibilité]
 		Changer, ce transformer, s'adapter aux besoins des utilisateurs.
 
-	\item[Consistence]
-		Garantir la configuration, les mises à jours.
-
 	\item[Cout]
 		Le nerf de la guerre qu'il faut savoir gérer pour ne pas ce retrouver sans éléctricité pour ses serveurs.
 
@@ -731,7 +728,7 @@ Cela correspond à représentation de l'imagimaire collectif des startups inform
 		Flexibilité & En un sens ces infrastructres ne peuvent répondre à une augmentation de demande trop importante. Commander et installer un serveurs n'est pas instantané. \\
 	\end{tabular}
 	\begin{tabular}{| l | c | }
-		Consistence & \\
+		Pertinence techniques & \\
 	\end{tabular}
 	\begin{tabular}{| l | c | }
 		Coût & \\
@@ -756,7 +753,7 @@ Cela correspond à représentation de l'imagimaire collectif des startups inform
 
 % projection des couts à 10 ans puissance pour de calcule
 
-Calculer le cout exact de la construction et de l'exploitation d'un centre de données privée et aù delà de mes compétences. Les facteurs de coûts son extrèments nombreux. Beaucoup d'entreprise une estimations inexacte de leurs infocentre en raison la fragmentation des centres de dépendances. Il facile de négliger le poid d'un super-calculateur\footnote{trouver un article sur biogemma si possible}au moment la construction du batiment, ce qui arrive ensuite est simple: l'ordinateurs pesant plusieurs tonnes traverse le sol pour aller décorer l'étage inférieur.
+Calculer le cout exact de la construction et de l'exploitation d'un centre de données privée et aù delà de mes compétences. Les facteurs de coûts son extrèmements nombreux. Beaucoup d'entreprise une estimations inexacte de leurs infocentre en raison la fragmentation des centres de dépendances. Il st facile de négliger le poid d'un super-calculateur\footnote{trouver un article sur biogemma si possible}au moment la construction du batiment, ce qui arrive ensuite est simple: l'ordinateurs pesant plusieurs tonnes traverse le sol pour aller décorer l'étage inférieur.
 
 La mise en place d'une telle structure demande énormément de compétence aussi diverse que varié. Le comptable est tout aussi important que le directeur des services d'informations car sans lui il serait impossible d'exploiter financiérement la plateforme. 
 
@@ -770,135 +767,163 @@ Il faut aussi prendre en compte l'impact du centre sur l'environnement. Ce derni
 %%%%% TABLEAU AVEC LES METRIQUE %%%%
 \begin{center}
 	\begin{tabular}{| l | c | }
-		Souveraineté & \\
+		Souveraineté &  l'exploitant étant en charge l"infrastructure il en a donc un controle total \\ 
 	\end{tabular}
 	\begin{tabular}{| l | c | }
-		Sécurité & \\
+		Sécurité & mise en place de controle d'accés physique et tout est à faire. \\
 	\end{tabular}
 	\begin{tabular}{| l | c | }
-		Flexibilité & \\
+		Flexibilité & Les importants coûts d'exploitation demande une exploitation a long termes pour le rentabiliser.  \\
 	\end{tabular}
 	\begin{tabular}{| l | c | }
-		Consistence & \\
+		Pertinence téchnologique & c'est une solutions adaptable aux grosses infrastructures mais qui une fois installer ne sont pas toujours évolutive aisément. \\
 	\end{tabular}
 	\begin{tabular}{| l | c | }
-		Coût & \\
+		Coût & ils sont très important et compplexe à évaluer avec des temps d'amortissement long.\\
 	\end{tabular}
 	\begin{tabular}{| l | c | }
-		Barriéres technologique & \\
+		Barriéres technologique & Le recours à de nombreux experts est nécessaire afin de mener à bien la création du centre de données. Un équipe d'ingénieur est des techniciens sera nécessaire à la maintenance. \\
 	\end{tabular}
 \end{center}
 
 			\subsection{Engin PaaS}
 
+Ils s'agit de plateforme d'herbergement virtualisé de nouvelle génération.  Bien que définie plus haut je me permet de faire un petit rapppel sur le PaaS. Ces structures proposent d'héberger les sources de votre logiciel le client déchargeant de la gestion de systèmes.
+%Incompatible dasn l'état d'happybox à cause la persistance des données
 
-Incompatible dasn l'état d'happybox à cause la persistance des données
+Les ressources proposé sont souvent dispendieuse et sont soumise à une limitation sur le nombres de languages implémenté par la plateforme.
 
-En plus c'est chére. CPU partagé mais ram allouer entiérement au container. On ne pense pas payer les couts des ressources os necessaire au fonctionnement du PaaS mais evidement tu paie plein taro mon con!
+Ce sont des plateforme offrant le meilleur taux d'évolutivité et de réponse pour utilisateurs, la plateforme fournira exactement les ressources dont l'application à besoin.
 
-Ultra scalable. mise à l'échelle dynamique en fonction de la configuration.
+Le véritable aspect des ce type des services est l'absence de pertinence de donée autrement que dans une base de donnée.
 
-Persistence des données problématique.
-
-projection des cout à 10 ans pour puissance calcule équivalente
-
-externalisation peux entrainer une dépendence technologique néfaste.
+Finalement l'externalisation peux entrainer une dépendence technologique néfaste et des situatiions ou l'hébergeur de donée pourrais prendre en otage le client.
 
 %%%%% TABLEAU AVEC LES METRIQUE %%%%
 \begin{center}
 	\begin{tabular}{| l | c | }
-		Souveraineté & \\
+		Souveraineté & Faible voire nul\\
 	\end{tabular}
 	\begin{tabular}{| l | c | }
-		Sécurité & \\
+		Sécurité & Gérer de manière logiciel.\\
 	\end{tabular}
 	\begin{tabular}{| l | c | }
-		Flexibilité & \\
+		Flexibilité & C'est l'évolution incarné, augmenter ou réduire la puissance de distribution peux même être gérer par la plateforme.\\
 	\end{tabular}
 	\begin{tabular}{| l | c | }
-		Consistence & \\
+		Pertinence techniques & permet de répondre à une énorme demande très rapidement.\\
 	\end{tabular}
 	\begin{tabular}{| l | c | }
-		Coût & \\
+		Coût & Proportionnel à la consommation de ressources.\\
 	\end{tabular}
 	\begin{tabular}{| l | c | }
-		Barriéres technologique & \\
+		Barriéres technologique &  extremement faible\\
 	\end{tabular}
 \end{center}
 
 
 			\subsection{Consistence des infrastructures et méthode de déploiement}
 
-La lois de Moore institut que la puissance de calcul des systèmes d'information double tout les six mois mais que ses administrateurs ne semble sujet à cette multiplication spontané. 
+La lois de Moore institut que la puissance de calcul des systèmes d'information double tout les six mois mais que ses administrateurs ne semble sujet à cette multiplication spontané. Du coup infrastructures acceuil de plus en plus d'hôte au sein de leur ferme mais le personnel n'augmente pas toujours à la même célérité. 
 
-Les infra sont de plus en plus importante. Il n'y a pas plus de sysadmin => c'est la ouaille.
-Impossible de garantir que sur 1000 servers configuré par un seul individue et qu'il n'y aura pas d'erreur. ZOB!
-Serveurs ma lconfiguré c'est serveurs vulnérables. Si infra importante difficle de troublshoot parce qu'il faut d'abord trouver.
+Des outils de gestion de configuration distribué ont vue le jours pour répondre à la forte hausse de la demande. Ils ce composent souvent d'un tiers local sur la machine à configurer et un tiers distant gérant la distribution des configurations.
 
-Mais y a moyen de moyenner et on vois ça aprés. cf provisionning
+Ils permettent de garantir une uniformité\footnote{consistence} de déploiemet et de configuration par unité de sens définie par le dévellopeur. Ceci permet d'éviter les longue séance recherche d'incident au milieux d'un centre de données.
+
+Cette gestion des configurations est alliés à un outils de gestion de code sources afin de proposer une solution intégrant déploiement applicatif et mise à jours logiciel. Plus de détails seront apporté à ce sujet dans la partie suivante.
+
+%Mais y a moyen de moyenner et on vois ça aprés. cf provisionning
 
 		% Exposé des décisions prise et des interventions menée par le stagiare pour résoudre le problème
 \section{Une infrastructure à batis dans le nuage.}	 % 15 pages
 
-		Petite intro bien sympa présentant la méthodes suivis:
-			- stat
-			- action
-			- stat
-			- action
-			- sieste
-			cf linux bible
+		% Petite intro bien sympa présentant la méthodes suivis:
+		% 	- stat
+		% 	- action
+		% 	- stat
+		% 	- action
+		% 	- sieste
+		% 	cf linux bibl
 
-	\subsection{Estimation, statistique et calcule prévisionnel des coûts d'exploitation de l'infra} % 5 pages
+	\subsection{création de l'infra} % 5 pages
 
 				% faire plusieurs itération faut vendre du vent et tomber des pages d
 				% parler de la limite mathématique de l'équation
+Une de mes première mission au sein de DOM Element Inc à été de définir les besoins en hébergement de la solution. Pour cela il à fallut commencer par définir exactement le fonctionnement de HappyBox CMS.
 
-Outils en ligne: http://www.cloudorado.com, http://cloudpricecalculator.com
-collecte des info via des plugin custom munin +
+\begin{center}
+	\includegraphics[width=\textwidth]{images/media/fonctionnementHB.png}
+\end{center}
 
-Premiéres vague de stat et de calcule métrique évidente
+L'architecture minimale necessaire au fonctionnement de Happybox CMS nécessite en premier lieu un serveur web pour héberger les données des utilisateurs. Une base de donnée gérant les permissions et permettant de coordonnée l'ensemble des opérations. Le dernier élément est un serveur permettant d'heberger l'API DOM Element Inc.. 
 
-Tableau 1 cout / perf
-analyse
-Erreur EBS
+Chaque élément a put être installer sur des serveurs séparé mais il est aussi possible de tous les gérer sur un seul hôte bien que cette solution ne nous à pas paru pertinente. En effet, en terme d'évolutivité cette solutions lie les clients à une instance virtuelle ou est gérer localement. 
+Si les ressoures de ce derniers viennent à manquer il faudra recréer un nouvel hôte et ré-installer et configurer chaque service. En cas d'erreur sur e serveur rendant innacessible ce dernier, les clients hébergé dessus n'auront plus accès au service.
+Il a été décider avant mon arrivé de séparer ces éléments en trois tiers distints: serveurs client, API et bases de données.
 
-Seconde vague de stat avec BP et oublier un couts fourbe type load balancer, démarage des infra
+La gestion des bases de donées étant fait au sein du service \emph{Relational Database Services} proposé par Amazon Web Services et offrant un moteur de base de données relationel hébergé. Cette solution nous à permis de simplifier la gestion de l'infrastrcture en externalisant les opérations de maintiens des bases bien que cette assetion ne soit pas toujours juste aux vues des erreurs ques nous avons rencontrer. En juillet, ce deniers à entrainé un arret de services pour une durée de 2 jours. Aprés investigation, nous avons découvert que l'instance de base de donées avait été redémarré par l'agent AWS et n'a pas réussit à redmémarrer. En conséquences, les sites créer par les utilisateurs était toujours accessible mais l'inscription et l'accès au logiciel HappyBox était impossible.
+Ce genre d'erreur ne génère une alerte que dans l'interface de gestion du service sur le site de AWS. Sur ce même site ce genre d'interfaces sont plétorique rendant le diagnostique parfois long et difficile. J'ai donc configurer des alertes envoyé par courriel qui m'indiquent en temps réel les erreurs facilitant la recherche d'erreur par la suite.
 
-T1 + T2 en paralélle
-Vague d'optimisations S3, stockage extrement chére
+Une fois la structure générale en place je me suis concentré sur les aspects spécifique à chaque élément. 
+J'ai donc décider d'organiser mon travail selon deux grand axes: entretiens et surveillance de l'infrastucture, déploiement et configuration du logiciel au sein de l'infrastructure. 
 
-troisiéme et dernieres vague d'estimation
+\subsection{Déploiement, configuration et optimisation}
 
-Comparaison entre les plateforme et cout difficile à établir
-
-Proposition de réduction drastique en utilisant dropbox en CDN archi pour 50\$ mois
-
-Opswork essayer l'auto-citation
+Comme nous l'avons vue précédemment HappyBox est un logiciel composé de trois élements distinct. On peu ajouter à cela la gestion des serveurs de nom\footnote{DNS, Domain Name Services} qui est une composante fondamentale car chaque site créer par un utilisateur est relié à une adresse internet de type \emph{nomDeLaPage.happyboxcms.me} ou composé à partir d'un domaine qui appartiens à l'utilisateur\footnote{Domaine qu'il peu acheter directement au sein de l'interface ou ajouter si il en est déjà propriétaire.}.
 
 
-\subsection{Déploiement et consistence}
+
+%%%% CMS
+
+%%%% API
+
+%%% BDD
+
+\subsection{Entretiens et surveillance de l'infrastructure}
+
+Cet Axe de travail est surement celui qui à occupé la majeur partie de mon temps.
+% Outils en ligne: http://www.cloudorado.com, http://cloudpricecalculator.com
+% collecte des info via des plugin custom munin +
+
+% Premiéres vague de stat et de calcule métrique évidente
+
+% Tableau 1 cout / perf
+% analyse
+% Erreur EBS
+
+% Seconde vague de stat avec BP et oublier un couts fourbe type load balancer, démarage des infra
+
+% T1 + T2 en paralélle
+% Vague d'optimisations S3, stockage extrement chére
+
+% troisiéme et dernieres vague d'estimation
+
+% Comparaison entre les plateforme et cout difficile à établir
+
+% Proposition de réduction drastique en utilisant dropbox en CDN archi pour 50\$ mois
+
+% Opswork essayer l'auto-citation
+
 
 				% Git
 				% Opswork Chef
 				% pourquoi PaaS opswork chiant
-Ospwork Gain de temps de déploiemt 1 click et 10 minutes vs une aprem voir plus
+% Ospwork Gain de temps de déploiemt 1 click et 10 minutes vs une aprem voir plus
 
-cout d'un techos à l'heure à montreal \$70 à \$120 citer les tarif de dan
+% cout d'un techos à l'heure à montreal \$70 à \$120 citer les tarif de dan
 
-GITlab, JIRA Ah si je peux définir des process de developement!!!!!
+% GITlab, JIRA Ah si je peux définir des process de developement!!!!!
 
 
-Procedure restauration hermes ou installation munin.... %crafter le doc
+% Procedure restauration hermes ou installation munin.... %crafter le doc
 
-	\subsection{Sécurité, souveraineté et performance}
+% Nginx vs apache bench mark de distribution de fichier statique.
 
-Nginx vs apache bench mark de distribution de fichier statique.
+% Gitlab
 
-Gitlab
+% réaction de AWS parfois surprenante via API ou interface Web => des risque de redémarrage d'instance ec2 ou RDS laissant le service en carafe. Trop rare pour automatisation mais suffisement casse cul quand ça arrive pour y perde sa nuit de sommeil.
 
-réaction de AWS parfois surprenante via API ou interface Web => des risque de redémarrage d'instance ec2 ou RDS laissant le service en carafe. Trop rare pour automatisation mais suffisement casse cul quand ça arrive pour y perde sa nuit de sommeil.
-
-Best practice linux bible
+% Best practice linux bible
 
 
 
@@ -912,7 +937,7 @@ Flexibilité ce qui ne semblait pas évidenta avec un produits aussi complet et 
 
 
 		% Analyse de l’approche choisie
-	\section{Analyse masturbatoire de l'action} % 3 pages
+	\section{Analyse de l'approche choisie} % 3 pages
 				% c'est le moment de ce la péter
 étudier pour répondre au besoin exact d'happybox CMS
 
