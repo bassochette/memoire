@@ -817,30 +817,21 @@ C'est une solution idéale pour un hobbyiste ou un groupe de passionnés car ell
 
 Cette première méthode correspond à la représentation de l’imaginaire collectif des startups informatiques florissant dans les garages de la Sylicon Valley des années soixante-dix.
 
-%%%%% TABLEAU AVEC LES METRIQUE %%%%
-\begin{left}
-	\hline
-	\begin{tabular}{| l | c | }
-		Souveraineté & Il est difficilement possible d'être plus souverain dans ce cas de figure. \\
-	\end{tabular}
-	\begin{tabular}{| l | c | }
-		Sécurité & Obtenir un système sécurisé demande de grandes compétences, des moyens financiers importants, particulièrement pour la sécurisation des accès physiques. Une fois en place, cela peut devenir un véritable bastion technologique.\\
-	\end{tabular}\\
-	\hline
-	\begin{tabular}{| l | c | }
-		Flexibilité & En un sens ces infrastructures ne peuvent répondre à une augmentation de demande trop importante. Commander et installer un serveur n'est pas instantané. \\
-	\end{tabular}
-	\begin{tabular}{| l | c | }
-		Pertinence technique & C'est pertinent d'un point de vue personnel, non professionnel \\
-	\end{tabular}\\
-	\hline
-	\begin{tabular}{| l | c | }
-		Coût & Difficilement chiffrable puisqu'il en vient de la responsabilité du constructeur de choisir ses matériaux, la taille de son serveur, etc.\\
-	\end{tabular}
-	\begin{tabular}{| l | c | }
-		Barrières technologiques & Installer son propre placard à serveur \\
-	\end{tabular}
-\end{left}
+%
+\begin{description}
+	\item[Souveraineté ]
+Il est difficilement possible d'être plus souverain dans ce cas de figure.
+	\item[Sécurité]
+Obtenir un système sécurisé demande de grandes compétences, des moyens financiers importants, particulièrement pour la sécurisation des accès physiques. Une fois en place, cela peut devenir un véritable bastion technologique.
+	\item[Flexibilité]
+ En un sens ces infrastructures ne peuvent répondre à une augmentation de demande trop importante. Commander et installer un serveur n'est pas instantané.
+	\item[Pertinence technique]
+C'est pertinent d'un point de vue personnel, non professionnel
+	\item[Coût]
+Difficilement chiffrable puisqu'il en vient de la responsabilité du constructeur de choisir ses matériaux, la taille de son serveur, etc.
+	\item[Barrières technologiques]
+	Installer son propre placard à serveur
+\end{description}
 
 			\subsection{Création de centre de données et cloud privé}
 
@@ -869,26 +860,22 @@ S'il est dans les prérogative du centre de fournir un service de haute disponib
 Il faut aussi prendre en compte l'impact du centre sur l'environnement. Ce dernier peut être négatif ou positif. Par exemple le data center de Google en Finlande récupère les eaux sales des villes environnantes. Elles sont ensuite réutilisées dans le système de refroidissement, traitées puis renvoyées potable dans le circuit de consommation ou rejetées \emph{froides} dans le golf d’Amina.
 
 %%%%% TABLEAU AVEC LES METRIQUE %%%%
-\begin{center}
-	\begin{tabular}{| l | c | }
-		Souveraineté &  L'exploitant étant en charge de l'infrastructure, il en a donc un contrôle total \\
-	\end{tabular}
-	\begin{tabular}{| l | c | }
-		Sécurité & Mise en place de contrôle d’accès physique et bien entendu c'est à l'exploitant de le faire. \\
-	\end{tabular}
-	\begin{tabular}{| l | c | }
-		Flexibilité & Les importants coûts d'exploitation demande une réflexion sur le long termes afin de le rentabiliser.  La flexibilité est donc très mauvaise.\\
-	\end{tabular}
-	\begin{tabular}{| l | c | }
-		Pertinence technologique & C'est une solution adaptable aux grosses infrastructures mais qui, une fois installée, n'est pas toujours évolutive aisément. \\
-	\end{tabular}
-	\begin{tabular}{| l | c | }
-		Coût & Ils sont très importants et complexes à évaluer car il faut prendre en compte des temps d'amortissement longs.\\
-	\end{tabular}
-	\begin{tabular}{| l | c | }
-		Barrières technologiques & Le recours à de nombreux experts est nécessaire afin de mener à bien la création du centre de données. Une équipe d'ingénieurs et de techniciens sera, qui plus est, indispensable à la maintenance. \\
-	\end{tabular}
-\end{center}
+
+
+\begin{description}
+	\item[Souveraineté ]
+L'exploitant étant en charge de l'infrastructure, il en a donc un contrôle total 
+	\item[Sécurité]
+Mise en place de contrôle d’accès physique et bien entendu c'est à l'exploitant de le faire.
+	\item[Flexibilité]
+ Les importants coûts d'exploitation demande une réflexion sur le long termes afin de le rentabiliser.  La flexibilité est donc très mauvaise.
+	\item[Pertinence technique]
+ C'est une solution adaptable aux grosses infrastructures mais qui, une fois installée, n'est pas toujours évolutive aisément. 
+	\item[Coût]
+Ils sont très importants et complexes à évaluer car il faut prendre en compte des temps d'amortissement longs.
+	\item[Barrières technologiques]
+	Le recours à de nombreux experts est nécessaire afin de mener à bien la création du centre de données. Une équipe d'ingénieurs et de techniciens sera, qui plus est, indispensable à la maintenance. 
+\end{description}
 
 			\subsection{Engin PaaS}
 
@@ -904,27 +891,21 @@ Le véritable aspect des ce type de service est l'absence de pertinence de donn�
 Finalement l'externalisation peut entraîner une dépendance technologique néfaste et des situations où l'hébergeur de donnée pourrait prendre en otage le client.
 
 %%%%% TABLEAU AVEC LES METRIQUE %%%%
-\begin{center}
-	\begin{tabular}{| l | c | }
-		Souveraineté & Faible voire nulle\\
-	\end{tabular}
-	\begin{tabular}{| l | c | }
-		Sécurité & Gérer de manière logicielle.\\
-	\end{tabular}
-	\begin{tabular}{| l | c | }
-		Flexibilité & C'est l'évolution incarnée; augmenter ou réduire la puissance de distribution peut même être géré par la plateforme.\\
-	\end{tabular}
-	\begin{tabular}{| l | c | }
-		Pertinence technique & Permet de répondre à une énorme demande très rapidement.\\
-	\end{tabular}
-	\begin{tabular}{| l | c | }
-		Coût & Proportionnel à la consommation de ressources.\\
-	\end{tabular}
-	\begin{tabular}{| l | c | }
-		Barrières technologiques &  extrêmement faibles\\
-	\end{tabular}
-\end{center}
 
+\begin{description}
+	\item[Souveraineté ]
+Faible voire nulle
+	\item[Sécurité]
+Gérer de manière logicielle.
+	\item[Flexibilité]
+C'est l'évolution incarnée; augmenter ou réduire la puissance de distribution peut même être géré par la plateforme.
+	\item[Pertinence technique]
+ Permet de répondre à une énorme demande très rapidement.
+	\item[Coût]
+Proportionnel à la consommation de ressources.
+	\item[Barrières technologiques]
+	extrêmement faibles
+\end{description}
 
 			\subsection{Consistance des infrastructures et méthode de déploiement}
 
