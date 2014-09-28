@@ -11,15 +11,16 @@
 \usepackage{tabularx}
 \usepackage{setspace}
 
-\setmainfont{Arial}
+%\setmainfont{Arial}
 
 \makeindex
 %\usepackage{fontspec}
 %\setmainfont{Arial}
+%\titlehead{\includegraphics[width=6cm]{images/happybox-logo-transparent.png}}
 
-\title{Mémoire Titre qui en jette grave}
-\author{Julien Prugne 108287}
-\date{Avril 2014 à Octobre 2014}
+%\title{Mémoire Titre qui en jette grave}
+%\author{Julien Prugne 108287}
+%\date{\today}
 
 % new page for every section
 \let\stdsection\section
@@ -28,7 +29,67 @@
 \begin{document}
 
 
-	\maketitle
+	%\maketitle
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE DOM Element Inc.}\\[1.5cm] % Name of your university/college
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Titre qui en jette grave }\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Auteur:}\\
+Julien  \textsc{Prugne} % Your name
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Maître de stage:} \\
+Guillaume \textsc{lagacé} % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+\includegraphics[width=\textwidth]{images/happybox-logo-transparent.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
 	\tableofcontents
 
 	% TODO: à la toute fin
@@ -330,7 +391,7 @@ Trois offres ont alors vu le jour au sein de l'application:
 	\end{tabular}
 \end{flushleft}
 \subparagraph{}
-Il faut, ensuite, appliquer les équations vues dans les paragraphes précédents avec des chiffres prévisionnels basés sur une \emph{croissance\index{startup!croissance} de la masse des utilisateurs de 4\%\footnote{Croissance minimum hebdomadaire d'une startup afin d'attirer des capitaux issus du \emph{venture capitalisme}} selon Paul Graham fondateur de Y-Combinators. 
+Il faut, ensuite, appliquer les équations vues dans les paragraphes précédents avec des chiffres prévisionnels basés sur une \emph{croissance\index{startup!croissance} de la masse des utilisateurs de 4\%\footnote{Croissance minimum hebdomadaire d'une startup afin d'attirer des capitaux issus du \emph{venture capitalisme}} selon Paul Graham fondateur de Y-Combinators.
 C'est aussi le taux de croissance prévisionnel défini dans le plan d'affaire de DOM Element Inc..} par semaine.
 Spéculons sur un lancement discret en janvier 2014 avec cinquante utilisateurs gratuits triés sur le volet et un taux de conversion faible de 2\%, au vu du coût minimum par contribution unitaire actuelle de \$49.99. Ces chiffres sont volontairement faibles afin de voir si même avec des indicateurs ne permettant que difficilement d'atteindre les objectifs de rentabilité, cela est encore possible. La profitabilité n'étant pas nécessairement un objectif pour une startup, nous verrons pourquoi dans la section sur les modes de financement des startups.
 
@@ -687,13 +748,13 @@ Pour cela, nous utiliserons sept indicateurs permettant, selon mon expérience, 
 Définir des indicateurs ne suffit pas à élaborer une stratégie. Les chiffres sont trop malléables pour pouvoir refléter la réalité. De plus, une projection linéaire ne peut être juste. Il faudrait au minimum l'indexer sur l'inflation afin d'appliquer une variance sur les projections pour que ces dernières soient en adéquation avec l'économie dans laquelle la structure évolue.
 
 
-Si tout se passe accordement au modèle, l’acquisition des utilisateurs est exponentielle. Les ressources nécessaires pour servir un volume de clients croissant de manière exponentielle est aussi théoriquement proportionnelle. Par extrapolation, les coûts suivent l’évolution de la masse d'utilisateur; même si les coûts sont faibles, ils ne sont toujours pas nuls. 
+Si tout se passe accordement au modèle, l’acquisition des utilisateurs est exponentielle. Les ressources nécessaires pour servir un volume de clients croissant de manière exponentielle est aussi théoriquement proportionnelle. Par extrapolation, les coûts suivent l’évolution de la masse d'utilisateur; même si les coûts sont faibles, ils ne sont toujours pas nuls.
 
-Il y a donc une limite mathématique à la réduction des coûts par la masse utilisateurs. C'est un palier annonçant la fin de la croissances des recettes et l'augmentation des coûts. Tant que les coûts par utilisateur baissent, la startup croît facilement. Nous pouvons reprendre, ici, le même principe que l’échange de monnaie ; étant donné que les marges réalisées grâce à la dépréciation d'une des monnaie par rapport à une autre, crée des profits. 
-Prenons un exemple simple, lorsque je paie 800 euros pour obtenir 1000 dollars canadien, il est possible que quelques jours plus tard pour ces mêmes 1000 dollars je ne paie que 600 euros. Évidemment, je n'ai pas fait de recette, cependant j'ai limité les pertes. Pour pouvoir tirer profit d'un achat, il suffit de le revendre pour une somme supérieure au montant d'achats additionné aux frais. 
+Il y a donc une limite mathématique à la réduction des coûts par la masse utilisateurs. C'est un palier annonçant la fin de la croissances des recettes et l'augmentation des coûts. Tant que les coûts par utilisateur baissent, la startup croît facilement. Nous pouvons reprendre, ici, le même principe que l’échange de monnaie ; étant donné que les marges réalisées grâce à la dépréciation d'une des monnaie par rapport à une autre, crée des profits.
+Prenons un exemple simple, lorsque je paie 800 euros pour obtenir 1000 dollars canadien, il est possible que quelques jours plus tard pour ces mêmes 1000 dollars je ne paie que 600 euros. Évidemment, je n'ai pas fait de recette, cependant j'ai limité les pertes. Pour pouvoir tirer profit d'un achat, il suffit de le revendre pour une somme supérieure au montant d'achats additionné aux frais.
 Pour cela, selon Adam Smith, nous n'avons qu'à attendre que la demande soit supérieure à l'offre \emph{La main invisible de l'économie} étant là pour réguler le marché, c'est à dire que selon lui, la loi du marché finit toujours par s'imposer et le réguler.
 
-Si rien n'est fait, le taux peut devenir négatif alors chaque utilisateur deviendra une perte nette qui va s’accroire de manière exponentielle. A ce moment là, la seule chose restante à faire est de trouver des capitaux extrêmement rapidement afin d'éviter la faillite. 
+Si rien n'est fait, le taux peut devenir négatif alors chaque utilisateur deviendra une perte nette qui va s’accroire de manière exponentielle. A ce moment là, la seule chose restante à faire est de trouver des capitaux extrêmement rapidement afin d'éviter la faillite.
 
 Tant que les flux d'investissement ne se tarissent pas et que l'entreprise n'a pas fait faillite tout est encore possible.
 
@@ -706,14 +767,14 @@ Tant que les flux d'investissement ne se tarissent pas et que l'entreprise n'a p
 
 			\subsection{Les serveurs dans le placard ou dans la cave}
 
-Cette solution permet d'être le seul et unique souverain de son infrastructure et de ses données. 
+Cette solution permet d'être le seul et unique souverain de son infrastructure et de ses données.
 
-Néanmoins, il est impossible de fournir un service en haute disponibilité, car il suffit d'une panne de courant ou d'une terrible femme de ménage débrancheuse de serveurs pour que cela ne fonctionne plus. 
+Néanmoins, il est impossible de fournir un service en haute disponibilité, car il suffit d'une panne de courant ou d'une terrible femme de ménage débrancheuse de serveurs pour que cela ne fonctionne plus.
 De plus, l'implémentation de mesure garantissant l'accès physique est impossible à mettre en place, à moins de posséder des moyens financiers importants ou de vivre préalablement dans un bunker. Ce qui ne serait peut être pas suffisant. Pour Kevin Mitnick\footnote{Hacker expert en ingénierie sociale, emprisonné à l'âge de 15 pour avoir pénétré des dizaines d'ordinateurs. Il a, d'ailleurs, passé 4 ans et 8 mois de sa peine en isolement. Selon Mitnick, les officiers de justice auraient convaincu le juge qu'il pourrait déclencher une guerre atomique en sifflant dans un téléphone.}, il n'existe pas de machine inaccessible, même un hôte isolé au fond d'un bunker est accessible car il ne suffit que de convaincre un garde de le brancher au réseau ou plus sobrement lui donner accés à la machine.
 
-C'est une solution idéale pour un hobbyiste ou un groupe de passionnés car elle offre la pus grande liberté. Chacun met ce qu'il veut dans son placard. En revanche, les compétences nécessaires au maintient de l'infrastructure sont très importantes. Il faut savoir changer/réparer du matériel brisé ou usé mais ce n'est pas tout car tout est du fait de la personne gérant son infrastructure. 
+C'est une solution idéale pour un hobbyiste ou un groupe de passionnés car elle offre la pus grande liberté. Chacun met ce qu'il veut dans son placard. En revanche, les compétences nécessaires au maintient de l'infrastructure sont très importantes. Il faut savoir changer/réparer du matériel brisé ou usé mais ce n'est pas tout car tout est du fait de la personne gérant son infrastructure.
 
-Cette première méthode correspond à la représentation de l’imaginaire collectif des startups informatiques florissant dans les garages de la Sylicon Valley des années soixante-dix. 
+Cette première méthode correspond à la représentation de l’imaginaire collectif des startups informatiques florissant dans les garages de la Sylicon Valley des années soixante-dix.
 
 %%%%% TABLEAU AVEC LES METRIQUE %%%%
 \begin{center}
@@ -754,11 +815,11 @@ Cette première méthode correspond à la représentation de l’imaginaire coll
 
 Calculer le coût exact de la construction et de l'exploitation d'un centre de données privée et au delà de mes compétences. Les facteurs de coûts son extrêmement nombreux. Beaucoup d'entreprises émettent une estimation inexacte de leur info-centre en raison de la fragmentation des centres de dépendance. Il est facile de négliger le poids d'un super-calculateur au moment de la construction du bâtiment. Ce qui arrive ensuite est simple: l'ordinateur, pesant plusieurs tonnes, traverse le sol pour aller décorer l'étage inférieur.
 
-La mise en place d'une telle structure demande énormément de compétences aussi diverses que variées. Le comptable est tout aussi important que le directeur des services d'information car sans lui, il serait impossible d'exploiter financièrement la plateforme. 
+La mise en place d'une telle structure demande énormément de compétences aussi diverses que variées. Le comptable est tout aussi important que le directeur des services d'information car sans lui, il serait impossible d'exploiter financièrement la plateforme.
 
-En effet, il en va du constructeur d'élaborer toute l'infrastructure : de son système de refroidissement, à la sécurité du réseau en passant par l'achat, l'installation et la configuration du matériel\footnote{Tous les câbles doivent être branchés et si possible au bon endroit.}. 
+En effet, il en va du constructeur d'élaborer toute l'infrastructure : de son système de refroidissement, à la sécurité du réseau en passant par l'achat, l'installation et la configuration du matériel\footnote{Tous les câbles doivent être branchés et si possible au bon endroit.}.
 
-S'il est dans les prérogative du centre de fournir un service de haute disponibilité, il sera nécessaire de construire deux sites physiquement distincts capables de se relayer en cas de panne afin d'offrir un plan de retour ou de non disruption de l'activité efficiente\footnote{L'efficience sera calculer en temps de présence disponibilité des ressources.}. 
+S'il est dans les prérogative du centre de fournir un service de haute disponibilité, il sera nécessaire de construire deux sites physiquement distincts capables de se relayer en cas de panne afin d'offrir un plan de retour ou de non disruption de l'activité efficiente\footnote{L'efficience sera calculer en temps de présence disponibilité des ressources.}.
 
 %%%% REF data center Google
 Il faut aussi prendre en compte l'impact du centre sur l'environnement. Ce dernier peut être négatif ou positif. Par exemple le data center de Google en Finlande récupère les eaux sales des villes environnantes. Elles sont ensuite réutilisées dans le système de refroidissement, traitées puis renvoyées potable dans le circuit de consommation ou rejetées \emph{froides} dans le golf d’Amina.
@@ -766,7 +827,7 @@ Il faut aussi prendre en compte l'impact du centre sur l'environnement. Ce derni
 %%%%% TABLEAU AVEC LES METRIQUE %%%%
 \begin{center}
 	\begin{tabular}{| l | c | }
-		Souveraineté &  L'exploitant étant en charge de l'infrastructure, il en a donc un contrôle total \\ 
+		Souveraineté &  L'exploitant étant en charge de l'infrastructure, il en a donc un contrôle total \\
 	\end{tabular}
 	\begin{tabular}{| l | c | }
 		Sécurité & Mise en place de contrôle d’accès physique et bien entendu c'est à l'exploitant de le faire. \\
@@ -823,7 +884,7 @@ Finalement l'externalisation peut entraîner une dépendance technologique néfa
 
 			\subsection{Consistance des infrastructures et méthode de déploiement}
 
-La lois de Moore institue que la puissance de calcul des systèmes d'information double tous les six mois mais que ses administrateurs ne semblent pas être sujets à cette multiplication spontanée. Du coup, les infrastructures accueillent de plus en plus d'hôtes au sein de leur ferme mais le personnel n'augmente pas toujours à la même célérité. 
+La lois de Moore institue que la puissance de calcul des systèmes d'information double tous les six mois mais que ses administrateurs ne semblent pas être sujets à cette multiplication spontanée. Du coup, les infrastructures accueillent de plus en plus d'hôtes au sein de leur ferme mais le personnel n'augmente pas toujours à la même célérité.
 
 Des outils de gestion de configuration distribués ont vu le jour dans le but de répondre à la forte hausse de la demande. Ils ce composent souvent d'un tiers local sur la machine à configurer et un tiers distant gérant la distribution des configurations.
 
@@ -855,35 +916,35 @@ Une de mes premières missions au sein de DOM Element Inc a été de définir le
 	\includegraphics[width=\textwidth]{images/media/fonctionnementHB.png}
 \end{center}
 \paragraph{}
-L'architecture minimale, nécessaire au fonctionnement de HappyBox CMS, nécessite en premier lieu un serveur web pour héberger les données des utilisateurs. Une base de donnée gére les permissions et permet de coordonner l'ensemble des opérations. Le dernier élément est un serveur permettant d’héberger l'API DOM Element Inc.. 
+L'architecture minimale, nécessaire au fonctionnement de HappyBox CMS, nécessite en premier lieu un serveur web pour héberger les données des utilisateurs. Une base de donnée gére les permissions et permet de coordonner l'ensemble des opérations. Le dernier élément est un serveur permettant d’héberger l'API DOM Element Inc..
 \paragraph{}
-Chaque élément a put être installé sur des serveurs séparés, mais il est aussi possible de tous les gérer sur un seul hôte bien que cette solution ne nous est pas paru pertinente. En effet, en terme d'évolutivité, cette solution lie les clients à une instance virtuelle qui est gérée localement. 
+Chaque élément a put être installé sur des serveurs séparés, mais il est aussi possible de tous les gérer sur un seul hôte bien que cette solution ne nous est pas paru pertinente. En effet, en terme d'évolutivité, cette solution lie les clients à une instance virtuelle qui est gérée localement.
 Si les ressources de ce dernier viennent à manquer, il faudra recréer un nouvel hôte, ré-installer et configurer chaque service. En cas d'erreur sur ce serveur, le rendant inaccessible, les clients hébergés dessus n'auront plus accès au service.
 Il a été décidé, avant mon arrivée, de séparer ces éléments en trois tiers distincts: serveurs client, API et bases de données.
 \paragraph{}
 La gestion des bases de données est faite au sein du service \emph{Relational Database Services} proposé par Amazon Web Services et propose un moteur de base de données relationnel hébergé. Cette solution nous a permis de simplifier la gestion de l’infrastructure en externalisant les opérations de maintien des bases bien que cette assertion ne soit pas toujours juste aux vues des erreurs que nous avons rencontrer. En juillet, ce dernier a entraîné un arrêt de service pour une durée de 2 jours. Après investigation, nous avons découvert que l'instance de base de données avait été redémarré par l'agent AWS et n'avait pas réussi à redémarrer. En conséquence, les sites créés par les utilisateurs étaient toujours accessibles mais l'inscription et l'accès au logiciel HappyBox était impossible.
 Ce genre d'erreur ne génère une alerte que dans l'interface de gestion du service sur le site de AWS. Sur ce même site ce genre d'interface sont pléthoriques, rendant le diagnostique parfois long et difficile. J'ai donc configuré des alertes envoyées par courriel qui m'indiquaient en temps réel les erreurs. Ce qui a grandement facilité la recherche d'erreurs par la suite.
 \paragraph{}
-Une fois la structure générale en place, je me suis concentré sur les aspects spécifiques à chaque élément. 
-J'ai donc décidé d'organiser mon travail selon deux grands axes: entretien et surveillance de l’infrastructure, déploiement et configuration du logiciel au sein de l'infrastructure. 
+Une fois la structure générale en place, je me suis concentré sur les aspects spécifiques à chaque élément.
+J'ai donc décidé d'organiser mon travail selon deux grands axes: entretien et surveillance de l’infrastructure, déploiement et configuration du logiciel au sein de l'infrastructure.
 
 \subsection{Déploiement et configuration}
 
 Comme nous l'avons vu précédemment HappyBox est un logiciel composé de trois éléments distincts. On peu ajouter à cela la gestion des serveurs de nom de domaine\footnote{DNS, Domain Name Services} qui est une composante fondamentale car chaque site créé par un utilisateur est relié à une adresse internet de type \emph{nomDeLaPage.happyboxcms.me} ou composé à partir d'un domaine qui appartient à l'utilisateur\footnote{Domaine qu'il peut acheter directement au sein de l'interface ou ajouter s'il en est déjà propriétaire.}.
 \paragraph{}
-La première chose à mettre en place est une API DOM Element afin de pouvoir manipuler les utilisateurs et coordonner le service. Je n'ai fait que peu de chose en ce qui concerne son déploiement et sa configuration qui est assez simple car il s'agit simplement d'un site web capable de répondre à des requêtes faites par le client. Ce processus est transparent pour l'utilisateur. 
+La première chose à mettre en place est une API DOM Element afin de pouvoir manipuler les utilisateurs et coordonner le service. Je n'ai fait que peu de chose en ce qui concerne son déploiement et sa configuration qui est assez simple car il s'agit simplement d'un site web capable de répondre à des requêtes faites par le client. Ce processus est transparent pour l'utilisateur.
 \paragraph{}
 Il a fallu ensuite faire le choix du serveur web permettant de servir les clients. Nous avons choisi d'utiliser le logiciel Nginx. À proprement parler, Nginx n'est pas un serveur web. Il s'agit d'un logiciel de proxy dont la fonction primaire n'est pas de permettre l'affichage de site web mais de réguler le trafic allant d'un point à un autre et qui offre les possibilité d'un serveur web traditionnel. Il est plus performant que les autres logiciels de ce type en terme de service de contenu statique. Couplé à un module d’interprétation php, il offre toutes les possibilités d'un serveur web avec un pic de performance dans la distribution de contenu statique. En revanche, son architecture modulaire\footnote{Nginx est constitué d'un binaire capable de gérer le trafic entrant et de renvoyer uniquement du contenu statique. Des modules offrant de nouvelles fonctionnalités peuvent ensuite être ajoutées afin de n'installer que ce dont on a besoin et de ne pas gâcher des ressources pour des services inutiles.} le rend plus complexe à installer qu'un serveur web de type apache car il faut compiler le cœur avec ses modules ou installer un paquet logiciel et un autre pour chaque module que l'on doit configurer séparément.
 \paragraph{}
-Dans mon cas, il a été obligatoire d'installer Nginx avec une douzaine de modules\footnote{installer séparément.} permettant la gestion du langage php, du cache et bien d'autre. Une fois l'installation terminée, il a fallu configurer les serveurs Nginx ainsi que ses modules en éditant des fichiers de configuration dans des formats non unifiés et dépendants du module. J'ai également, installer d'autres services, comme un serveur ftp\footnote{Service de transfert de fichier}, un agent de mail enfin, j'ai créé les dossiers pour accueillir HappyBox CMS. 
+Dans mon cas, il a été obligatoire d'installer Nginx avec une douzaine de modules\footnote{installer séparément.} permettant la gestion du langage php, du cache et bien d'autre. Une fois l'installation terminée, il a fallu configurer les serveurs Nginx ainsi que ses modules en éditant des fichiers de configuration dans des formats non unifiés et dépendants du module. J'ai également, installer d'autres services, comme un serveur ftp\footnote{Service de transfert de fichier}, un agent de mail enfin, j'ai créé les dossiers pour accueillir HappyBox CMS.
 \paragraph{}
-Une fois environnement prêt à accueillir le logiciel, le déploiement peut commencer. Il se fait par le biais de deux dépôts de source: un pour la partie utilisateur visible sur internet et une seconde servant à la maintenance par un système de message. 
+Une fois environnement prêt à accueillir le logiciel, le déploiement peut commencer. Il se fait par le biais de deux dépôts de source: un pour la partie utilisateur visible sur internet et une seconde servant à la maintenance par un système de message.
 \subparagraph{}
-De plus, les sources du logiciel n'étaient pas centralisé. Il est possible que la mauvaise version soit déployée par erreur.   
+De plus, les sources du logiciel n'étaient pas centralisé. Il est possible que la mauvaise version soit déployée par erreur.
 \subparagraph{}
 C'est un processus long et capable de générer des erreurs aussi hétéroclites que nombreuses car chaque élément est un facteur d'erreur potentielle. De plus, d'un serveur à l'autre, il est possible que les versions des logiciels utilisées ainsi que leurs fichiers de configuration soient différents. La recherche d'erreur est une fois encore complexifiée.
 \paragraph{}
-J'ai donc proposé que nous changions de méthode de déploiement afin d'essayer d'obtenir un parc uniforme donc consistent. J'ai donc proposé l'utilisation de deux service: un pour la gestion des configurations et un autre pour la gestion de la version du code source.  
+J'ai donc proposé que nous changions de méthode de déploiement afin d'essayer d'obtenir un parc uniforme donc consistent. J'ai donc proposé l'utilisation de deux service: un pour la gestion des configurations et un autre pour la gestion de la version du code source.
 \paragraph{}
 En ce qui concerne la gestion de version du code source le choix à était le suivant: conserver la gouvernance et la souveraineté de l'hébergement des sources gràce au logiciel gitlab ou recourir à un service en ligne github ou bitbucket. Au finale, nous avons décidé de conserver les sources au sein de l'infrastructure. J'ai donc installer sur un serveur gitlab et configuré le service. Ce dernier offre tout les avantages de la gestion des source via git\footnote{Système de gestion des sources décentralisé créer utiliser pour le maintiens du noyau linux.} allié à une interface graphique intuitive.
 \paragraph{}
@@ -891,13 +952,13 @@ Une fois les sources accessibles par version et non par clef usb qui transite da
 \paragraph{}
 Opswork est donc l'implémentation de chef dans le service AWS. L'utilisation d'Opswork requiert la création de livre de recette ou cookbook. Ces livres de recette sont développés dans le langage de programmation rubi qu'il m'a fallu apprendre et maîtriser. Ils sont composés de gabarit qui sont la base de nos fichiers de configuration, de fichier d’attribut qui permettent de stocker des valeurs accessibles n'importe où dans livre de recette. Ces dernières définissent une liste d'action à exécuter.
 \paragraph{}
-Le développement ainsi que le maintien des cookbook ne sont pas une mince affaire et demande de la méthode car la configuration déployée sera la même sur l'intégralité du parc. C'est à dire qu'une configuration rendant l'instance inaccessible sera appliquée à tous les hôtes utilisant le livre de recette déficient. 
+Le développement ainsi que le maintien des cookbook ne sont pas une mince affaire et demande de la méthode car la configuration déployée sera la même sur l'intégralité du parc. C'est à dire qu'une configuration rendant l'instance inaccessible sera appliquée à tous les hôtes utilisant le livre de recette déficient.
 \paragraph{}
-Ma méthode est la suivante: Dans un premier temps définir les différentes unités de sens qui seront nos livre de recette. J'ai choisi d'en créer 3 principaux qui définiront le fonctionnement de déploiement. 
+Ma méthode est la suivante: Dans un premier temps définir les différentes unités de sens qui seront nos livre de recette. J'ai choisi d'en créer 3 principaux qui définiront le fonctionnement de déploiement.
 \subparagraph{}
 Le premier permet de préparer l’hôte de manière générique. Ce livre de recette n'est pas lié à l'architecture de HappyBox mais est constitué d'un ensemble de configuration et d'action exécutée avant le déploiement à proprement parler. On y trouve les réglages généraux, par exemple la configuration de la langue et du temps. La création des utilisateurs administratifs ainsi que leurs accès distants via ssh. L'installation et la configuration de l’éditeur de texte vim et quelques autres petites configurations de moindre importance.
 \subparagraph{}
-Le second correspond à l'installation et à la configuration du serveur web et de ses composantes ainsi que d'un agent de transfert de courriel. C'est à partir de cet instant que la gestion de configuration devient importante car elle permet de garantir que peu importe le moment où l'on vérifiera le serveur, il y aura toujours la même version et la même configuration sur toutes les instances. 
+Le second correspond à l'installation et à la configuration du serveur web et de ses composantes ainsi que d'un agent de transfert de courriel. C'est à partir de cet instant que la gestion de configuration devient importante car elle permet de garantir que peu importe le moment où l'on vérifiera le serveur, il y aura toujours la même version et la même configuration sur toutes les instances.
 \subparagraph{}
 Le dernier crée l'architecture de dossiers nécessaires au fonctionnement d'HappyBox, configure les tâches planifiées puis déploie et configure HappyBox CMS en fonction de la version souhaitée. Il sert aussi à mettre à jour l'application grâce à des recettes offrant le choix du type d'installation voulue: développement, production ou compatibilité avec l'ancienne version du logiciel\footnote{Certains utilisateurs ont des projets créés et non compatibles avec les versions plus récentes.}.
 \paragraph{}
@@ -908,21 +969,21 @@ La mise en place d'Opswork a eu un impact significatif dans l'installation et la
 
 %%%%% JIRA %%%%%
 \paragraph{}
-Après avoir mis en place une structure pour gérer le logiciel. Nous avons pensé qu'il serait judicieux de mettre en place un outil nous permettant d'organiser le travail. Il m'a incombé de chercher et tester la meilleure solution. Après plusieurs essais avec différentes plateformes, nous avons décidé d'utiliser Jira de la compagnie Atlassian. 
+Après avoir mis en place une structure pour gérer le logiciel. Nous avons pensé qu'il serait judicieux de mettre en place un outil nous permettant d'organiser le travail. Il m'a incombé de chercher et tester la meilleure solution. Après plusieurs essais avec différentes plateformes, nous avons décidé d'utiliser Jira de la compagnie Atlassian.
 \subparagraph{}
 Ce logiciel permet de gérer les tâches de tout le monde de manière centralisé via une interface web différent projet et les droits d’accès. Dans ces projet, il est possible de créer et d'assigner des tâches aux membres. Cela permet de mieux coordonner et de suivre le travail de tous. Il fonctionne par un système de tickets. Le service étant un logiciel SaaS, il nous a suffi de payer l'abonnement pour y accéder.
 
 
 %%%%% L'horreur des volumes EBS
 \paragraph{}
-Vint le jour de cette magnifique idée : un volume de données par utilisateurs afin de les rendre mobiles et indépendants. J'ai donc proposé l'idée à Danny et Guillaume qui m'ont donné leur aval afin de me lancer dans ce chantier de grande ampleur. 
+Vint le jour de cette magnifique idée : un volume de données par utilisateurs afin de les rendre mobiles et indépendants. J'ai donc proposé l'idée à Danny et Guillaume qui m'ont donné leur aval afin de me lancer dans ce chantier de grande ampleur.
 \subparagraph{}
-Amazon Web Service proposant une interface de programmation dans différents langages, j'ai développé des script permettant de créer  des volumes de données automatiquement lors de la création de compte. Il était ensuite attaché à l'instance et monté afin de pouvoir accueillir au mieux les données des utilisateurs. 
+Amazon Web Service proposant une interface de programmation dans différents langages, j'ai développé des script permettant de créer  des volumes de données automatiquement lors de la création de compte. Il était ensuite attaché à l'instance et monté afin de pouvoir accueillir au mieux les données des utilisateurs.
 J'ai testé la solution sur une instance à part afin de ne pas interagir directement sur des serveurs en production. À la suite de ces tests, qui ont semblé concluant, nous avons procédé à l'intégration au sein du service lors de l'ajout d'un hôte.
 \subparagraph{}
-Peu de temps après, j'ai pu constaté l'erreur que cela a été. En effet, le temps de traitement des nouveaux comptes a commencé à renvoyer des erreurs ne créant pas convenablement les volumes qui restaient verrouillés dans un état de création infinie ne pouvant alors être attachés aux instances. Un mécanisme de secours permettant de stocker temporairement les données utilisateurs dans un dossier sur le serveur, a permis d'éviter les interruptions de service dues aux erreurs. 
+Peu de temps après, j'ai pu constaté l'erreur que cela a été. En effet, le temps de traitement des nouveaux comptes a commencé à renvoyer des erreurs ne créant pas convenablement les volumes qui restaient verrouillés dans un état de création infinie ne pouvant alors être attachés aux instances. Un mécanisme de secours permettant de stocker temporairement les données utilisateurs dans un dossier sur le serveur, a permis d'éviter les interruptions de service dues aux erreurs.
 \subparagraph{}
-Avec le nombre croissant de volumes, les opérations de sauvegarde et de récupération se sont vues sensiblement complexifiées. De plus, la migration des utilisateurs entre les différentes instances est devenue une opération complexe car chaque volume devait être attaché et monté correctement sur le nouvel hôte. Il faut encore préciser qu'au moment de la décision un paramètre essentiel à été oublié: pour augmenter la taille d'un volume, il faut le supprimer et en recréer un de taille supérieure. Sachant que l'offre d'HappyBox propose la possibilité, moyennant finance, d'agrandir l'espace d'un utilisateur. Cette solution était vouée à mourir. 
+Avec le nombre croissant de volumes, les opérations de sauvegarde et de récupération se sont vues sensiblement complexifiées. De plus, la migration des utilisateurs entre les différentes instances est devenue une opération complexe car chaque volume devait être attaché et monté correctement sur le nouvel hôte. Il faut encore préciser qu'au moment de la décision un paramètre essentiel à été oublié: pour augmenter la taille d'un volume, il faut le supprimer et en recréer un de taille supérieure. Sachant que l'offre d'HappyBox propose la possibilité, moyennant finance, d'agrandir l'espace d'un utilisateur. Cette solution était vouée à mourir.
 \subparagraph{}
 Après investigation je me suis rendu compte que parfois l'interface de programmation d'Amazon Web Services annoncée comme étant synchrone ne l'était pas. En effet, une action peut renvoyer un état achevé alors que ce n'est pas encore le cas. Les opérations suivantes ne peuvent donc pas s'exécuter correctement et sont susceptibles de mettre en échec l'intégralité de l'instance.
 
@@ -932,15 +993,15 @@ Finalement, j'ai pris la décision de changer de méthode lors de la migration d
 
 \subsection{Entretiens et surveillance de l'infrastructure}
 
-Cet axe de travail est sûrement celui qui a occupé la majeure partie de mon temps et ralenti considérablement la mise en place de nouveauté au sein de l'infrastructure. 
+Cet axe de travail est sûrement celui qui a occupé la majeure partie de mon temps et ralenti considérablement la mise en place de nouveauté au sein de l'infrastructure.
 
 % MAJ
 \paragraph{}
 Il s'agissait, ici, de tester les nouvelles versions des logiciels utilisés sur les serveurs dans un environnement cloisonné afin d'éviter une mauvaise synergie ou une version comprenant des erreurs capables de mettre en échec un hôte ou un service nécessaire au bon fonctionnement d'HappyBox CMS.
 
-La méthodologie appliquée pour cela a été la suivante: 
-Dans un premier temps, un nouvel hôte identique à ses pères, grâce au gestionnaire de configuration, est déployé. La mise a jour a été faite manuellement sur l'hôte de test afin d'en décrire le processus et de pouvoir l'ajouter aux livres de recette existants. 
-Ensuite, le logiciel est testé afin de voir si tout est fonctionnel tant du côté de la machine que du logiciel. 
+La méthodologie appliquée pour cela a été la suivante:
+Dans un premier temps, un nouvel hôte identique à ses pères, grâce au gestionnaire de configuration, est déployé. La mise a jour a été faite manuellement sur l'hôte de test afin d'en décrire le processus et de pouvoir l'ajouter aux livres de recette existants.
+Ensuite, le logiciel est testé afin de voir si tout est fonctionnel tant du côté de la machine que du logiciel.
 
 \subparagraph{}
 Ce test est composé de deux étapes: une première sur le système et une seconde en ligne sur l'interface d'HappyBox. J'en ai, pour ce fait, conçu plusieurs qui m'ont permis de tester les services qui exécutent des actions courantes telles que créer un utilisateur, modifier l'espace de stockage, ou encore le réduire, communiquer avec la base de données, etc.
@@ -951,32 +1012,32 @@ La seconde consiste à aller sur l'interface de l'instance de test et d'utiliser
 
 \subsection{Calcul du coût d'un utilisateur}
 \paragraph{}
-Il m'a aussi été demandé de calculer le coût exact d'un utilisateur gratuit sur HappyBox CMS. Pour cela, j'ai cherché le moyen de calculer la bande passante par utilisateur\footnote{La bande passante fait partie des éléments dispendieux d'une infrastructure.} c'est à dire la somme de la bande passante utilisé pour chaque projet. En pratique, mesurer la bande passante n'est pas une chose aisée car il s'agit d'un flux et calculer la quantité revient théoriquement à en mesurer la taille de chaque paquet\footnote{Un paquet est un morceau d'information encapsulé pour transiter sur un réseau.} entrant et sortant. 
+Il m'a aussi été demandé de calculer le coût exact d'un utilisateur gratuit sur HappyBox CMS. Pour cela, j'ai cherché le moyen de calculer la bande passante par utilisateur\footnote{La bande passante fait partie des éléments dispendieux d'une infrastructure.} c'est à dire la somme de la bande passante utilisé pour chaque projet. En pratique, mesurer la bande passante n'est pas une chose aisée car il s'agit d'un flux et calculer la quantité revient théoriquement à en mesurer la taille de chaque paquet\footnote{Un paquet est un morceau d'information encapsulé pour transiter sur un réseau.} entrant et sortant.
 % verif par paquet
 \subparagraph{}
-Dans la pratique, ce ne serait pas une bonne idée car cela ralentirait considérablement les transferts. Il se produirait alors la même chose qui se produit lorsqu'un groupe de gendarmes zélés décide de contrôler toutes les voitures passant sur une route créant ainsi un bouchon. Pour des raisons évidentes, il n'était donc pas envisageable d'adopter une telle solution. 
+Dans la pratique, ce ne serait pas une bonne idée car cela ralentirait considérablement les transferts. Il se produirait alors la même chose qui se produit lorsqu'un groupe de gendarmes zélés décide de contrôler toutes les voitures passant sur une route créant ainsi un bouchon. Pour des raisons évidentes, il n'était donc pas envisageable d'adopter une telle solution.
 % pas de solution toute faite
 \subparagraph{}
 Je n'ai pas trouvé de solution toute faite pour répondre à ce problème. En effet, ce n'est pas une demande courante à ce niveau là de la pile logiciel. En général, ce sont les fournisseurs d'accès à internet ou les processeurs de centre de données qui mesurent les limitations pour leurs clients. Mais ces derniers mesurent cela au niveau du réseau, chose qu'il m'était impossible de faire car HappyBox ne contrôle pas l'équipement réseau de son infrastructure externalisé chez Amazon Web Services.
 
 % on peu faire du globale
 \subparagraph{}
-Il est possible d'estimer la bande passante globale d'un serveur avec des outils tels que VNstat. Il est impossible dans ce dernier d'obtenir les statistiques par utilisateur. 
+Il est possible d'estimer la bande passante globale d'un serveur avec des outils tels que VNstat. Il est impossible dans ce dernier d'obtenir les statistiques par utilisateur.
 %
 \subparagraph{}
 Même si nous arrivions à estimer la bande passante par utilisateur créé sur le serveur, nous n'aurions qu'une information incomplète car elle ne prendrait pas en compte le fait que les sites créés par l'utilisateur sont exécutés par un utilisateur administratif et donc hors des statistiques. Nous sommes, ici, dans la couche applicative; ce qui implique que les flux réseaux sont bien plus bas dans le modèle OSI et donc encapsulés et difficilement accessibles.
 \subparagraph{}
-J'ai donc choisi d’utiliser le logiciel Munin qui sert à surveiller les métriques des serveurs unix de manière générale. Il fonctionne sur le modèle client/serveurs. Il faut donc mettre en place un serveur principal qui sera en charge de centraliser et agréger les informations qu'il récupère en se connectant sur les nodes qu'il connaît. Ce qui implique qu'à chaque ajout d'hôte dans la ferme, il est nécessaire d'aller déclarer cette dernière auprès du maître Munin. 
+J'ai donc choisi d’utiliser le logiciel Munin qui sert à surveiller les métriques des serveurs unix de manière générale. Il fonctionne sur le modèle client/serveurs. Il faut donc mettre en place un serveur principal qui sera en charge de centraliser et agréger les informations qu'il récupère en se connectant sur les nodes qu'il connaît. Ce qui implique qu'à chaque ajout d'hôte dans la ferme, il est nécessaire d'aller déclarer cette dernière auprès du maître Munin.
 Sur les hôtes, on peut installer des sondes qui determineront ce qui leur est demandé de mesurer. Ce sont des scripts développables dans n'importe quel langage à condition de respecter les formats de fichier acceptés par le serveur maître et définis dans la documentation de Munin.
 \subparagraph{}
 Pour cela, j'ai donc ré-écrit une sonde qui analyse les fichiers d'enregistrement du serveur web de façon périodique afin d'analyser les informations données par ce dernier. En effet, la bande passante utilisée n'est pas indiquée dans le fichier mais la quantité de données pour chaque requête est spécifiée. Il m'a donc été possible de proposer une estimation globale pour le serveur web. En continuant d’analyser les fichiers de log il a été envisageable de faire la somme du poids des paquets transférés pour un hôte virtuel donné, en d'autres termes, un site web.
-\paragraph{} 
+\paragraph{}
 À partir de ce point, il est concevable d'avoir une idée du volume de données entrant et sortant pour chaque hôte virtuel. De plus, si nous faisons la somme des volumes de chaque hôte virtuel pour un utilisateur, on peut estimer une partie de la bande passante consommée par les projets de ce dernier. La valeur ne sera pas exacte, bien sûr, car elle se base uniquement sur une estimation déterminée à partir d'une partie des données. Mais nous pouvons, ainsi, avoir une estimation toujours inférieure de la consommation d'un utilisateur. Cependant, il ne faut oublier que calculer la bande passante par utilisateur à ce niveau là de l'infrastructure reviendrait à essayer de calculer la consommation d'eau de chaque habitant d'une maison en se fiant aux images d'une caméra de surveillance. Le résultat n'est pas juste, mais il est, néanmoins, possible de savoir qui consomme le plus d'eau.
 \subparagraph{}
 %%%
-Évidement, la bande passante n'est pas suffisante pour déterminer le coût d'un utilisateur. Il a donc fallu s’intéresser ensuite au ressources consommées, autrement dit à la quantité de mémoire vive, l'espace disque et l'utilisation processeur. En ce qui concerne l'espace disque, c'est assez aisé vu que chaque utilisateur se voit alloué une partition virtuelle correspondant à l'espace de stockage fourni par l'offre que le client a choisi. En principe, pour estimer cela, il suffit de prendre en compte le nombre de clients gratuits et de lui ajouter le produit des clients payants associés à leur offre respective. 
+Évidement, la bande passante n'est pas suffisante pour déterminer le coût d'un utilisateur. Il a donc fallu s’intéresser ensuite au ressources consommées, autrement dit à la quantité de mémoire vive, l'espace disque et l'utilisation processeur. En ce qui concerne l'espace disque, c'est assez aisé vu que chaque utilisateur se voit alloué une partition virtuelle correspondant à l'espace de stockage fourni par l'offre que le client a choisi. En principe, pour estimer cela, il suffit de prendre en compte le nombre de clients gratuits et de lui ajouter le produit des clients payants associés à leur offre respective.
 \subparagraph{}
-Vient alors le tour de l'utilisation de mémoire vive et l'utilisation de processeur. Une sonde Munin m'a semblé être un choix pertinent permettant de regrouper toutes les mesures au même endroit sur le maître Munin. Il m'a donc fallu écrire deux scripts habilités à faire une moyenne de l'utilisation de ces ressources par utilisateur, le tout en analysant des extractions régulières d'information sur le système. 
+Vient alors le tour de l'utilisation de mémoire vive et l'utilisation de processeur. Une sonde Munin m'a semblé être un choix pertinent permettant de regrouper toutes les mesures au même endroit sur le maître Munin. Il m'a donc fallu écrire deux scripts habilités à faire une moyenne de l'utilisation de ces ressources par utilisateur, le tout en analysant des extractions régulières d'information sur le système.
 
 \subparagraph{}
 Munin est encore capable de bien des merveilles. Il existe beaucoup de sondes créées par la communauté et leur création est assez aisée. Il m'a permis d'obtenir des indicateurs qui jusqu'alors m'étaient inaccessibles.
@@ -985,12 +1046,12 @@ La véritable limite de Munin se situe dans la nécessité de déclarer l'ajout 
 
 
 % 	\subsection{État des lieux}
-% Á l'heure actuel HappyBox CMS est dans la tourmente. Les fonds sont épuisé et l'avenir est encore incertain quand à la survie du produit, ce dernier n'ayant pas encore une masse d'utilisateur suffisante pour demander tenter une levé de fond auprés d'ange ou de venture capitalist. Bien que lors des premier contact la plupart de ces derniers été interessé par le produit mais leurs réponse étant la suivante: \emph{Revenez nous voir lorsque vous aurais 10000 utilisateurs} DOM Element Inc. n'a pas été financé. 
+% Á l'heure actuel HappyBox CMS est dans la tourmente. Les fonds sont épuisé et l'avenir est encore incertain quand à la survie du produit, ce dernier n'ayant pas encore une masse d'utilisateur suffisante pour demander tenter une levé de fond auprés d'ange ou de venture capitalist. Bien que lors des premier contact la plupart de ces derniers été interessé par le produit mais leurs réponse étant la suivante: \emph{Revenez nous voir lorsque vous aurais 10000 utilisateurs} DOM Element Inc. n'a pas été financé.
 % \paragraph{}
-% Danny et Guillaume on réduis le temps qu'ils consacrait à l'entreprise afin de trouver un emplois et se renflouer. HappyBox stagne en ligne accessible au utilisateur dont nous attendons avec impatience leur arrivé. Ce processus est plus long que prévue ce qui entraine la société dans une impasse. 
+% Danny et Guillaume on réduis le temps qu'ils consacrait à l'entreprise afin de trouver un emplois et se renflouer. HappyBox stagne en ligne accessible au utilisateur dont nous attendons avec impatience leur arrivé. Ce processus est plus long que prévue ce qui entraine la société dans une impasse.
 % \subparagraph{}
-% Faut il continuer le développement ou cesser les activités? Pour les fondateurs c'est la fin à moins de trouver une stratégie miracle pour l'avenir du produit. Il m'a donc été offert la possibilité de réfléchir à une stratégie pour l'avenir. 
-% \paragraph{}	
+% Faut il continuer le développement ou cesser les activités? Pour les fondateurs c'est la fin à moins de trouver une stratégie miracle pour l'avenir du produit. Il m'a donc été offert la possibilité de réfléchir à une stratégie pour l'avenir.
+% \paragraph{}
 % Je n'ai put refusé cette opportunité mais avant d'emettre une proposition, il faut analyser la situation et définir raisons de ce manque d'accroche auprès des utilisateurs ce qui nous permettrais de trouver du financement afin de pouvoir continuer.
 
 % \paragraph{}
@@ -1000,7 +1061,7 @@ La véritable limite de Munin se situe dans la nécessité de déclarer l'ajout 
 
 %%%% OWA
 \paragraph{}
-Open web Analytics est un outils d'analyse de trafique complet et libre\footnote{libre comme dans liberté et pas dans libre de droit.}. En plus des fonctionnalité attendu avec ce genre de logiciel, nombre de visiteur analyse de trafique par zone géographique, taux de rebond. Il offre des fonctionnalité extremement avancé tel un générateur de \emph{hitmap}, c'est affichage visuel indiquant ou les utilisateurs clique sur la page web. 
+Open web Analytics est un outils d'analyse de trafique complet et libre\footnote{libre comme dans liberté et pas dans libre de droit.}. En plus des fonctionnalité attendu avec ce genre de logiciel, nombre de visiteur analyse de trafique par zone géographique, taux de rebond. Il offre des fonctionnalité extremement avancé tel un générateur de \emph{hitmap}, c'est affichage visuel indiquant ou les utilisateurs clique sur la page web.
 
 Danny recherché un moyen de proposer ces analyses directement au sein de l'application ce qui n'est pas possible avec la solution la plus populaire: Google Web Analytics. En plus d'offrir une interface de programmation permettant de créer des niveau d'analyse trés détaillé, il n'impose aucune limite et nous permet de conerver une souveraineté total sur les données de nos utilisateurs.
 
@@ -1048,109 +1109,112 @@ Il s'agit là du déploiemet le plus cimple que j'ai réaliser durant mon stage.
 
 % Best practice linux bible
 
-	
+
 
 
 
 		% Démonstration d’une originalité dans l’élaboration et la mise en œuvre de la solution
 	\section{YarrBox le seul est unique vaisseaux des pirates de la boite.} % 5 page
 
-% Mise en place de jira et devellopement de process. 
+% Mise en place de jira et devellopement de process.
 % Infra ne nécessitant aucune présence physique donc startup ++ ou on vas fumer des joint avec les pote pis on code jusqu'a ce que segmentation fault s'en suive.
 
 % Flexibilité ce qui ne semblait pas évidenta avec un produits aussi complet et complexe qu'happybox CMS. Opswork et plein de scripts dans tout les sens
 
-		
+
 \paragraph{}
-YarrBox\footnote{"Yarr" est le cris d'un pirate. Il faut prononcé ce nom en fermant un oeil et en grognant.} est le nom de code de l'infrastructure mise en place spécialement pour HappyBox CMS. C'est un vaisseau unique qui été  développé spécialement pour permettre à HappyBox CMS de voguer dans les eaux troubles du web. 
+YarrBox\footnote{"Yarr" est le cris d'un pirate. Il faut prononcé ce nom en fermant un oeil et en grognant.} est le nom de code de l'infrastructure mise en place spécialement pour HappyBox CMS. C'est un vaisseau unique qui été  développé spécialement pour permettre à HappyBox CMS de voguer dans les eaux troubles du web.
 \paragraph{}
-Cette infrastructure est entièrement virtuelle. Par ce fait, elle est accessible et gérable depuis n'importe quelle partie du monde. Ainsi peu importe où se trouve son équipage, il est possible de travailler. 
+Cette infrastructure est entièrement virtuelle. Par ce fait, elle est accessible et gérable depuis n'importe quelle partie du monde. Ainsi peu importe où se trouve son équipage, il est possible de travailler.
 \paragraph{}
-YarrBox inclue un ensemble de logiciels modifiés et adaptés par mes soins et intégrés par tous les moyens existants. Il ne s'agit jamais de savoir à quoi sert un logiciel mais plutôt comment réussir à lui faire faire ce que l'on souhaite. Cela va à l'encontre de toute la propagande des gros éditeurs logiciel qui, par l'intermédiaire de lobby, ont réussi à faire passer des réglementations liberticides et nocives pour les utilisateurs, le tout avec l'aval d'un pouvoir exécutif peu regardant sur le bien être des moutons qu'il pense avoir soumis. C'est en totale contradiction avec la nature humaine qui accommode continuellement son environnement à ses besoins. rarement dans le sens inverse. 
+YarrBox inclue un ensemble de logiciels modifiés et adaptés par mes soins et intégrés par tous les moyens existants. Il ne s'agit jamais de savoir à quoi sert un logiciel mais plutôt comment réussir à lui faire faire ce que l'on souhaite. Cela va à l'encontre de toute la propagande des gros éditeurs logiciel qui, par l'intermédiaire de lobby, ont réussi à faire passer des réglementations liberticides et nocives pour les utilisateurs, le tout avec l'aval d'un pouvoir exécutif peu regardant sur le bien être des moutons qu'il pense avoir soumis. C'est en totale contradiction avec la nature humaine qui accommode continuellement son environnement à ses besoins. rarement dans le sens inverse.
 \paragraph{}
 YarrBox a été pensé en ce sens et se veut être une infrastructure évolutive et toujours en quête de nouvelles fonctionnalités. Cette philosophie est à l’œuvre et s'applique à l’échelle du projet tout entier, HappyBox CMS devait être un module pour drupal mais à force de modifications de grandes choses sont arrivée et cette merveille a vu le jour. L'infrastructure l’hébergeant se doit d'être à son image. En ce sens, beaucoup de logiciels ont une utilisation différente de ce qui est prévue.
 \subsection{Munin}
 % plugin munin
-Munin est un outil de surveillance de ressources présentes sur un réseau. Il donne la possibilité de créer des sondes uniques, ce qui en fait un compagnon extrêmement malléable et surtout utile puisque ces dernières peuvent surveiller ce que la plupart des logiciels de surveillance n'autorisent pas. Ici tout est observable, à  condition que la node soit déclarée auprès du maître. Pour palier à ce problème un utilitaire de communication, basé sur node js, et un système de messages chiffrés sont en cours d'élaboration. 
+Munin est un outil de surveillance de ressources présentes sur un réseau. Il donne la possibilité de créer des sondes uniques, ce qui en fait un compagnon extrêmement malléable et surtout utile puisque ces dernières peuvent surveiller ce que la plupart des logiciels de surveillance n'autorisent pas. Ici tout est observable, à  condition que la node soit déclarée auprès du maître. Pour palier à ce problème un utilitaire de communication, basé sur node js, et un système de messages chiffrés sont en cours d'élaboration.
 Le fonctionnement en est assez simple: sur le maître un processus est à l'écoute. Il est tapis, à l’affût d'une communication. Lorsque cette communication arrive, il en authentifie la source via un jeton fourni au client, ajoute les configurations nécessaires et renvoie un message sur la complétion ou l'erreur du procédé. La communication entre les éléments sur un réseau n'a rien de novateur mais ici l'objectif est de rendre les serveurs intelligents et capables de discuter entre eux de manière autonome. J'espère, à terme, pouvoir gérer des messages plus complexes et multi-directionnels afin de créer une sorte d'\emph{intelligence artificielle} d'administration système.
 \paragraph{}
 En ce sens, c'est un outil exceptionnel trop souvent ignoré car son interface graphique n'est pas particulièrement agréable. Mais dans notre produit, l'interface n'est pas utilisée. Ces données permettent de fournir des statistiques d'utilisation qui sont mises à la disposition des utilisateurs HappyBox. Danny a interfacé le résultat de mes scripts à l'application.
 %script de manipulation LVM
 
 \subsection{stockage}
-En ce qui concerne le stockage des données utilisateurs, il y a eu beaucoup de progrès pour les libérer des instances et rendre encore plus flexible HappyBox. Malgré cela, la solution n'est pas encore au point à mon avis. Tant que les données utilisateurs seront liées à une seule et unique instance, leur gestion sera complexe et chronophage. 
+En ce qui concerne le stockage des données utilisateurs, il y a eu beaucoup de progrès pour les libérer des instances et rendre encore plus flexible HappyBox. Malgré cela, la solution n'est pas encore au point à mon avis. Tant que les données utilisateurs seront liées à une seule et unique instance, leur gestion sera complexe et chronophage.
 \paragraph{}
-C'est pourquoi, une nouvelle approche doit être envisagée. Jusqu'à l'heure, peu de solutions semblaient répondre convenablement au problème et s'interfacer judicieusement sans créer une énorme usine à gaz. 
+C'est pourquoi, une nouvelle approche doit être envisagée. Jusqu'à l'heure, peu de solutions semblaient répondre convenablement au problème et s'interfacer judicieusement sans créer une énorme usine à gaz.
 
-Ceci n'est plus le cas depuis la sortie du logiciel Docker. Il permet de cloisonner ou plusieurs processus dans des conteneurs où il s’exécute sans affecter l’hôte. 
+Ceci n'est plus le cas depuis la sortie du logiciel Docker. Il permet de cloisonner ou plusieurs processus dans des conteneurs où il s’exécute sans affecter l’hôte.
 \paragraph{}
-En effet, il serait grâce à lui, possible de séparer les espaces des utilisateurs dans des conteneurs autonomes et fortement cloisonnés. De la sorte, au lieu d'offrir non seulement un hébergement pour les sites des utilisateurs, HappyBox leur proposerait aussi une machine virtuelle où il pourrait installer les logiciels de leurs choix et serait \emph{maitre} d'un petit espace sur les serveurs de HappyBox. Cela correspondrait à l'ouverture de la version agence du logiciel à tous les utilisateurs. 
+En effet, il serait grâce à lui, possible de séparer les espaces des utilisateurs dans des conteneurs autonomes et fortement cloisonnés. De la sorte, au lieu d'offrir non seulement un hébergement pour les sites des utilisateurs, HappyBox leur proposerait aussi une machine virtuelle où il pourrait installer les logiciels de leurs choix et serait \emph{maitre} d'un petit espace sur les serveurs de HappyBox. Cela correspondrait à l'ouverture de la version agence du logiciel à tous les utilisateurs.
 Ainsi, les clients agences ont un serveur HappyBox qui leur est dédié ce qui n'est pas envisageable pour les autres types d'offre au vue des coûts engendrés. Un conteneur docker pourrait faire office de machine virtuel pour tous les utilisateurs en ajoutant une fonctionnalité attirante pour les utilisateurs développeurs.
  \paragraph{}
-En effet, les clients agences ont un serveur HappyBox qui leur est dédié ce qui n'est pas envisageable pour les autres types de plan au vue des cout engendré. Un conteneur docker pourrait faire office de machine virtuel pour tout les utilisateurs ajoutant une fonctionnalité attirante pour les utilisateurs développeur. 
+En effet, les clients agences ont un serveur HappyBox qui leur est dédié ce qui n'est pas envisageable pour les autres types de plan au vue des cout engendré. Un conteneur docker pourrait faire office de machine virtuel pour tout les utilisateurs ajoutant une fonctionnalité attirante pour les utilisateurs développeur.
 \paragraph{}
 %%% STOP
-Qui plus est, les processus d’exécution sont uniques à chaque utilisateur mais ces derniers s'exécutent dans un environnement partagé. L'ouverture aux utilisateurs de l'éditeur de code au sein d'HappyBox n'a, pour l'instant, pas été ouverte pour des raisons de sécurité afin d'éviter une exécution de code malveillant sur nos serveurs. 
+Qui plus est, les processus d’exécution sont uniques à chaque utilisateur mais ces derniers s'exécutent dans un environnement partagé. L'ouverture aux utilisateurs de l'éditeur de code au sein d'HappyBox n'a, pour l'instant, pas été ouverte pour des raisons de sécurité afin d'éviter une exécution de code malveillant sur nos serveurs.
 
 
 \subsection{Outils de travail}
-Le code et la technique ne sont pas les seules composantes du travail au sein d'une startup. Il est indispensable de pouvoir élaborer une stratégie, de la revoir à tout moment et d'agir en conséquence tout en contrôlant son efficacité. En ce sens, la mise en place de Git a profondément changé les méthodes de travail en les rendant plus collaboratives et plus sécuritaires. Gitlab est, certes, un logiciel de gestion de version des sources mais c'est aussi une plateforme sociale facilitant l'interaction entre les membres de l'équipe. 
+Le code et la technique ne sont pas les seules composantes du travail au sein d'une startup. Il est indispensable de pouvoir élaborer une stratégie, de la revoir à tout moment et d'agir en conséquence tout en contrôlant son efficacité. En ce sens, la mise en place de Git a profondément changé les méthodes de travail en les rendant plus collaboratives et plus sécuritaires. Gitlab est, certes, un logiciel de gestion de version des sources mais c'est aussi une plateforme sociale facilitant l'interaction entre les membres de l'équipe.
 
-Dans le même soucis d'amélioration des conditions de travail le choix de la plateforme Jira nous a permis d'optimiser, au mieux, l'organisation de notre équipe. Chaque membre peut, dorénavant, aisément savoir ce qui lui est nécessaire de faire pour avancer de manière coordonnée avec le reste de l'équipe. La communication étant un facteur primordial de réussite dans l'élaboration, le maintien et l'évolution d'un projet, il était nécessaire de faciliter son application. Grâce à Jira, elle s'en trouve une fois de plus, simplifiée. 
+Dans le même soucis d'amélioration des conditions de travail le choix de la plateforme Jira nous a permis d'optimiser, au mieux, l'organisation de notre équipe. Chaque membre peut, dorénavant, aisément savoir ce qui lui est nécessaire de faire pour avancer de manière coordonnée avec le reste de l'équipe. La communication étant un facteur primordial de réussite dans l'élaboration, le maintien et l'évolution d'un projet, il était nécessaire de faciliter son application. Grâce à Jira, elle s'en trouve une fois de plus, simplifiée.
 
-Jira a également profondément changé les méthodes de travail en créant un processus de développement et de gestion de stratégie claire. Le système de ticket trié par importance permet de savoir rapidement ce qu'il y a faire et ce qui a été fait. Il aussi possible de générer des indicateurs de performance et définir des métriques telles que le nombre de tickets résolus par jour ou les objectifs restant avant la prochaine version. 
+Jira a également profondément changé les méthodes de travail en créant un processus de développement et de gestion de stratégie claire. Le système de ticket trié par importance permet de savoir rapidement ce qu'il y a faire et ce qui a été fait. Il aussi possible de générer des indicateurs de performance et définir des métriques telles que le nombre de tickets résolus par jour ou les objectifs restant avant la prochaine version.
 En plus, d'un gain de productivité non négligeable, l'utilisation de Jira a pu consolider la communication interne de l'équipe. En effet, cette solution a donné à chaque employé la possibilité de s'intéresser profondément au travail des autres sans les priver, pour autant, de leur temps de productivité.
 
-Avant cela il n'y avait pas vraiment de processus de management au vu de la taille de l'équipe. L'utilisation d'un logiciel SaaS permet de le rendre accessible depuis n'importe quel point. C'est un aspect important pour HappyBox car cela a totalement modifié notre manière de travailler.  En nous donnant la liberté de travailler où bon nous semblait, nous étions nettement plus enclin à donner de soi dans ce projet. Nous sommes, avant tout, là pour donner naissance à un projet et non faire un quota d'heures fixes. Cette méthode de travail a réellement amené une ambiance de travail agréable et par conséquent productive. Que le travail soit fait du bureau ou depuis son canapé, cela n'avait pas d'importance : un employé heureux est un employé efficace.  
+Avant cela il n'y avait pas vraiment de processus de management au vu de la taille de l'équipe. L'utilisation d'un logiciel SaaS permet de le rendre accessible depuis n'importe quel point. C'est un aspect important pour HappyBox car cela a totalement modifié notre manière de travailler.  En nous donnant la liberté de travailler où bon nous semblait, nous étions nettement plus enclin à donner de soi dans ce projet. Nous sommes, avant tout, là pour donner naissance à un projet et non faire un quota d'heures fixes. Cette méthode de travail a réellement amené une ambiance de travail agréable et par conséquent productive. Que le travail soit fait du bureau ou depuis son canapé, cela n'avait pas d'importance : un employé heureux est un employé efficace.
 
 %% une image de jira
 
 %% STOP
 		% Analyse de l’approche choisie
+	% Analyse de l’approche choisie
 	\section{Analyse de l'approche choisie} % 3 pages
 \paragraph{}
-Lors de mon arrivé dans les rang de HappyBox il m'a éte confié une mission claire: batir une infrastructure pouvant acceuillir une forte masse d'utilisateur environ 10 000. Pour résoudre ce probléme j'ai adopté une approche basé sur les méthodes scientifique que j'ai pu observé durant mon stage chez Biogemma. La méthode est simple et repose sur l'observation et l'analyse.
-Selon il faut effectuer des cycles basé sur la durée de croissance d'une pousse de blé in vitro et son séquençage en laboratoire. Cela permettant de s'adapter et de modifier ses objectifs à partir des résultats obtenue lors de l'itération précédente. Il est nécessaire dans le cas de recherche de pratiquer ce genre de méthode car explorer une piste voué l'echec coute chére financièrement et humainement parlant. C'est un cycle composé de six étapes: Observation, réfléxion, documentation, projection, action et analyse.
-N'ayant pas des contrainte logistique importante dans le cadre d'une expérience j'ai choisi d'adopter un cycle hebdomadaire. Chose possible grâce la quasi-total autonomie dont dans laquelle j'évolué. Chaque semaine, un j'ai établie un bilan de l'impact des choix de la semaine précédente. Chose facilité par la tenue d'un cahier de recherche\footnote{Les chercheurs ne pouvant produire un résultat aisément mesurable, il leur est demandé de documenter le travail. C'est un outils extremement utile à la fois pour les chercheurs présent et future. En effet, ces cahiers son archivé et indexé afin de ne rien perdre du travail et des réflexion effectuer. } contenant un résumé de mon travail, de mes notes prises au contact de Guillaume et Danny et de mes réflexion tenu à jour en temps réel. Ce cahier dois être daté afin de pouvoir s'en servir comme support de travail à long termes. c'est l'élément fondamentale de la phase d'observation car il deviens une mémoire alternative diffusable. 
-Il ne s'agit pas réellement d'une cyclique car pour optimiser la recherche il est possible de le paralléliser afin de compenser l'aspect bloquant de certain axe. Durant l'attente des résultats d'une expérience on il est possible de préparer la seconde et ainsi de suite. Les travaux de réflexion et de documentation servent préparer la mise en place de l'experience car l'on cherche à éviter de travailler avec des paramétres inconnus pouvant fausser les résultat chose qui n'est souvent visible qu'après plusieurs itération et représentant un perte de temps colossale.
+Lors de mon arrivé dans les rang d'HappyBox, il m'a été confié une mission claire: bâtir une infrastructure pouvant accueillir une forte masse d'utilisateurs, environ 10 000. Pour résoudre ce problème, j'ai adopté une approche basée sur des méthodes scientifiques que j'ai pu observé durant mon stage chez Biogemma. La méthode est simple et repose sur l'observation et l'analyse, selon laquelle, il faut effectuer des cycles basés sur la durée de croissance d'une pousse de blé in vitro et son séquençage en laboratoire. Cela permettait de s'adapter et de modifier ses objectifs à partir des résultats obtenus lors de l'itération précédente. 
+Il est nécessaire, dans un cadre de recherche, de pratiquer ce genre de méthode car explorer une piste vouée à l’échec coûte cher financièrement et humainement parlant. C'est un cycle composé de six étapes: observations, réflexions, documentation, projection, action et analyse.
+
+N'ayant pas de contraintes logistiques importantes comme cela peut l'être dans le cadre d'une expérience, j'ai choisi d'adopter un cycle hebdomadaire. Chose possible grâce à la quasi-totale autonomie dans laquelle j'ai pu évoluer. Chaque semaine, j'ai établi un bilan de l'impact des choix pris la semaine précédente. Cette tâche a été grandement facilité par la tenue d'un cahier de recherche\footnote{Les chercheurs ne pouvant produire un résultat aisément mesurable, il leur est demandé de documenter leur travail. Ce cahier est un outil extrêmement utile à la fois pour les chercheurs présents mais aussi pour les chercheurs futurs. En effet, ces cahiers sont archivés et indexés afin de ne rien perdre du travail et des réflexions effectués.} contenant un résumé de mon travail, de mes notes prises au contact de Guillaume et Danny ainsi que de mes réflexions tenues à jour en temps réel. Ce cahier doit être daté afin de pouvoir s'en servir comme support de travail à long terme, car il me permet de visualiser, en cas de problème, toutes les modifications que j'ai pu effectuer C'est l'élément fondamental de la phase d'observation car il devient une mémoire alternative diffusable. 
+Il ne s'agit pas réellement d'une méthode cyclique car pour optimiser la recherche, il est parfois préférable de la paralléliser afin de compenser l'aspect bloquant de certains axes. Durant l'attente des résultats d'une expérience, il est possible de préparer la seconde itération et ainsi de suite, afin d'optimiser au mieux sa productivité. Les travaux de réflexion et de documentation servent à préparer la mise en place de l’expérience. Dans cette étape, on cherche à éviter de travailler avec des paramètres inconnus pouvant fausser les résultats, chose qui n'est souvent visible qu'après plusieurs itérations, ce qui représente un perte de temps colossale.
 
 \paragraph{}
-Il est possible de possible d'adapter cette approches dans tout type de projet demandant une grande autonomie ou un réfléxion complex et structuré. Dans le cadre d'une startup, elle particulièrement redoutable car elle m'a permis de m'adapter trés rapidement aux besoins changeant. 
+Il est possible d'adapter cette approche à tout type de projet demandant une grande autonomie ou une réflexion complexe et structurée. Dans le cadre d'une startup, cette méthode est particulièrement redoutable car elle m'a permis de m'adapter très rapidement aux besoins changeant. 
 
-J'ai aussi petit à petit dériver d'un rôle purement technique à une place demandant une vision plus globale du projet. Il n'est pas envisageable, dans un cadre de travail aussi changeant, de conserver une approche linéaire et prévue à long terme. 
+J'ai aussi, petit à petit, dérivé d'un rôle purement technique à une place demandant une vision plus globale du projet. Il n'est pas envisageable, dans un cadre de travail aussi fluctuant, de conserver une approche linéaire et prévue sur le long terme. 
 
-En effet les besoins étant peux conventionel il m'a fallut apprendre beaucoup de choses rapidement. L'étape de documentation a été fondamentale en ce sens car on peu à la fois allier formation et expérimentation hors du context de production permettant de  réduire au maximum les difficultés technique et la plupart des problèmes triviaux. 
+En effet, les besoins étant peu conventionnels, il m'a fallu apprendre une multitude de notions et ce de manière très rapide. L'étape de documentation a été fondamentale en ce sens car il m'a offert à la fois l'occasion d'allier formation et expérimentation hors du contexte de production. Cela permet de  réduire au maximum les difficultés techniques et la plupart des problèmes triviaux. 
 
 \paragraph{}
-Cette pratique n'est pas récente. Il s'agit de la base de la méthode scientifique. Cette dernières est adaptable en toute situation et permet d'augementer les performances en terme de recherche et developpement. De plus elle permet d'explorer des problémes complexe par étapes simplifiant ainsi la résolution des erreur. Ou la navigation dans un arbre de possibilité.
+Cette pratique n'est pas récente car elle est la composante essentielle du travail scientifique. Cette dernière est adaptable en toute situation et permet d’augmenter les performances en terme de recherche et de développement. De plus, elle rend possible l'exploration de problèmes complexes par étapes, simplifiant ainsi la résolution des erreurs.
+
 
 
 		% Réflexion sur le stage et le mémoire
 	\section{Autoévaluation} % 2 pages
 \paragraph{}
-La rédaction de ce mémoire m'a contraint à prendre énormément de recul, pas seulement sur ce que j'ai accompli en tant qu'administrateur système linux, mais également et surtout en tant que collaborateur d'HappyBox CMS. Aujourd'hui, mon poids décisionnel est tel que ma réflexion se porte beaucoup plus loin et ne se limite pas simplement au bon fonctionnement de l'infrastructure. 
+La rédaction de ce mémoire m'a contraint à prendre énormément de recul, pas seulement sur ce que j'ai accompli en tant qu'administrateur système linux, mais également et surtout en tant que collaborateur d'HappyBox CMS. Aujourd'hui, mon poids décisionnel est tel que ma réflexion se porte beaucoup plus loin et ne se limite pas simplement au bon fonctionnement de l'infrastructure.
 \paragraph{}
-Je ne veux pas minimiser ce dernier point qui est un des piliers fondateurs de sa survie ; cependant HappyBox CMS, tel qu'il est pensé actuellement, ne fonctionne pas. Le produit est excellent et son utilisation et sa croissance peuvent être exponentielles ; mais il est, in situ, mal présenté et manque clairement de visibilité. 
+Je ne veux pas minimiser ce dernier point qui est un des piliers fondateurs de sa survie ; cependant HappyBox CMS, tel qu'il est pensé actuellement, ne fonctionne pas. Le produit est excellent et son utilisation et sa croissance peuvent être exponentielles ; mais il est, in situ, mal présenté et manque clairement de visibilité.
 
 \paragraph{}
-J'ai, d'ores et déjà, réfléchi à plusieurs axes d'évolution que je compte bien mettre en pratique dès que possible. Je souhaite, notamment, offrir à ses utilisateurs plus de liberté dans le nombre de projet qui leur est alloué, afin d'apporter à HappyBox un réel contenu et donner aux utilisateurs la possibilité d'utiliser le logiciel différemment. 
+J'ai, d'ores et déjà, réfléchi à plusieurs axes d'évolution que je compte bien mettre en pratique dès que possible. Je souhaite, notamment, offrir à ses utilisateurs plus de liberté dans le nombre de projet qui leur est alloué, afin d'apporter à HappyBox un réel contenu et donner aux utilisateurs la possibilité d'utiliser le logiciel différemment.
 \paragraph{}
-Comme je l'ai déjà mentionné, pour le moment HappyBox permet à ses usagers de créer une seule et unique page (de manière gratuite), ce qui bride nos utilisateurs. 
-Pour moi, l'une des erreurs les plus flagrantes que l'on ait pu commettre, a été d'essayer de croquer le gâteau avant de l'avoir fait. 
+Comme je l'ai déjà mentionné, pour le moment HappyBox permet à ses usagers de créer une seule et unique page (de manière gratuite), ce qui bride nos utilisateurs.
+Pour moi, l'une des erreurs les plus flagrantes que l'on ait pu commettre, a été d'essayer de croquer le gâteau avant de l'avoir fait.
 \paragraph{}
 Je m'explique : nous avions choisi, après réflexions communes, d'adopter un modèle économique de type freemium alors que nous n'avions pas encore la base massive d'utilisateurs addicts. Nous nous sommes, de mon point de vue, concentrer sur le problème épineux de l'auto-financement, ce qui en réalité n'était pas d'actualité. En effet, nous avions réfléchi à partir d'une projection d'évolution du produit et non aux besoins actuels d'HappyBox et de ses utilisateurs.
 \paragraph{}
-Il est contradictoire d'empêcher l'expression créative de nos usagers alors que nous voulons justement que notre plateforme soit utilisée. Pourquoi donnons-nous une multitude de fonctionnalités à leur disposition sans leur permettre de pouvoir tous les essayer et ce dans des projets différents ? Bien sûr, il est toujours facile de se rendre compte de ces choses après coup. 
+Il est contradictoire d'empêcher l'expression créative de nos usagers alors que nous voulons justement que notre plateforme soit utilisée. Pourquoi donnons-nous une multitude de fonctionnalités à leur disposition sans leur permettre de pouvoir tous les essayer et ce dans des projets différents ? Bien sûr, il est toujours facile de se rendre compte de ces choses après coup.
 \paragraph{}
-J'ai pris conscience de mon manque de discernement et surtout du peu d'expérience que j'avais lors de mon arrivée au sein d'HappyBox. Aujourd'hui, j'ose entrapercevoir les problèmes qu'HappyBox a pu rencontré dans sa communication interne et externe de son produit. 
+J'ai pris conscience de mon manque de discernement et surtout du peu d'expérience que j'avais lors de mon arrivée au sein d'HappyBox. Aujourd'hui, j'ose entrapercevoir les problèmes qu'HappyBox a pu rencontré dans sa communication interne et externe de son produit.
 \paragraph{}
 J'ai énormément appris en travaillant avec Danny et Guillaume et pas seulement d'un point de vue technique, même si la quantité et la qualité des technologies que j'ai pu côtoyer, aborder, comprendre et utiliser étaient impressionnantes. Mais j'ai également pu observer le fonctionnement d'une startup, de sa création à son évolution en passant par ses investissements, ses possibilités créatives, ses coûts engendrés, son organisation de travail, son recrutement, son image et son système de marketing. Ce stage fut riche en expériences toutes aussi différentes que captivantes et surtout, ne pouvant marcher les unes sans les autres.
-Je suis entré  au sein de la boîte joyeuse lorsqu'elle n'était encore qu'à ces débuts dans ce monde économique impitoyable des startups. Ce fut une chance pour moi d'assister et de contribuer à son évolution. 
+Je suis entré  au sein de la boîte joyeuse lorsqu'elle n'était encore qu'à ces débuts dans ce monde économique impitoyable des startups. Ce fut une chance pour moi d'assister et de contribuer à son évolution.
 
 
 \paragraph{}
 
-- Faire mes trucs museion, happybox, 
+- Faire mes trucs museion, happybox,
 
 - Fonadtion linux
 
