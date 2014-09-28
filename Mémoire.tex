@@ -1052,19 +1052,30 @@ Cette infrastructure est entièrement virtuelle par ce fait elle est accessible 
 Yarrbox inclus un ensemble de logiciel modifié et adapté par mes soins et intégré par tout les moyens possibles. Il ne s'agit jamais de savoir à quoi sert un logiciel mais plutôt comment réussir à lui faire faire ce que l'on souhaite. Cela vas à l'encontre de toute la propagande des gros éditeures logiciel qui, par l'intermédiaire de lobby, on réussi à faire passer des réglementation liberticide et nocives pour les utilisateurs le tout avec l'avale d'un pouvoir exécutif peut regardant sur le bien être des moutons qu'il pense avoir soumis. C'est en total contradiction avec la nature humaine qui adapte son environnement. 
 \paragraph{}
 YarrBox à été penser en ce sens et ce veut être une infrastructure évolutive et toujours en quéte de nouvelle fonctionnalité. Cette philosophie est à l'oeuvre à l'echelle du projet tout entier, Happybox CMS devait être un module pour drupal mais à force de modification de grande chose sont arrivé et cette merveille à vue le jours. L'infrastructure l'hébergant ce doit d'être à son images. En ce sens, beaucoup de logiciel on une utilisation différente de ce qui est prévue.
-\paragraph{}
+\subsection{Munin}
 % plugin munin
 Munin est un outils de surveillance de ressources présente dans sur un réseaux. Il permet de créer des sondes unique ce qui en fait un compagnon extrémement utile puisque ces dernières peuvent surveiller ce que la plupart des logicielles de surveillance n'autorise pas. Ici tout est observable, à  condition que la node soit déclarer auprés du maitre. Pour palier à ce problémes un utilitaire de communication basé sur node js et un sysème de messages chiffré est en cours d'élaboration. 
 Le fonctionnement en est assez simple: sur le maitre un processus est à l'écoute. Il est tapis, à l'affut d'une communication. Lorsque cette communication arrive. Il en authentifie la source via un jetons fournis au client. Ajoute les configurations nécessaire et renvoie un message sur la complétion ou l'erreur du procédé. La communication entre élément sur un résaux n'à rien de novateur mais ici l'objectif est de rendre les serveurs intelligent et capable de discuter entre eux manière autonome. J'espère termes pouvoir gérer des messages plus complexe et multi-directionnelle afin de crée une sorte d'\emph{intelligence artificielle} d'administration systeme.
 
+En ce sens c'est un outils exeptionnel top souvent ignoré car son interface graphique n'est pas trés agréable. Mais dasn notre l'interface n'est pas utilisé. ces données permettent de fournir des statistiques d'utilisation qui sont accessible pour les utilisateurs HappyBox. Danny à interfacé le résultat de mes scripts à l'application.
 %script de manipulation LVM
 
+\subsection{stockage}
+En ce qui concerne le stockage des données utilisateurs. Il y a eu beaucoup de progrés pour les libérer des instances et rendre encore plus flexible HappyBox. Malgrés cela la solution n'est pas encore au point à mon avis. Tant que les données utilisateurs seront lié à une seul et unique instance leurs gestion sera complexe et chronophage. 
+
+C'est pourquoi une nouvelle approche doit être envisagé. Jusqu'à l'heure peu de solutions semblé répondre convenablement au problème  et s'interfacer judicieusement sans créer un énorme usine à gaz. 
+
+Ceci n'est plus vrai depuis la sortie du logiciel Docker. Il permet de cloisonné ou plusieurs processus dans des conteneurs ou il s'execute sans affecter l'hote. 
+
+En effet il serait ,grace à lui, possible de séparer les espaces des utilisateurs dans des conteneur autonome et fortement cloisoné. De la sorte au lieu d'offrir non seulement un hébergement pour les sites des utilisateurs mais aussi une machine virtuelle ou il pourrait installer les logiciels de leurs choix et serait \emph{maitre} d'un petit espace sur les serveurs de HappyBox. Cela correspondrai à l'ouverture de la version agence du logiciel à tout les utilisateurs. 
+En effet, les clients agences ont un serveur HappyBox qui leur est dédié ce qui n'est pas envisageable pour les autres types de plan au vue des cout engendré. Un conteneur docker pourrait faire office de machine virtuel pour tout les utilisateurs ajoutant une fonctionnalité attirante pour les utilisateurs développeur. 
+En plus de cela les processus d'execution sont unique à chaque utilisateur mais ce dernier s'exécute dans un envirronement partagé. L'ouverture aux utilisateurs de l'éditeur de code au sein d'HappyBox n'a pas été ouverte pour des raisons de sécurité afin d'éviter une exécution de code malveillant sur nos serveurs.
 
 		% Analyse de l’approche choisie
 	\section{Analyse de l'approche choisie} % 3 pages
 				% c'est le moment de ce la péter
 % étudier pour répondre au besoin exact d'happybox CMS
-
+Ici, tout est sur mesure.
 % seul moyen est projections puis comparaison avec les fait
 
 % Peu dispendieuse bien que vrais lors de la mise en place. Depuis l'offre à changer, les serveurs que nous utilisions sont moins puissants que la gnenération actuel burst de CPU en plus.
