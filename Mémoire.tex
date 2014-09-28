@@ -999,6 +999,12 @@ La véritable limite de Munin se situe dans la nécessité de déclarer l'ajout 
 
 
 %%%% OWA
+\paragraph{}
+Open web Analytics est un outils d'analyse de trafique complet et libre\footnote{libre comme dans liberté et pas dans libre de droit.}. En plus des fonctionnalité attendu avec ce genre de logiciel, nombre de visiteur analyse de trafique par zone géographique, taux de rebond. Il offre des fonctionnalité extremement avancé tel un générateur de \emph{hitmap}, c'est affichage visuel indiquant ou les utilisateurs clique sur la page web. 
+
+Danny recherché un moyen de proposer ces analyses directement au sein de l'application ce qui n'est pas possible avec la solution la plus populaire: Google Web Analytics. En plus d'offrir une interface de programmation permettant de créer des niveau d'analyse trés détaillé, il n'impose aucune limite et nous permet de conerver une souveraineté total sur les données de nos utilisateurs.
+
+Il s'agit là du déploiemet le plus cimple que j'ai réaliser durant mon stage. Il a suffit de copier le logiciel dans sur serveur web et de le connecter à une base de données.
 
 %%% MUNIN
 
@@ -1067,59 +1073,92 @@ YarrBox a été pensé en ce sens et se veut être une infrastructure évolutive
 % plugin munin
 Munin est un outil de surveillance de ressources présentes sur un réseau. Il donne la possibilité de créer des sondes uniques, ce qui en fait un compagnon extrêmement malléable et surtout utile puisque ces dernières peuvent surveiller ce que la plupart des logiciels de surveillance n'autorisent pas. Ici tout est observable, à  condition que la node soit déclarée auprès du maître. Pour palier à ce problème un utilitaire de communication, basé sur node js, et un système de messages chiffrés sont en cours d'élaboration. 
 Le fonctionnement en est assez simple: sur le maître un processus est à l'écoute. Il est tapis, à l’affût d'une communication. Lorsque cette communication arrive, il en authentifie la source via un jeton fourni au client, ajoute les configurations nécessaires et renvoie un message sur la complétion ou l'erreur du procédé. La communication entre les éléments sur un réseau n'a rien de novateur mais ici l'objectif est de rendre les serveurs intelligents et capables de discuter entre eux de manière autonome. J'espère, à terme, pouvoir gérer des messages plus complexes et multi-directionnels afin de créer une sorte d'\emph{intelligence artificielle} d'administration système.
-
+\paragraph{}
 En ce sens, c'est un outil exceptionnel trop souvent ignoré car son interface graphique n'est pas particulièrement agréable. Mais dans notre produit, l'interface n'est pas utilisée. Ces données permettent de fournir des statistiques d'utilisation qui sont mises à la disposition des utilisateurs HappyBox. Danny a interfacé le résultat de mes scripts à l'application.
 %script de manipulation LVM
 
 \subsection{stockage}
 En ce qui concerne le stockage des données utilisateurs, il y a eu beaucoup de progrès pour les libérer des instances et rendre encore plus flexible HappyBox. Malgré cela, la solution n'est pas encore au point à mon avis. Tant que les données utilisateurs seront liées à une seule et unique instance, leur gestion sera complexe et chronophage. 
-
+\paragraph{}
 C'est pourquoi, une nouvelle approche doit être envisagée. Jusqu'à l'heure, peu de solutions semblaient répondre convenablement au problème et s'interfacer judicieusement sans créer une énorme usine à gaz. 
 
 Ceci n'est plus le cas depuis la sortie du logiciel Docker. Il permet de cloisonner ou plusieurs processus dans des conteneurs où il s’exécute sans affecter l’hôte. 
-
+\paragraph{}
 En effet, il serait grâce à lui, possible de séparer les espaces des utilisateurs dans des conteneurs autonomes et fortement cloisonnés. De la sorte, au lieu d'offrir non seulement un hébergement pour les sites des utilisateurs, HappyBox leur proposerait aussi une machine virtuelle où il pourrait installer les logiciels de leurs choix et serait \emph{maitre} d'un petit espace sur les serveurs de HappyBox. Cela correspondrait à l'ouverture de la version agence du logiciel à tous les utilisateurs. 
 Ainsi, les clients agences ont un serveur HappyBox qui leur est dédié ce qui n'est pas envisageable pour les autres types d'offre au vue des coûts engendrés. Un conteneur docker pourrait faire office de machine virtuel pour tous les utilisateurs en ajoutant une fonctionnalité attirante pour les utilisateurs développeurs.
- 
+ \paragraph{}
 En effet, les clients agences ont un serveur HappyBox qui leur est dédié ce qui n'est pas envisageable pour les autres types de plan au vue des cout engendré. Un conteneur docker pourrait faire office de machine virtuel pour tout les utilisateurs ajoutant une fonctionnalité attirante pour les utilisateurs développeur. 
-
+\paragraph{}
 %%% STOP
-En plus de cela les processus d'execution sont unique à chaque utilisateur mais ce dernier s'exécute dans un envirronement partagé. L'ouverture aux utilisateurs de l'éditeur de code au sein d'HappyBox n'a pas été ouverte pour des raisons de sécurité afin d'éviter une exécution de code malveillant sur nos serveurs.
+Qui plus est, les processus d’exécution sont uniques à chaque utilisateur mais ces derniers s'exécutent dans un environnement partagé. L'ouverture aux utilisateurs de l'éditeur de code au sein d'HappyBox n'a, pour l'instant, pas été ouverte pour des raisons de sécurité afin d'éviter une exécution de code malveillant sur nos serveurs. 
+
 
 \subsection{Outils de travail}
-Le code et la technique ne font pas tout au seins d'une startup. Il nécessaire de pouvoir élaborer un stratégie et d'en controller l'efficacité. En ce sens la mise en place de git à profondément changé les méthodes de travail en les rendant plus collaboratives et plus sécuritaire. Gitlab est certe un logiciel de gestion de version des sources mais c'est aussi une plateforme social facilitant la communication. 
+Le code et la technique ne sont pas les seules composantes du travail au sein d'une startup. Il est indispensable de pouvoir élaborer une stratégie, de la revoir à tout moment et d'agir en conséquence tout en contrôlant son efficacité. En ce sens, la mise en place de Git a profondément changé les méthodes de travail en les rendant plus collaboratives et plus sécuritaires. Gitlab est, certes, un logiciel de gestion de version des sources mais c'est aussi une plateforme sociale facilitant l'interaction entre les membres de l'équipe. 
 
-Dans le même soucis d'amélioration des conditions de travail le choix de la plateforme Jira nous à permis d'organiser l'équipe. Chaque membre peut facilement savoir ce qui lui est necessaire de faire pour avancé de manière coordonner avec le reste de l'équipe. La communication s'en trouve une fois de plus simplifié. 
+Dans le même soucis d'amélioration des conditions de travail le choix de la plateforme Jira nous a permis d'optimiser, au mieux, l'organisation de notre équipe. Chaque membre peut, dorénavant, aisément savoir ce qui lui est nécessaire de faire pour avancer de manière coordonnée avec le reste de l'équipe. La communication étant un facteur primordial de réussite dans l'élaboration, le maintien et l'évolution d'un projet, il était nécessaire de faciliter son application. Grâce à Jira, elle s'en trouve une fois de plus, simplifiée. 
 
-Jira à aussi profondément changé les méthodes de travail en créant un processus de dévellopement et de gestion de la stratégie claire. Le système de ticket trié par importance permet de savoir rapidement ce qu'il y à faire et ce qui à été fait. Il aussi possible de générer des indiquateur de performance et définir des métriques telles que le nombre de ticket résolu par jours ou les objectifs restant avant la prochaine version. 
+Jira a également profondément changé les méthodes de travail en créant un processus de développement et de gestion de stratégie claire. Le système de ticket trié par importance permet de savoir rapidement ce qu'il y a faire et ce qui a été fait. Il aussi possible de générer des indicateurs de performance et définir des métriques telles que le nombre de tickets résolus par jour ou les objectifs restant avant la prochaine version. 
+En plus, d'un gain de productivité non négligeable, l'utilisation de Jira a pu consolider la communication interne de l'équipe. En effet, cette solution a donné à chaque employé la possibilité de s'intéresser profondément au travail des autres sans les priver, pour autant, de leur temps de productivité.
 
-Avant cela il n'y avait pas vraiment de processus de management au vue de la taille de l'équipe. L'utilisation d'un logiciel SaaS permet de le rendre accessible depuis n'importe quelle point. C'est un aspect important pour happybox car dans soucis de liberté il n'y a aucune obligation de venir au bureau physiquement. Nous sommes la pour faire avancer un projet et faire un quota d'heure. Que le travail soit fait du bureau ou depuis son canapé un employé heureux est un employé efficace. 
+Avant cela il n'y avait pas vraiment de processus de management au vu de la taille de l'équipe. L'utilisation d'un logiciel SaaS permet de le rendre accessible depuis n'importe quel point. C'est un aspect important pour HappyBox car cela a totalement modifié notre manière de travailler.  En nous donnant la liberté de travailler où bon nous semblait, nous étions nettement plus enclin à donner de soi dans ce projet. Nous sommes, avant tout, là pour donner naissance à un projet et non faire un quota d'heures fixes. Cette méthode de travail a réellement amené une ambiance de travail agréable et par conséquent productive. Que le travail soit fait du bureau ou depuis son canapé, cela n'avait pas d'importance : un employé heureux est un employé efficace.  
 
 %% une image de jira
 
-
+%% STOP
 		% Analyse de l’approche choisie
 	\section{Analyse de l'approche choisie} % 3 pages
-% resultat
-Pour le moment les résultats ne sont que peu visible 
+\paragraph{}
+Lors de mon arrivé dans les rang de HappyBox il m'a éte confié une mission claire: batir une infrastructure pouvant acceuillir une forte masse d'utilisateur environ 10 000. Pour résoudre ce probléme j'ai adopté une approche basé sur les méthodes scientifique que j'ai pu observé durant mon stage chez Biogemma. La méthode est simple et repose sur l'observation et l'analyse.
+Selon il faut effectuer des cycles basé sur la durée de croissance d'une pousse de blé in vitro et son séquençage en laboratoire. Cela permettant de s'adapter et de modifier ses objectifs à partir des résultats obtenue lors de l'itération précédente. Il est nécessaire dans le cas de recherche de pratiquer ce genre de méthode car explorer une piste voué l'echec coute chére financièrement et humainement parlant. C'est un cycle composé de six étapes: Observation, réfléxion, documentation, projection, action et analyse.
+N'ayant pas des contrainte logistique importante dans le cadre d'une expérience j'ai choisi d'adopter un cycle hebdomadaire. Chose possible grâce la quasi-total autonomie dont dans laquelle j'évolué. Chaque semaine, un j'ai établie un bilan de l'impact des choix de la semaine précédente. Chose facilité par la tenue d'un cahier de recherche\footnote{Les chercheurs ne pouvant produire un résultat aisément mesurable, il leur est demandé de documenter le travail. C'est un outils extremement utile à la fois pour les chercheurs présent et future. En effet, ces cahiers son archivé et indexé afin de ne rien perdre du travail et des réflexion effectuer. } contenant un résumé de mon travail, de mes notes prises au contact de Guillaume et Danny et de mes réflexion tenu à jour en temps réel. Ce cahier dois être daté afin de pouvoir s'en servir comme support de travail à long termes. c'est l'élément fondamentale de la phase d'observation car il deviens une mémoire alternative diffusable. 
+Il ne s'agit pas réellement d'une cyclique car pour optimiser la recherche il est possible de le paralléliser afin de compenser l'aspect bloquant de certain axe. Durant l'attente des résultats d'une expérience on il est possible de préparer la seconde et ainsi de suite. Les travaux de réflexion et de documentation servent préparer la mise en place de l'experience car l'on cherche à éviter de travailler avec des paramétres inconnus pouvant fausser les résultat chose qui n'est souvent visible qu'après plusieurs itération et représentant un perte de temps colossale.
 
-% application
+\paragraph{}
+Il est possible de possible d'adapter cette approches dans tout type de projet demandant une grande autonomie ou un réfléxion complex et structuré. Dans le cadre d'une startup, elle particulièrement redoutable car elle m'a permis de m'adapter trés rapidement aux besoins changeant. 
 
-% perspective 
+J'ai aussi petit à petit dériver d'un rôle purement technique à une place demandant une vision plus globale du projet. Il n'est pas envisageable, dans un cadre de travail aussi changeant, de conserver une approche linéaire et prévue à long terme. 
+
+En effet les besoins étant peux conventionel il m'a fallut apprendre beaucoup de choses rapidement. L'étape de documentation a été fondamentale en ce sens car on peu à la fois allier formation et expérimentation hors du context de production permettant de  réduire au maximum les difficultés technique et la plupart des problèmes triviaux. 
+
+\paragraph{}
+Cette pratique n'est pas récente. Il s'agit de la base de la méthode scientifique. Cette dernières est adaptable en toute situation et permet d'augementer les performances en terme de recherche et developpement. De plus elle permet d'explorer des problémes complexe par étapes simplifiant ainsi la résolution des erreur. Ou la navigation dans un arbre de possibilité.
+
 
 		% Réflexion sur le stage et le mémoire
 	\section{Autoévaluation} % 2 pages
-
-La rédaction de ce mémoire m'a contraint à prendre énormément de recul, pas seulement sur ce que j'ai accompli en tant qu'administrateur système linux, mais également et surtout en tant que collaborateur d'HappyBox CMS. Aujourd'hui, mon poids décisionnel est tel que ma réflexion se porte beaucoup plus loin et ne se limite pas simplement au bon fonctionnement de cette startup. 
+\paragraph{}
+La rédaction de ce mémoire m'a contraint à prendre énormément de recul, pas seulement sur ce que j'ai accompli en tant qu'administrateur système linux, mais également et surtout en tant que collaborateur d'HappyBox CMS. Aujourd'hui, mon poids décisionnel est tel que ma réflexion se porte beaucoup plus loin et ne se limite pas simplement au bon fonctionnement de l'infrastructure. 
+\paragraph{}
 Je ne veux pas minimiser ce dernier point qui est un des piliers fondateurs de sa survie ; cependant HappyBox CMS, tel qu'il est pensé actuellement, ne fonctionne pas. Le produit est excellent et son utilisation et sa croissance peuvent être exponentielles ; mais il est, in situ, mal présenté et manque clairement de visibilité. 
 
-J'ai, d'ores et déjà, réfléchi à plusieurs axes d'évolution que je compte bien mettre en pratique dès que possible. Je souhaite, notamment, offrir à ses utilisateurs plus de liberté dans le nombre de projet qui leur est alloué, afin d'apporter à HappyBox un réel contenu et donner aux utilisateurs la possibilité d'utiliser HappyBox différemment. 
-
+\paragraph{}
+J'ai, d'ores et déjà, réfléchi à plusieurs axes d'évolution que je compte bien mettre en pratique dès que possible. Je souhaite, notamment, offrir à ses utilisateurs plus de liberté dans le nombre de projet qui leur est alloué, afin d'apporter à HappyBox un réel contenu et donner aux utilisateurs la possibilité d'utiliser le logiciel différemment. 
+\paragraph{}
 Comme je l'ai déjà mentionné, pour le moment HappyBox permet à ses usagers de créer une seule et unique page (de manière gratuite), ce qui bride nos utilisateurs. 
+Pour moi, l'une des erreurs les plus flagrantes que l'on ait pu commettre, a été d'essayer de croquer le gâteau avant de l'avoir fait. 
+\paragraph{}
+Je m'explique : nous avions choisi, après réflexions communes, d'adopter un modèle économique de type freemium alors que nous n'avions pas encore la base massive d'utilisateurs addicts. Nous nous sommes, de mon point de vue, concentrer sur le problème épineux de l'auto-financement, ce qui en réalité n'était pas d'actualité. En effet, nous avions réfléchi à partir d'une projection d'évolution du produit et non aux besoins actuels d'HappyBox et de ses utilisateurs.
+\paragraph{}
+Il est contradictoire d'empêcher l'expression créative de nos usagers alors que nous voulons justement que notre plateforme soit utilisée. Pourquoi donnons-nous une multitude de fonctionnalités à leur disposition sans leur permettre de pouvoir tous les essayer et ce dans des projets différents ? Bien sûr, il est toujours facile de se rendre compte de ces choses après coup. 
+\paragraph{}
+J'ai pris conscience de mon manque de discernement et surtout du peu d'expérience que j'avais lors de mon arrivée au sein d'HappyBox. Aujourd'hui, j'ose entrapercevoir les problèmes qu'HappyBox a pu rencontré dans sa communication interne et externe de son produit. 
+\paragraph{}
+J'ai énormément appris en travaillant avec Danny et Guillaume et pas seulement d'un point de vue technique, même si la quantité et la qualité des technologies que j'ai pu côtoyer, aborder, comprendre et utiliser étaient impressionnantes. Mais j'ai également pu observer le fonctionnement d'une startup, de sa création à son évolution en passant par ses investissements, ses possibilités créatives, ses coûts engendrés, son organisation de travail, son recrutement, son image et son système de marketing. Ce stage fut riche en expériences toutes aussi différentes que captivantes et surtout, ne pouvant marcher les unes sans les autres.
+Je suis entré  au sein de la boîte joyeuse lorsqu'elle n'était encore qu'à ces débuts dans ce monde économique impitoyable des startups. Ce fut une chance pour moi d'assister et de contribuer à son évolution. 
 
-Il est contradictoire d'empêcher l'expression créative de nos clients alors que nous voulons justement que notre plateforme soit utilisée. Pourquoi donnons-nous une multitude de fonctionnalités à leur disposition sans leur permettre de pouvoir tous les essayer et ce dans des projets différents ? Bien sûr, il est toujours facile de se rendre compte de ces choses après coup. 
 
-J'ai pris conscience de mon manque de discernement et surtout du peu d'expérience que j'avais lors de mon arrivée au sein d'HappyBox. Aujourd'hui, j'ose entrapercevoir les problèmes qu'HappyBox a pu rencontré dans leur communication interne et externe de leur produit. 
+\paragraph{}
+
+- Faire mes trucs museion, happybox, 
+
+- Fonadtion linux
+
+- déja entretien avec google nouveauc dasn 6 mois
+
+- ne plus dire que je viens de supinfo parce au moment ou je dis supinfo les recruteur de me parle plus!
+
+
 
 % Beaucoup appris économie à forte croissance.
 % Mais si à refaire ce serait encore plus simple et moins chéres.
@@ -1131,14 +1170,8 @@ J'ai pris conscience de mon manque de discernement et surtout du peu d'expérien
 
 % Beaucoup expérimentation => cool et rare
 
-	\section{Conclusion} % 2 pages
 
-	La rédaction de ce mémoire m'a contraint à prendre énormément de recul, pas seulement sur ce que j'ai accompli en tant qu'administrateur système linux, mais également et surtout en tant que collaborateur d'HappyBox CMS. Aujourd'hui, mon poids décisionnel est tel que ma réflexion se porte beaucoup plus loin et ne se limite pas simplement au bon fonctionnement de cette startup. 
-	Je ne veux pas minimiser ce dernier point qui est un des piliers fondateurs de sa survie ; cependant HappyBox CMS, tel qu'il est pensé actuellement, ne fonctionne pas. Le produit est excellent et son utilisation et sa croissance peuvent être exponentielles ; mais il est, in situ, mal présenté et manque clairement de visibilité. 
-	J'ai, d'ores et déjà, réfléchi à plusieurs axes d'évolution que je compte bien mettre en pratique dès que possible. Je souhaite, notamment, offrir à ses utilisateurs plus de liberté dans le nombre de projet qui leur est alloué, afin d'apporter à HappyBox un réel contenu et donner aux utilisateurs la possibilité d'utiliser HappyBox différemment. 
-	Comme je l'ai déjà mentionné, pour le moment HappyBox permet à ses usagers de créer une seule et unique page (de manière gratuite), ce qui bride nos utilisateurs. 
-	Il est contradictoire d'empêcher l'expression créative de nos clients alors que nous voulons justement que notre plateforme soit utilisée. Pourquoi donnons-nous une multitude de fonctionnalités à leur disposition sans leur permettre de pouvoir tous les essayer et ce dans des projets différents ? Bien sûr, il est toujours facile de se rendre compte de ces choses après coup. 
-	J'ai pris conscience de mon manque de discernement et surtout du peu d'expérience que j'avais lors de mon arrivée au sein d'HappyBox. Aujourd'hui, j'ose entrapercevoir les problèmes qu'HappyBox a pu rencontré dans leur communication interne et externe de leur produit. 
+	\section{Conclusion} % 2 pages
 
 
 		c'était trop bien, j'ai beaucoup apris. J'ai découvert un monde halucinant des startups.
