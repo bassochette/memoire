@@ -686,15 +686,10 @@ Pour cela, nous utiliserons sept indicateurs permettant, selon mon expérience, 
 %%%%%%%%%%%%% METHODOLOGIE %%%%%%%
 Définir des indicateurs ne suffit pas à élaborer une stratégie. Les chiffres sont trop malléables pour pouvoir refléter la réalité. De plus, une projection linéaire ne peut être juste. Il faudrait au minimum l'indexer sur l'inflation afin d'appliquer une variance sur les projections pour que ces dernières soient en adéquation avec l'économie dans laquelle la structure évolue.
 
-Il est tout même possible d'accorder 
 
-Si tout se passe accordement au modèle, l’acquisition des utilisateurs est exponentielle. Les ressources nécessaires pour servir un volume de clients croissant de manière exponentielle est aussi théoriquement proportionnelle. Par extrapolation, les coûts suivent l’évolution
+Si tout se passe accordement au modèle, l’acquisition des utilisateurs est exponentielle. Les ressources nécessaires pour servir un volume de clients croissant de manière exponentielle est aussi théoriquement proportionnelle. Par extrapolation, les coûts suivent l’évolution de la masse d'utilisateur; même si les coûts sont faibles, ils ne sont toujours pas nuls. 
 
-
- même si les coûts sont faibles, ils ne sont toujours pas nuls. 
-
-
-Il y a donc une limite mathématique à la réduction des coûts par les utilisateurs. C'est un palier annonçant la fin de la croissances des recettes et l'augmentation des coûts. Tant que les coûts par utilisateur baissent, la startup croît facilement. Nous pouvons reprendre, ici, le même principe que l’échange de monnaie ; étant donné que les marges réalisées grâce à la dépréciation d'une des monnaie par rapport à une autre, crée des profits. 
+Il y a donc une limite mathématique à la réduction des coûts par la masse utilisateurs. C'est un palier annonçant la fin de la croissances des recettes et l'augmentation des coûts. Tant que les coûts par utilisateur baissent, la startup croît facilement. Nous pouvons reprendre, ici, le même principe que l’échange de monnaie ; étant donné que les marges réalisées grâce à la dépréciation d'une des monnaie par rapport à une autre, crée des profits. 
 Prenons un exemple simple, lorsque je paie 800 euros pour obtenir 1000 dollars canadien, il est possible que quelques jours plus tard pour ces mêmes 1000 dollars je ne paie que 600 euros. Évidemment, je n'ai pas fait de recette, cependant j'ai limité les pertes. Pour pouvoir tirer profit d'un achat, il suffit de le revendre pour une somme supérieure au montant d'achats additionné aux frais. 
 Pour cela, selon Adam Smith, nous n'avons qu'à attendre que la demande soit supérieure à l'offre \emph{La main invisible de l'économie} étant là pour réguler le marché, c'est à dire que selon lui, la loi du marché finit toujours par s'imposer et le réguler.
 
@@ -706,7 +701,7 @@ Tant que les flux d'investissement ne se tarissent pas et que l'entreprise n'a p
 
 
 		% Méthodes habituellement utilisées pour une situation présentant des similitude
-s
+
 		\section{méthodes habituelles} % 5 pages
 
 			\subsection{Les serveurs dans le placard ou dans la cave}
@@ -954,38 +949,52 @@ Les fichiers d’enregistrement, ou fichiers de log, sont ensuite analysés grâ
 La seconde consiste à aller sur l'interface de l'instance de test et d'utiliser le logiciel afin de voir si tout fonctionne correctement.
 
 
-\subsection{Calcul du cout d'un utilisateur}
+\subsection{Calcul du coût d'un utilisateur}
 \paragraph{}
-Il m'a aussi été demandé de calculer le cout exact d'un utilisateurs gratuit sur HappyBox CMS. Pour cela, j'ai cherché le moyen de calculer la bande passante par utilisateur\footnote{La bande passante fait partie des élément dispendieux d'une infrastructure.} c'est à dire la somme de la bande passante utilisé pour chaque projet. En pratique mesurer la bande passante n'est pas une chose aisée car il s'agit d'un flux et calculer la quantité reviens théoriquement à en mesurer la taille de chaque paquet\footnote{Un paquet un morceau d'information encapsulé pour transiter sur un réseaux.} entrant et sortant. 
+Il m'a aussi été demandé de calculer le coût exact d'un utilisateur gratuit sur HappyBox CMS. Pour cela, j'ai cherché le moyen de calculer la bande passante par utilisateur\footnote{La bande passante fait partie des éléments dispendieux d'une infrastructure.} c'est à dire la somme de la bande passante utilisé pour chaque projet. En pratique, mesurer la bande passante n'est pas une chose aisée car il s'agit d'un flux et calculer la quantité revient théoriquement à en mesurer la taille de chaque paquet\footnote{Un paquet est un morceau d'information encapsulé pour transiter sur un réseau.} entrant et sortant. 
 % verif par paquet
 \subparagraph{}
-Dans la pratique ce ne serait pas une bonne idée car cela ralentirai considérablement les transfert. Il ce produirai alors la même chose qui produit quand un groupe de gendarme zélé décide de controller toutes les voitures passant sur une route créant ainsi un bouchon. Il n'était donc pas envisageable d'adopter une telle solution. 
+Dans la pratique, ce ne serait pas une bonne idée car cela ralentirait considérablement les transferts. Il se produirait alors la même chose qui se produit lorsqu'un groupe de gendarmes zélés décide de contrôler toutes les voitures passant sur une route créant ainsi un bouchon. Pour des raisons évidentes, il n'était donc pas envisageable d'adopter une telle solution. 
 % pas de solution toute faite
 \subparagraph{}
-Je n'ai pas trouvé de solution toute fait pour répondre à ce problème. En effet ce n'est pas une demande courante à ce niveau là de la pile logiciel en générale ce sont les fournisseurs d'accès à internet ou les pocesseur de centre de données mesurant les limitations pour leurs clients. Mais ces derniers mesure cela au niveau du réseaux choses qu'il m'est impossible de faire car HappyBox ne controle pas l'équipement réseaux de sont infrastructure externalisé chez Amazon Web Services.
+Je n'ai pas trouvé de solution toute faite pour répondre à ce problème. En effet, ce n'est pas une demande courante à ce niveau là de la pile logiciel. En général, ce sont les fournisseurs d'accès à internet ou les processeurs de centre de données qui mesurent les limitations pour leurs clients. Mais ces derniers mesurent cela au niveau du réseau, chose qu'il m'était impossible de faire car HappyBox ne contrôle pas l'équipement réseau de son infrastructure externalisé chez Amazon Web Services.
 
 % on peu faire du globale
 \subparagraph{}
-Il est possible d'estimer la bande passante globale d'un serveur avec des outils tels que VNstat. Il est impossible dans ce dernier d'obtenir les statistiques par utilisateurs. 
+Il est possible d'estimer la bande passante globale d'un serveur avec des outils tels que VNstat. Il est impossible dans ce dernier d'obtenir les statistiques par utilisateur. 
 %
 \subparagraph{}
-Même si nous arrivions à estimer la bande passante par utilisateur créer sur le serveur nous n'aurions qu'une information incomplète car elle ne prendrai pas en compte le fait que les site créer par l'utilisateur sont executé par un utilisateur administratif et donc hors des statistiques. Nous sommes ici dans la couche applicative ce qui implique que les flux réseaux sont bien plus bas dans le modéle OSI et donc encapsulé et innaccessible aisément.
+Même si nous arrivions à estimer la bande passante par utilisateur créé sur le serveur, nous n'aurions qu'une information incomplète car elle ne prendrait pas en compte le fait que les sites créés par l'utilisateur sont exécutés par un utilisateur administratif et donc hors des statistiques. Nous sommes, ici, dans la couche applicative; ce qui implique que les flux réseaux sont bien plus bas dans le modèle OSI et donc encapsulés et difficilement accessibles.
 \subparagraph{}
-J'ai donc choisi d'utliser le logiciel Munin qui sert à surveiller les métrique des serveurs unix de manière générale. Il fonctionne sur le modèle client/serveurs. Il faut donc mettre en place un serveur principale qui sera en charge de centraliser et agrégée les informations qu'il récupère en ce connectant sur les nodes qu'il connait. Ce qui implique qu'a chaque ajout d'hôte dans la ferme, il est nécessaire d'aller déclarer cette dernière auprés du maitre munin. 
-Sur les hôtes on peu installer des sondes qui mesureront ce qui leur est demandé de mesurer. Ce sont des scripts dévellopable dans n'importe quel langage à condition des respecter les formats de fichier accepté par le serveurs maitre et définis dans la documentation de munin.
+J'ai donc choisi d’utiliser le logiciel Munin qui sert à surveiller les métriques des serveurs unix de manière générale. Il fonctionne sur le modèle client/serveurs. Il faut donc mettre en place un serveur principal qui sera en charge de centraliser et agréger les informations qu'il récupère en se connectant sur les nodes qu'il connaît. Ce qui implique qu'à chaque ajout d'hôte dans la ferme, il est nécessaire d'aller déclarer cette dernière auprès du maître Munin. 
+Sur les hôtes, on peut installer des sondes qui determineront ce qui leur est demandé de mesurer. Ce sont des scripts développables dans n'importe quel langage à condition de respecter les formats de fichier acceptés par le serveur maître et définis dans la documentation de Munin.
 \subparagraph{}
-J'ai donc ré-écrit une sonde qui analyse les fichiers d'enregistrement du serveur web périodiqument afin d'analyser les informations donnée par ce derniers. En effet, la bande passante utilisé n'est pas indiqué dans le fichier mais la quantité de données pour chaque requète l'est. Il à donc été possible de proposer une estimations globale pour le serveurs web. En continuant d'anlyser les fichiers de log il à été possible de faire la somme du poids des paquets transféré pour un hôte virtuel donné c'est à dire un site web.
+Pour cela, j'ai donc ré-écrit une sonde qui analyse les fichiers d'enregistrement du serveur web de façon périodique afin d'analyser les informations données par ce dernier. En effet, la bande passante utilisée n'est pas indiquée dans le fichier mais la quantité de données pour chaque requête est spécifiée. Il m'a donc été possible de proposer une estimation globale pour le serveur web. En continuant d’analyser les fichiers de log il a été envisageable de faire la somme du poids des paquets transférés pour un hôte virtuel donné, en d'autres termes, un site web.
 \paragraph{} 
-À partir de ce point, il possible d'avoir une idée du volume de données entrant et sortant pour chaque hote virtuel et si nous faisons la somme des volumes de chaque hote virtuel pour un utilisateur on peu estimer une partie de la bande passante consommé par les projets de ce derniers. La valeur ne sera pas exact car ce basant uniquement sur l'estimation à partir d'une partie des données. Mais nous pouvons ainsi avoir une estimation toujours inférieur de la consommation d'un utilisateur. Mais n'oublions pas que calculer la bande passante par utilisateur à ce niveau là de l'infrastructure reviendrai à essayer de calculer la consommation d'eau de chaque habitant d'une maison en ce fiant au images d'une caméra de surveillance. Le résultat n'est pas juste mais il est possible de savoir qui consomme le plus d'eau.
+À partir de ce point, il est concevable d'avoir une idée du volume de données entrant et sortant pour chaque hôte virtuel. De plus, si nous faisons la somme des volumes de chaque hôte virtuel pour un utilisateur, on peut estimer une partie de la bande passante consommée par les projets de ce dernier. La valeur ne sera pas exacte, bien sûr, car elle se base uniquement sur une estimation déterminée à partir d'une partie des données. Mais nous pouvons, ainsi, avoir une estimation toujours inférieure de la consommation d'un utilisateur. Cependant, il ne faut oublier que calculer la bande passante par utilisateur à ce niveau là de l'infrastructure reviendrait à essayer de calculer la consommation d'eau de chaque habitant d'une maison en se fiant aux images d'une caméra de surveillance. Le résultat n'est pas juste, mais il est, néanmoins, possible de savoir qui consomme le plus d'eau.
 \subparagraph{}
 %%%
-Evidement la bande passante n'est pas suffisante pour estimer le cout d'un utilisateur. Il à fallut s'interesser ensuite au ressources consommé c'est à dire la quantité de mémoire vive, l'espace disque et l'utilisation processeur. En ce qui concerne l'espace disque c'est assez aisé vue que chaque utilisateur ce vois allouer une partition virtuel correspondant à l'espace de stockage fournis par l'offre choisi par le client. En principe pour estimer cela il suffit de prendre nombre de client gratuit et de lui ajouter le produit des clients payant avec par leur offre respective. 
+Évidement, la bande passante n'est pas suffisante pour déterminer le coût d'un utilisateur. Il a donc fallu s’intéresser ensuite au ressources consommées, autrement dit à la quantité de mémoire vive, l'espace disque et l'utilisation processeur. En ce qui concerne l'espace disque, c'est assez aisé vu que chaque utilisateur se voit alloué une partition virtuelle correspondant à l'espace de stockage fourni par l'offre que le client a choisi. En principe, pour estimer cela, il suffit de prendre en compte le nombre de clients gratuits et de lui ajouter le produit des clients payants associés à leur offre respective. 
 \subparagraph{}
-Viens alors le tour de l'utilisation de mémoire vive et l'utilisation de processeur. Une sonde munin m'a semblé être un choix pertinent permettant de regrouper toute les mesures au même endroit sur le maitre munin. Il m'a donc fallut écrire deux petite scripts capable de faire une moyenne de l'utilisation de ces ressources par utilisateur en anlysant des extractions régulière d'information sur le système. 
+Vient alors le tour de l'utilisation de mémoire vive et l'utilisation de processeur. Une sonde Munin m'a semblé être un choix pertinent permettant de regrouper toutes les mesures au même endroit sur le maître Munin. Il m'a donc fallu écrire deux scripts habilités à faire une moyenne de l'utilisation de ces ressources par utilisateur, le tout en analysant des extractions régulières d'information sur le système. 
 
 \subparagraph{}
-Munin est encore capable de bien des merveilles. Il existe beaucoup de sondes créer par la communauté et leur création est assez aisé. Il m'a permis d'obtenir des indicateurs qui jusqu'alors m'était inaccessible.
-La véritable de limite de munin viens de la nécessiter de déclarer l'ajout des nouvelles node sur le serveurs maitre afin qu'il puisse aller récupérer les information utltérieurement. Cette déclaration est un poids au seins d'une architecture qui ce veut dynamique et capables de répondre rapidement au besoins de nouvelles ressources. Voila pourquoi, j'ai entepris l'écriture d'un outils de discussion entre les nodes afin que, par l'échange de messages, ces dernières puissent ce déclarer auprès du serveur maitre munin. Ce projet est un pure produit de ma volonté, en effet avec le temps j'ai gagné une grande autonomie me permettant de prendre des décisions pour la gestion de l'infrastructure librement. Ce projet en est l'accomplissement car étant outils purement technique, j'ai d'abords entamé son développement sur mon temps libre et l'ai intégré à l'infrastructure récemment en toute autonomie.
+Munin est encore capable de bien des merveilles. Il existe beaucoup de sondes créées par la communauté et leur création est assez aisée. Il m'a permis d'obtenir des indicateurs qui jusqu'alors m'étaient inaccessibles.
+La véritable limite de Munin se situe dans la nécessité de déclarer l'ajout des nouvelles nodes sur le serveur maître afin qu'il puisse aller récupérer les informations ultérieurement. Cette déclaration est un poids au sein d'une architecture qui se veut dynamique et susceptible de répondre rapidement au besoins de nouvelles ressources. Voilà pourquoi, j'ai entrepris l'écriture d'un outil de discussion entre les nodes afin que, par l'échange de messages, ces dernières puissent se déclarer auprès du serveur maître Munin. Ce projet est un pur produit de ma volonté. En effet, avec le temps, j'ai gagné une grande autonomie me permettant de prendre des décisions pour et sur la gestion de l'infrastructure et ce, librement. Ce projet en est l'accomplissement car, étant un outil purement technique, j'ai d'abord entamé son développement sur mon temps libre et l'ai intégré à l'infrastructure récemment en toute autonomie.
+
+
+
+% 	\subsection{État des lieux}
+% Á l'heure actuel HappyBox CMS est dans la tourmente. Les fonds sont épuisé et l'avenir est encore incertain quand à la survie du produit, ce dernier n'ayant pas encore une masse d'utilisateur suffisante pour demander tenter une levé de fond auprés d'ange ou de venture capitalist. Bien que lors des premier contact la plupart de ces derniers été interessé par le produit mais leurs réponse étant la suivante: \emph{Revenez nous voir lorsque vous aurais 10000 utilisateurs} DOM Element Inc. n'a pas été financé. 
+% \paragraph{}
+% Danny et Guillaume on réduis le temps qu'ils consacrait à l'entreprise afin de trouver un emplois et se renflouer. HappyBox stagne en ligne accessible au utilisateur dont nous attendons avec impatience leur arrivé. Ce processus est plus long que prévue ce qui entraine la société dans une impasse. 
+% \subparagraph{}
+% Faut il continuer le développement ou cesser les activités? Pour les fondateurs c'est la fin à moins de trouver une stratégie miracle pour l'avenir du produit. Il m'a donc été offert la possibilité de réfléchir à une stratégie pour l'avenir. 
+% \paragraph{}	
+% Je n'ai put refusé cette opportunité mais avant d'emettre une proposition, il faut analyser la situation et définir raisons de ce manque d'accroche auprès des utilisateurs ce qui nous permettrais de trouver du financement afin de pouvoir continuer.
+
+% \paragraph{}
+% En premier lieux, pour un outils permettant d'apporter de la visibilité sur internet il n'est que trés peu visible.
 
 
 
@@ -1038,73 +1047,99 @@ La véritable de limite de munin viens de la nécessiter de déclarer l'ajout de
 
 
 		% Démonstration d’une originalité dans l’élaboration et la mise en œuvre de la solution
-	\section{YarrBox\footnote{"Yarr" est le cris d'un pirate. Il faut prononcé ce nom en fermant un oeil et en grognant.} le seul est unique vaisseaux des pirates de la boite.} % 5 page
+	\section{YarrBox le seul est unique vaisseaux des pirates de la boite.} % 5 page
 
 % Mise en place de jira et devellopement de process. 
 % Infra ne nécessitant aucune présence physique donc startup ++ ou on vas fumer des joint avec les pote pis on code jusqu'a ce que segmentation fault s'en suive.
 
 % Flexibilité ce qui ne semblait pas évidenta avec un produits aussi complet et complexe qu'happybox CMS. Opswork et plein de scripts dans tout les sens
+
+		
 \paragraph{}
-YarrBox est le nom de code de l'infrastructure mise en place spécialement pour HappyBox CMS. C'est un vaisseau unique qui été  développé spécialement pour permettre à Happybox CMS de vogué dans les eaux troubles du web. 
+YarrBox\footnote{"Yarr" est le cris d'un pirate. Il faut prononcé ce nom en fermant un oeil et en grognant.} est le nom de code de l'infrastructure mise en place spécialement pour HappyBox CMS. C'est un vaisseau unique qui été  développé spécialement pour permettre à HappyBox CMS de voguer dans les eaux troubles du web. 
 \paragraph{}
-Cette infrastructure est entièrement virtuelle par ce fait elle est accessible et gérable depuis n'importe quelle partie du monde. Ainsi peu importe ou est son équipage il est possible de travailler. 
+Cette infrastructure est entièrement virtuelle. Par ce fait, elle est accessible et gérable depuis n'importe quelle partie du monde. Ainsi peu importe où se trouve son équipage, il est possible de travailler. 
 \paragraph{}
-Yarrbox inclus un ensemble de logiciel modifié et adapté par mes soins et intégré par tout les moyens possibles. Il ne s'agit jamais de savoir à quoi sert un logiciel mais plutôt comment réussir à lui faire faire ce que l'on souhaite. Cela vas à l'encontre de toute la propagande des gros éditeures logiciel qui, par l'intermédiaire de lobby, on réussi à faire passer des réglementation liberticide et nocives pour les utilisateurs le tout avec l'avale d'un pouvoir exécutif peut regardant sur le bien être des moutons qu'il pense avoir soumis. C'est en total contradiction avec la nature humaine qui adapte son environnement. 
+YarrBox inclue un ensemble de logiciels modifiés et adaptés par mes soins et intégrés par tous les moyens existants. Il ne s'agit jamais de savoir à quoi sert un logiciel mais plutôt comment réussir à lui faire faire ce que l'on souhaite. Cela va à l'encontre de toute la propagande des gros éditeurs logiciel qui, par l'intermédiaire de lobby, ont réussi à faire passer des réglementations liberticides et nocives pour les utilisateurs, le tout avec l'aval d'un pouvoir exécutif peu regardant sur le bien être des moutons qu'il pense avoir soumis. C'est en totale contradiction avec la nature humaine qui accommode continuellement son environnement à ses besoins. rarement dans le sens inverse. 
 \paragraph{}
-YarrBox à été penser en ce sens et ce veut être une infrastructure évolutive et toujours en quéte de nouvelle fonctionnalité. Cette philosophie est à l'oeuvre à l'echelle du projet tout entier, Happybox CMS devait être un module pour drupal mais à force de modification de grande chose sont arrivé et cette merveille à vue le jours. L'infrastructure l'hébergant ce doit d'être à son images. En ce sens, beaucoup de logiciel on une utilisation différente de ce qui est prévue.
+YarrBox a été pensé en ce sens et se veut être une infrastructure évolutive et toujours en quête de nouvelles fonctionnalités. Cette philosophie est à l’œuvre et s'applique à l’échelle du projet tout entier, HappyBox CMS devait être un module pour drupal mais à force de modifications de grandes choses sont arrivée et cette merveille a vu le jour. L'infrastructure l’hébergeant se doit d'être à son image. En ce sens, beaucoup de logiciels ont une utilisation différente de ce qui est prévue.
 \subsection{Munin}
 % plugin munin
-Munin est un outils de surveillance de ressources présente dans sur un réseaux. Il permet de créer des sondes unique ce qui en fait un compagnon extrémement utile puisque ces dernières peuvent surveiller ce que la plupart des logicielles de surveillance n'autorise pas. Ici tout est observable, à  condition que la node soit déclarer auprés du maitre. Pour palier à ce problémes un utilitaire de communication basé sur node js et un sysème de messages chiffré est en cours d'élaboration. 
-Le fonctionnement en est assez simple: sur le maitre un processus est à l'écoute. Il est tapis, à l'affut d'une communication. Lorsque cette communication arrive. Il en authentifie la source via un jetons fournis au client. Ajoute les configurations nécessaire et renvoie un message sur la complétion ou l'erreur du procédé. La communication entre élément sur un résaux n'à rien de novateur mais ici l'objectif est de rendre les serveurs intelligent et capable de discuter entre eux manière autonome. J'espère termes pouvoir gérer des messages plus complexe et multi-directionnelle afin de crée une sorte d'\emph{intelligence artificielle} d'administration systeme.
+Munin est un outil de surveillance de ressources présentes sur un réseau. Il donne la possibilité de créer des sondes uniques, ce qui en fait un compagnon extrêmement malléable et surtout utile puisque ces dernières peuvent surveiller ce que la plupart des logiciels de surveillance n'autorisent pas. Ici tout est observable, à  condition que la node soit déclarée auprès du maître. Pour palier à ce problème un utilitaire de communication, basé sur node js, et un système de messages chiffrés sont en cours d'élaboration. 
+Le fonctionnement en est assez simple: sur le maître un processus est à l'écoute. Il est tapis, à l’affût d'une communication. Lorsque cette communication arrive, il en authentifie la source via un jeton fourni au client, ajoute les configurations nécessaires et renvoie un message sur la complétion ou l'erreur du procédé. La communication entre les éléments sur un réseau n'a rien de novateur mais ici l'objectif est de rendre les serveurs intelligents et capables de discuter entre eux de manière autonome. J'espère, à terme, pouvoir gérer des messages plus complexes et multi-directionnels afin de créer une sorte d'\emph{intelligence artificielle} d'administration système.
 
-En ce sens c'est un outils exeptionnel top souvent ignoré car son interface graphique n'est pas trés agréable. Mais dasn notre l'interface n'est pas utilisé. ces données permettent de fournir des statistiques d'utilisation qui sont accessible pour les utilisateurs HappyBox. Danny à interfacé le résultat de mes scripts à l'application.
+En ce sens, c'est un outil exceptionnel trop souvent ignoré car son interface graphique n'est pas particulièrement agréable. Mais dans notre produit, l'interface n'est pas utilisée. Ces données permettent de fournir des statistiques d'utilisation qui sont mises à la disposition des utilisateurs HappyBox. Danny a interfacé le résultat de mes scripts à l'application.
 %script de manipulation LVM
 
 \subsection{stockage}
-En ce qui concerne le stockage des données utilisateurs. Il y a eu beaucoup de progrés pour les libérer des instances et rendre encore plus flexible HappyBox. Malgrés cela la solution n'est pas encore au point à mon avis. Tant que les données utilisateurs seront lié à une seul et unique instance leurs gestion sera complexe et chronophage. 
+En ce qui concerne le stockage des données utilisateurs, il y a eu beaucoup de progrès pour les libérer des instances et rendre encore plus flexible HappyBox. Malgré cela, la solution n'est pas encore au point à mon avis. Tant que les données utilisateurs seront liées à une seule et unique instance, leur gestion sera complexe et chronophage. 
 
-C'est pourquoi une nouvelle approche doit être envisagé. Jusqu'à l'heure peu de solutions semblé répondre convenablement au problème  et s'interfacer judicieusement sans créer un énorme usine à gaz. 
+C'est pourquoi, une nouvelle approche doit être envisagée. Jusqu'à l'heure, peu de solutions semblaient répondre convenablement au problème et s'interfacer judicieusement sans créer une énorme usine à gaz. 
 
-Ceci n'est plus vrai depuis la sortie du logiciel Docker. Il permet de cloisonné ou plusieurs processus dans des conteneurs ou il s'execute sans affecter l'hote. 
+Ceci n'est plus le cas depuis la sortie du logiciel Docker. Il permet de cloisonner ou plusieurs processus dans des conteneurs où il s’exécute sans affecter l’hôte. 
 
-En effet il serait ,grace à lui, possible de séparer les espaces des utilisateurs dans des conteneur autonome et fortement cloisoné. De la sorte au lieu d'offrir non seulement un hébergement pour les sites des utilisateurs mais aussi une machine virtuelle ou il pourrait installer les logiciels de leurs choix et serait \emph{maitre} d'un petit espace sur les serveurs de HappyBox. Cela correspondrai à l'ouverture de la version agence du logiciel à tout les utilisateurs. 
+En effet, il serait grâce à lui, possible de séparer les espaces des utilisateurs dans des conteneurs autonomes et fortement cloisonnés. De la sorte, au lieu d'offrir non seulement un hébergement pour les sites des utilisateurs, HappyBox leur proposerait aussi une machine virtuelle où il pourrait installer les logiciels de leurs choix et serait \emph{maitre} d'un petit espace sur les serveurs de HappyBox. Cela correspondrait à l'ouverture de la version agence du logiciel à tous les utilisateurs. 
+Ainsi, les clients agences ont un serveur HappyBox qui leur est dédié ce qui n'est pas envisageable pour les autres types d'offre au vue des coûts engendrés. Un conteneur docker pourrait faire office de machine virtuel pour tous les utilisateurs en ajoutant une fonctionnalité attirante pour les utilisateurs développeurs.
+ 
 En effet, les clients agences ont un serveur HappyBox qui leur est dédié ce qui n'est pas envisageable pour les autres types de plan au vue des cout engendré. Un conteneur docker pourrait faire office de machine virtuel pour tout les utilisateurs ajoutant une fonctionnalité attirante pour les utilisateurs développeur. 
+
+%%% STOP
 En plus de cela les processus d'execution sont unique à chaque utilisateur mais ce dernier s'exécute dans un envirronement partagé. L'ouverture aux utilisateurs de l'éditeur de code au sein d'HappyBox n'a pas été ouverte pour des raisons de sécurité afin d'éviter une exécution de code malveillant sur nos serveurs.
+
+\subsection{Outils de travail}
+Le code et la technique ne font pas tout au seins d'une startup. Il nécessaire de pouvoir élaborer un stratégie et d'en controller l'efficacité. En ce sens la mise en place de git à profondément changé les méthodes de travail en les rendant plus collaboratives et plus sécuritaire. Gitlab est certe un logiciel de gestion de version des sources mais c'est aussi une plateforme social facilitant la communication. 
+
+Dans le même soucis d'amélioration des conditions de travail le choix de la plateforme Jira nous à permis d'organiser l'équipe. Chaque membre peut facilement savoir ce qui lui est necessaire de faire pour avancé de manière coordonner avec le reste de l'équipe. La communication s'en trouve une fois de plus simplifié. 
+
+Jira à aussi profondément changé les méthodes de travail en créant un processus de dévellopement et de gestion de la stratégie claire. Le système de ticket trié par importance permet de savoir rapidement ce qu'il y à faire et ce qui à été fait. Il aussi possible de générer des indiquateur de performance et définir des métriques telles que le nombre de ticket résolu par jours ou les objectifs restant avant la prochaine version. 
+
+Avant cela il n'y avait pas vraiment de processus de management au vue de la taille de l'équipe. L'utilisation d'un logiciel SaaS permet de le rendre accessible depuis n'importe quelle point. C'est un aspect important pour happybox car dans soucis de liberté il n'y a aucune obligation de venir au bureau physiquement. Nous sommes la pour faire avancer un projet et faire un quota d'heure. Que le travail soit fait du bureau ou depuis son canapé un employé heureux est un employé efficace. 
+
+%% une image de jira
+
 
 		% Analyse de l’approche choisie
 	\section{Analyse de l'approche choisie} % 3 pages
-				% c'est le moment de ce la péter
-% étudier pour répondre au besoin exact d'happybox CMS
-Ici, tout est sur mesure.
-% seul moyen est projections puis comparaison avec les fait
+% resultat
+Pour le moment les résultats ne sont que peu visible 
 
-% Peu dispendieuse bien que vrais lors de la mise en place. Depuis l'offre à changer, les serveurs que nous utilisions sont moins puissants que la gnenération actuel burst de CPU en plus.
+% application
 
-% 			Table T1.micro VS T2.micro le batlle des titans nain
-
-% Conversion de danny à linux mint mistifier du pinguin
-
-% Archi mi-pour les devs sans moi les infra tournerons encore masi pas aussi bien.
-
-% proposition de modele hybrid alliant AWS à une autre solutions et projeter
-
-% docker pour les utilisateurs
-
+% perspective 
 
 		% Réflexion sur le stage et le mémoire
 	\section{Autoévaluation} % 2 pages
 
-Beaucoup appris économie à forte croissance.
-Mais si à refaire ce serait encore plus simple et moins chéres.
-normale  car loi  de moore.
+La rédaction de ce mémoire m'a contraint à prendre énormément de recul, pas seulement sur ce que j'ai accompli en tant qu'administrateur système linux, mais également et surtout en tant que collaborateur d'HappyBox CMS. Aujourd'hui, mon poids décisionnel est tel que ma réflexion se porte beaucoup plus loin et ne se limite pas simplement au bon fonctionnement de cette startup. 
+Je ne veux pas minimiser ce dernier point qui est un des piliers fondateurs de sa survie ; cependant HappyBox CMS, tel qu'il est pensé actuellement, ne fonctionne pas. Le produit est excellent et son utilisation et sa croissance peuvent être exponentielles ; mais il est, in situ, mal présenté et manque clairement de visibilité. 
 
-Le chemins sera encore long avant de devnir un magiciens du kernel mais les perspective de ce monde, coté passioné et fou. L'argent des fundings c'est le trucs chiant.
+J'ai, d'ores et déjà, réfléchi à plusieurs axes d'évolution que je compte bien mettre en pratique dès que possible. Je souhaite, notamment, offrir à ses utilisateurs plus de liberté dans le nombre de projet qui leur est alloué, afin d'apporter à HappyBox un réel contenu et donner aux utilisateurs la possibilité d'utiliser HappyBox différemment. 
 
-Avec du recule sla solution nést plus adapté il faudrait penser une alternative.
+Comme je l'ai déjà mentionné, pour le moment HappyBox permet à ses usagers de créer une seule et unique page (de manière gratuite), ce qui bride nos utilisateurs. 
 
-Beaucoup expérimentation => cool et rare
+Il est contradictoire d'empêcher l'expression créative de nos clients alors que nous voulons justement que notre plateforme soit utilisée. Pourquoi donnons-nous une multitude de fonctionnalités à leur disposition sans leur permettre de pouvoir tous les essayer et ce dans des projets différents ? Bien sûr, il est toujours facile de se rendre compte de ces choses après coup. 
+
+J'ai pris conscience de mon manque de discernement et surtout du peu d'expérience que j'avais lors de mon arrivée au sein d'HappyBox. Aujourd'hui, j'ose entrapercevoir les problèmes qu'HappyBox a pu rencontré dans leur communication interne et externe de leur produit. 
+
+% Beaucoup appris économie à forte croissance.
+% Mais si à refaire ce serait encore plus simple et moins chéres.
+% normale  car loi  de moore.
+
+% Le chemins sera encore long avant de devnir un magiciens du kernel mais les perspective de ce monde, coté passioné et fou. L'argent des fundings c'est le trucs chiant.
+
+% Avec du recule sla solution nést plus adapté il faudrait penser une alternative.
+
+% Beaucoup expérimentation => cool et rare
 
 	\section{Conclusion} % 2 pages
+
+	La rédaction de ce mémoire m'a contraint à prendre énormément de recul, pas seulement sur ce que j'ai accompli en tant qu'administrateur système linux, mais également et surtout en tant que collaborateur d'HappyBox CMS. Aujourd'hui, mon poids décisionnel est tel que ma réflexion se porte beaucoup plus loin et ne se limite pas simplement au bon fonctionnement de cette startup. 
+	Je ne veux pas minimiser ce dernier point qui est un des piliers fondateurs de sa survie ; cependant HappyBox CMS, tel qu'il est pensé actuellement, ne fonctionne pas. Le produit est excellent et son utilisation et sa croissance peuvent être exponentielles ; mais il est, in situ, mal présenté et manque clairement de visibilité. 
+	J'ai, d'ores et déjà, réfléchi à plusieurs axes d'évolution que je compte bien mettre en pratique dès que possible. Je souhaite, notamment, offrir à ses utilisateurs plus de liberté dans le nombre de projet qui leur est alloué, afin d'apporter à HappyBox un réel contenu et donner aux utilisateurs la possibilité d'utiliser HappyBox différemment. 
+	Comme je l'ai déjà mentionné, pour le moment HappyBox permet à ses usagers de créer une seule et unique page (de manière gratuite), ce qui bride nos utilisateurs. 
+	Il est contradictoire d'empêcher l'expression créative de nos clients alors que nous voulons justement que notre plateforme soit utilisée. Pourquoi donnons-nous une multitude de fonctionnalités à leur disposition sans leur permettre de pouvoir tous les essayer et ce dans des projets différents ? Bien sûr, il est toujours facile de se rendre compte de ces choses après coup. 
+	J'ai pris conscience de mon manque de discernement et surtout du peu d'expérience que j'avais lors de mon arrivée au sein d'HappyBox. Aujourd'hui, j'ose entrapercevoir les problèmes qu'HappyBox a pu rencontré dans leur communication interne et externe de leur produit. 
+
 
 		c'était trop bien, j'ai beaucoup apris. J'ai découvert un monde halucinant des startups.
 
