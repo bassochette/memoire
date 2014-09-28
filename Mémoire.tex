@@ -959,8 +959,40 @@ La seconde consiste à aller sur l'interface de l'instance de test et d'utiliser
 
 
 \subsection{Calcul du cout d'un utilisateur}
+\paragraph{}
+Il m'a aussi été demandé de calculer le cout exact d'un utilisateurs gratuit sur HappyBox CMS. Pour cela, j'ai cherché le moyen de calculer la bande passante par utilisateur\footnote{La bande passante fait partie des élément dispendieux d'une infrastructure.} c'est à dire la somme de la bande passante utilisé pour chaque projet. En pratique mesurer la bande passante n'est pas une chose aisée car il s'agit d'un flux et calculer la quantité reviens théoriquement à en mesurer la taille de chaque paquet\footnote{Un paquet un morceau d'information encapsulé pour transiter sur un réseaux.} entrant et sortant. 
+% verif par paquet
+\subparagraph{}
+Dans la pratique ce ne serait pas une bonne idée car cela ralentirai considérablement les transfert. Il ce produirai alors la même chose qui produit quand un groupe de gendarme zélé décide de controller toutes les voitures passant sur une route créant ainsi un bouchon. Il n'était donc pas envisageable d'adopter une telle solution. 
+% pas de solution toute faite
+\subparagraph{}
+Je n'ai pas trouvé de solution toute fait pour répondre à ce problème. En effet ce n'est pas une demande courante à ce niveau là de la pile logiciel en générale ce sont les fournisseurs d'accès à internet ou les pocesseur de centre de données mesurant les limitations pour leurs clients. Mais ces derniers mesure cela au niveau du réseaux choses qu'il m'est impossible de faire car HappyBox ne controle pas l'équipement réseaux de sont infrastructure externalisé chez Amazon Web Services.
 
-Il m'a aussi été demandé de calculer le cout exact d'un utilisateurs gratuit sur HappyBox CMS. 
+% on peu faire du globale
+\subparagraph{}
+Il est possible d'estimer la bande passante globale d'un serveur avec des outils tels que VNstat. Il est impossible dans ce dernier d'obtenir les statistiques par utilisateurs. 
+%
+\subparagraph{}
+Même si nous arrivions à estimer la bande passante par utilisateur créer sur le serveur nous n'aurions qu'une information incomplète car elle ne prendrai pas en compte le fait que les site créer par l'utilisateur sont executé par un utilisateur administratif et donc hors des statistiques. Nous sommes ici dans la couche applicative ce qui implique que les flux réseaux sont bien plus bas dans le modéle OSI et donc encapsulé et innaccessible aisément.
+\subparagraph{}
+J'ai donc choisi d'utliser le logiciel Munin qui sert à surveiller les métrique des serveurs unix de manière générale. Il fonctionne sur le modèle client/serveurs. Il faut donc mettre en place un serveur principale qui sera en charge de centraliser et agrégée les informations qu'il récupère en ce connectant sur les nodes qu'il connait. Ce qui implique qu'a chaque ajout d'hôte dans la ferme, il est nécessaire d'aller déclarer cette dernière auprés du maitre munin. 
+Sur les hôtes on peu installer des sondes qui mesureront ce qui leur est demandé de mesurer. Ce sont des scripts dévellopable dans n'importe quel langage à condition des respecter les formats de fichier accepté par le serveurs maitre et définis dans la documentation de munin.
+\subparagraph{}
+J'ai donc ré-écrit une sonde qui analyse les fichiers d'enregistrement du serveur web périodiqument afin d'analyser les informations donnée par ce derniers. En effet, la bande passante utilisé n'est pas indiqué dans le fichier mais la quantité de données pour chaque requète l'est. Il à donc été possible de proposer une estimations globale pour le serveurs web. En continuant d'anlyser les fichiers de log il à été possible de faire la somme du poids des paquets transféré pour un hôte virtuel donné c'est à dire un site web.
+\paragraph{} 
+À partir de ce point, il possible d'avoir une idée du volume de données entrant et sortant pour chaque hote virtuel et si nous faisons la somme des volumes de chaque hote virtuel pour un utilisateur on peu estimer une partie de la bande passante consommé par les projets de ce derniers. La valeur ne sera pas exact car ce basant uniquement sur l'estimation à partir d'une partie des données. Mais nous pouvons ainsi avoir une estimation toujours inférieur de la consommation d'un utilisateur. Mais n'oublions pas que calculer la bande passante par utilisateur à ce niveau là de l'infrastructure reviendrai à essayer de calculer la consommation d'eau de chaque habitant d'une maison en ce fiant au images d'une caméra de surveillance. Le résultat n'est pas juste mais il est possible de savoir qui consomme le plus d'eau.
+\subparagraph{}
+%%%
+Evidement la bande passante n'est pas suffisante pour estimer le cout d'un utilisateur. Il à fallut s'interesser ensuite au ressources consommé c'est à dire la quantité de mémoire vive, l'espace disque et l'utilisation processeur. En ce qui concerne l'espace disque c'est assez aisé vue que chaque utilisateur ce vois allouer une partition virtuel correspondant à l'espace de stockage fournis par l'offre choisi par le client. En principe pour estimer cela il suffit de prendre nombre de client gratuit et de lui ajouter le produit des clients payant avec par leur offre respective. 
+\subparagraph{}
+Viens alors le tour de l'utilisation de mémoire vive et l'utilisation de processeur. Une sonde munin m'a semblé être un choix pertinent permettant de regrouper toute les mesures au même endroit sur le maitre munin. Il m'a donc fallut écrire deux petite scripts capable de faire une moyenne de l'utilisation de ces ressources par utilisateur en anlysant des extractions régulière d'information sur le système. 
+
+\subparagraph{}
+Munin est encore capable de bien des merveilles. Il existe beaucoup de sondes créer par la communauté et leur création est assez aisé. Il m'a permis d'obtenir des indicateurs qui jusqu'alors m'était inaccessible.
+La véritable de limite de munin viens de la nécessiter de déclarer l'ajout des nouvelles node sur le serveurs maitre afin qu'il puisse aller récupérer les information utltérieurement. Cette déclaration est un poids au seins d'une architecture qui ce veut dynamique et capables de répondre rapidement au besoins de nouvelles ressources. Voila pourquoi, j'ai entepris l'écriture d'un outils de discussion entre les nodes afin que, par l'échange de messages, ces dernières puissent ce déclarer auprès du serveur maitre munin. Ce projet est un pure produit de ma volonté, en effet avec le temps j'ai gagné une grande autonomie me permettant de prendre des décisions pour la gestion de l'infrastructure librement. Ce projet en est l'accomplissement car étant outils purement technique, j'ai d'abords entamé son développement sur mon temps libre et l'ai intégré à l'infrastructure récemment en toute autonomie.
+
+
+
 %%%% OWA
 
 %%% MUNIN
@@ -1010,32 +1042,46 @@ Il m'a aussi été demandé de calculer le cout exact d'un utilisateurs gratuit 
 
 
 		% Démonstration d’une originalité dans l’élaboration et la mise en œuvre de la solution
-	\section{Yarrbox le seul est unique vaiseaux des pirates de la boite.} % 5 page
+	\section{YarrBox\footnote{"Yarr" est le cris d'un pirate. Il faut prononcé ce nom en fermant un oeil et en grognant.} le seul est unique vaisseaux des pirates de la boite.} % 5 page
 
-Mise en place de jira et devellopement de process. 
-Infra ne nécessitant aucune présence physique donc startup ++ ou on vas fumer des joint avec les pote pis on code jusqu'a ce que segmentation fault s'en suive.
+% Mise en place de jira et devellopement de process. 
+% Infra ne nécessitant aucune présence physique donc startup ++ ou on vas fumer des joint avec les pote pis on code jusqu'a ce que segmentation fault s'en suive.
 
-Flexibilité ce qui ne semblait pas évidenta avec un produits aussi complet et complexe qu'happybox CMS. Opswork et plein de scripts dans tout les sens
+% Flexibilité ce qui ne semblait pas évidenta avec un produits aussi complet et complexe qu'happybox CMS. Opswork et plein de scripts dans tout les sens
+\paragraph{}
+YarrBox est le nom de code de l'infrastructure mise en place spécialement pour HappyBox CMS. C'est un vaisseau unique qui été  développé spécialement pour permettre à Happybox CMS de vogué dans les eaux troubles du web. 
+\paragraph{}
+Cette infrastructure est entièrement virtuelle par ce fait elle est accessible et gérable depuis n'importe quelle partie du monde. Ainsi peu importe ou est son équipage il est possible de travailler. 
+\paragraph{}
+Yarrbox inclus un ensemble de logiciel modifié et adapté par mes soins et intégré par tout les moyens possibles. Il ne s'agit jamais de savoir à quoi sert un logiciel mais plutôt comment réussir à lui faire faire ce que l'on souhaite. Cela vas à l'encontre de toute la propagande des gros éditeures logiciel qui, par l'intermédiaire de lobby, on réussi à faire passer des réglementation liberticide et nocives pour les utilisateurs le tout avec l'avale d'un pouvoir exécutif peut regardant sur le bien être des moutons qu'il pense avoir soumis. C'est en total contradiction avec la nature humaine qui adapte son environnement. 
+\paragraph{}
+YarrBox à été penser en ce sens et ce veut être une infrastructure évolutive et toujours en quéte de nouvelle fonctionnalité. Cette philosophie est à l'oeuvre à l'echelle du projet tout entier, Happybox CMS devait être un module pour drupal mais à force de modification de grande chose sont arrivé et cette merveille à vue le jours. L'infrastructure l'hébergant ce doit d'être à son images. En ce sens, beaucoup de logiciel on une utilisation différente de ce qui est prévue.
+\paragraph{}
+% plugin munin
+Munin est un outils de surveillance de ressources présente dans sur un réseaux. Il permet de créer des sondes unique ce qui en fait un compagnon extrémement utile puisque ces dernières peuvent surveiller ce que la plupart des logicielles de surveillance n'autorise pas. Ici tout est observable, à  condition que la node soit déclarer auprés du maitre. Pour palier à ce problémes un utilitaire de communication basé sur node js et un sysème de messages chiffré est en cours d'élaboration. 
+Le fonctionnement en est assez simple: sur le maitre un processus est à l'écoute. Il est tapis, à l'affut d'une communication. Lorsque cette communication arrive. Il en authentifie la source via un jetons fournis au client. Ajoute les configurations nécessaire et renvoie un message sur la complétion ou l'erreur du procédé. La communication entre élément sur un résaux n'à rien de novateur mais ici l'objectif est de rendre les serveurs intelligent et capable de discuter entre eux manière autonome. J'espère termes pouvoir gérer des messages plus complexe et multi-directionnelle afin de crée une sorte d'\emph{intelligence artificielle} d'administration systeme.
+
+%script de manipulation LVM
 
 
 		% Analyse de l’approche choisie
 	\section{Analyse de l'approche choisie} % 3 pages
 				% c'est le moment de ce la péter
-étudier pour répondre au besoin exact d'happybox CMS
+% étudier pour répondre au besoin exact d'happybox CMS
 
-seul moyen est projections puis comparaison avec les fait
+% seul moyen est projections puis comparaison avec les fait
 
-Peu dispendieuse bien que vrais lors de la mise en place. Depuis l'offre à changer, les serveurs que nous utilisions sont moins puissants que la gnenération actuel burst de CPU en plus.
+% Peu dispendieuse bien que vrais lors de la mise en place. Depuis l'offre à changer, les serveurs que nous utilisions sont moins puissants que la gnenération actuel burst de CPU en plus.
 
-			Table T1.micro VS T2.micro le batlle des titans nain
+% 			Table T1.micro VS T2.micro le batlle des titans nain
 
-Conversion de danny à linux mint mistifier du pinguin
+% Conversion de danny à linux mint mistifier du pinguin
 
-Archi mi-pour les devs sans moi les infra tournerons encore masi pas aussi bien.
+% Archi mi-pour les devs sans moi les infra tournerons encore masi pas aussi bien.
 
-proposition de modele hybrid alliant AWS à une autre solutions et projeter
+% proposition de modele hybrid alliant AWS à une autre solutions et projeter
 
-
+% docker pour les utilisateurs
 
 
 		% Réflexion sur le stage et le mémoire
